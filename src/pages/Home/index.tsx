@@ -1,10 +1,6 @@
 import background from "../../assets/bg.png";
-import { IntroContainer } from "./styles";
+import { Introduction } from "./Introduction";
 
 export function Home() {
-  return (
-    <IntroContainer>
-
-    </IntroContainer>
-  )
+  return <Introduction />;
 }
