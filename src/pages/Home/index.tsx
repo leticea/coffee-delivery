@@ -1,9 +1,10 @@
 import background from "../../assets/bg.png";
+import { IntroContainer } from "./styles";
 
 export function Home() {
   return (
-    <div>
+    <IntroContainer>
       <img src={background} alt="" />
-    </div>
+    </IntroContainer>
   )
 }
