@@ -5,6 +5,7 @@ export function Home() {
   return (
     <IntroContainer>
       <img src={background} alt="" />
+
     </IntroContainer>
   )
 }
