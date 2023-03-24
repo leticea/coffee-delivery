@@ -5,5 +5,5 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 32px 160px;
-  //gap: 820px;
+
 `;
