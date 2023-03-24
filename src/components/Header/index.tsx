@@ -6,7 +6,9 @@ import { HeaderContainer } from "./styles";
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logoPage} alt="Logotipo Coffee Delivery" />
+      <NavLink to="/">
+        <img src={logoPage} alt="Logotipo Coffee Delivery" />
+      </NavLink>
       <nav>
         <span>
           <MapPin size={22} weight="fill" />
