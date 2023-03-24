@@ -13,21 +13,32 @@ export const Container = styled.main`
 export const InfoText = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 0px;
   gap: 16px;
 
   width: 588px;
   height: 192px;
 
+  margin: 94px 692px 258px 160px;
+
   border: 1px solid red;
 
   h1 {
     font-family: "Baloo 2";
-    font-style: normal;
     font-weight: 800;
     font-size: 48px;
+    line-height: 130%;
+
 
     color: ${(props) => props.theme["gray-900"]};
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: ${(props) => props.theme["gray-800"]};
+
   }
 `;
