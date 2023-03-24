@@ -5,6 +5,8 @@ export function Header() {
   return (
     <HeaderContainer>
       <img src={logoPage} alt="" />
+      Location
+      Carrinho
     </HeaderContainer>
   );
 }
