@@ -1,4 +1,5 @@
-import { Container, InfoText } from "./styles";
+import { CoffeeImage, Container, InfoText } from "./styles";
+import coffeeImage from "../../../assets/coffee-image.png";
 
 export function Introduction() {
   return (
@@ -10,8 +11,9 @@ export function Introduction() {
           hora
         </p>
       </InfoText>
-
-
+      <CoffeeImage>
+        <img src={coffeeImage} alt="" />
+      </CoffeeImage>
     </Container>
   );
 }

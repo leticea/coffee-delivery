@@ -20,6 +20,7 @@ export const InfoText = styled.div`
   height: 192px;
 
   margin: 94px 692px 258px 160px;
+  position: absolute;
 
   border: 1px solid red;
 
@@ -28,7 +29,6 @@ export const InfoText = styled.div`
     font-weight: 800;
     font-size: 48px;
     line-height: 130%;
-
 
     color: ${(props) => props.theme["gray-900"]};
   }
@@ -39,6 +39,21 @@ export const InfoText = styled.div`
     font-size: 20px;
     line-height: 130%;
     color: ${(props) => props.theme["gray-800"]};
+  }
+`;
+
+export const CoffeeImage = styled.span`
+  /* width: 476px;
+  height: 360px; */
+  border: 1px solid red;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+  img {
+    margin: 92px 160px 92px 56px;
+
 
   }
 `;
