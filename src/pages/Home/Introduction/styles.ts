@@ -8,6 +8,18 @@ export const Container = styled.main`
   justify-content: center;
 
   border: 1px solid red;
+
+  img {
+    width: 476px;
+    height: 360px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin: 92px 160px 92px 804px;
+
+    border: 1px solid red;
+  }
 `;
 
 export const InfoText = styled.div`
@@ -40,16 +52,4 @@ export const InfoText = styled.div`
     line-height: 130%;
     color: ${(props) => props.theme["gray-800"]};
   }
-`;
-
-export const CoffeeImage = styled.span`
-  width: 476px;
-  height: 360px;
-  border: 1px solid red;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: end;
-  margin: 92px 160px 92px 804px;
-
 `;

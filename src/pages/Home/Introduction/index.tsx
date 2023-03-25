@@ -11,9 +11,9 @@ export function Introduction() {
           hora
         </p>
       </InfoText>
-      <CoffeeImage>
+
         <img src={coffeeImage} alt="" />
-      </CoffeeImage>
+
     </Container>
   );
 }
