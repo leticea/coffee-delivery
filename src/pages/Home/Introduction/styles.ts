@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+const ICON_COLORS = {
+  yellow-dark: "yellow-600",
+  yellow:  "yellow-400",
+  purple: "purple-600",
+  gray: "gray-700",
+} as const;
+
+interface IconProps {
+  iconColor: keyof typeof ICON_COLORS;
+}
+
 export const Container = styled.main`
   width: 100%;
   height: 544px;
