@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
-const ICON_COLORS = {
-  yellow-dark: "yellow-600",
-  yellow:  "yellow-400",
-  purple: "purple-600",
-  gray: "gray-700",
-} as const;
+// export const ICON_COLORS = {
+//   yellow-dark: "yellow-600",
+//   yellow:  "yellow-400",
+//   purple: "purple-600",
+//   gray: "gray-700",
+// } as const;
 
-interface IconProps {
-  iconColor: keyof typeof ICON_COLORS;
-}
+// interface IconProps {
+//   iconColor: keyof typeof ICON_COLORS;
+// }
 
 export const Container = styled.main`
   width: 100%;
@@ -63,4 +63,10 @@ export const InfoText = styled.div`
     line-height: 130%;
     color: ${(props) => props.theme["gray-800"]};
   }
+`;
+
+export const InfoGrid = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
 `;

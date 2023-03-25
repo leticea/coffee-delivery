@@ -1,4 +1,4 @@
-import { Container, InfoText } from "./styles";
+import { Container, InfoGrid, InfoText } from "./styles";
 import coffeeImage from "../../../assets/coffee-image.png";
 
 export function Introduction() {
@@ -11,6 +11,15 @@ export function Introduction() {
           hora
         </p>
       </InfoText>
+
+      <InfoGrid>
+        <li>Compra simples e segura</li>
+        <li>Entrega rápida e rastreada</li>
+        <li>Embalagem mantém o café intacto</li>
+        <li>O café chega fresquinho até você</li>
+      </InfoGrid>
+
+
         <img src={coffeeImage} alt="" />
     </Container>
   );
