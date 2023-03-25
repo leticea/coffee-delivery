@@ -66,7 +66,14 @@ export const InfoText = styled.div`
 `;
 
 export const InfoGrid = styled.ul`
+  width: 567px;
+  height: 84px;
+  margin: 352px 713px 108px 160px;
+
   display: grid;
+  position: absolute;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+  list-style: none;
+
+  border: 1px solid red;
 `;
