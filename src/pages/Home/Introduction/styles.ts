@@ -43,17 +43,13 @@ export const InfoText = styled.div`
 `;
 
 export const CoffeeImage = styled.span`
-  /* width: 476px;
-  height: 360px; */
+  width: 476px;
+  height: 360px;
   border: 1px solid red;
 
-    display: flex;
-    align-items: center;
-    justify-content: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  margin: 92px 160px 92px 804px;
 
-  img {
-    margin: 92px 160px 92px 56px;
-
-
-  }
 `;
