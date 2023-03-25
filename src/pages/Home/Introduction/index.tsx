@@ -1,12 +1,13 @@
 import { ShoppingCart, Timer, Package, Coffee } from "phosphor-react";
 
-import { Background, Container, InfoGrid, InfoText } from "./styles";
+import { CoffeeImage, Container, InfoGrid, InfoText } from "./styles";
 import coffeeImage from "../../../assets/coffee-image.png";
 import background from "../../../assets/bg.png";
 
 export function Introduction() {
   return (
     <Container>
+      <img src={background} alt="" />
       <InfoText>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
         <p>
@@ -32,12 +33,13 @@ export function Introduction() {
         </li>
 
         <li>
-          <Coffee size={22} weight="fill" />
-          O café chega fresquinho até você
+          <Coffee size={22} weight="fill" />O café chega fresquinho até você
         </li>
       </InfoGrid>
 
-      <img src={coffeeImage} alt="" />
+      <CoffeeImage>
+        <img src={coffeeImage} alt="" />
+      </CoffeeImage>
     </Container>
   );
 }

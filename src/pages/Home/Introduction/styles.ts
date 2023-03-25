@@ -20,25 +20,9 @@ export const Container = styled.main`
 
   border: 1px solid red;
 
-  background-image: linear-gradient(
-    135deg,
-    ${(props) => props.theme["yellow-100"]} 0%,
-    ${(props) => props.theme["purple-100"]} 25%,
-    ${(props) => props.theme["yellow-100"]} 50%,
-    ${(props) => props.theme["purple-100"]} 75%,
-    ${(props) => props.theme["yellow-100"]} 100%
-  );
-
   img {
-    width: 476px;
-    height: 360px;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: end;
-    margin: 92px 160px 92px 804px;
-
-    border: 1px solid red;
+    width: 100%;
+    height: 544px;
   }
 `;
 
@@ -89,4 +73,20 @@ export const InfoGrid = styled.ul`
 
 export const Background = styled.div`
   width: 100%;
+`;
+
+export const CoffeeImage = styled.span`
+  img {
+    width: 476px;
+    height: 360px;
+    position: absolute;
+
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    margin: 92px 160px 92px 804px;
+
+    border: 1px solid red;
+  }
 `;
