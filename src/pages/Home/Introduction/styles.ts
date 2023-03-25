@@ -23,6 +23,7 @@ export const Container = styled.main`
   img {
     width: 100%;
     height: 544px;
+    position: absolute;
   }
 `;
 
@@ -79,12 +80,9 @@ export const CoffeeImage = styled.span`
   img {
     width: 476px;
     height: 360px;
-    position: absolute;
-
+    position: relative;
 
     display: flex;
-    align-items: flex-end;
-    justify-content: end;
     margin: 92px 160px 92px 804px;
 
     border: 1px solid red;
