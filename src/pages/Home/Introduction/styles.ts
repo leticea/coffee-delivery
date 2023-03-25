@@ -12,11 +12,10 @@ import styled from "styled-components";
 // }
 
 export const Container = styled.main`
-  width: 100%;
   height: 544px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
 
   border: 1px solid red;
 
@@ -30,7 +29,6 @@ export const Container = styled.main`
 export const InfoText = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px;
   gap: 16px;
 
   width: 588px;
@@ -39,7 +37,7 @@ export const InfoText = styled.div`
   margin: 94px 692px 258px 160px;
   position: absolute;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   h1 {
     font-family: "Baloo 2";
@@ -72,17 +70,13 @@ export const InfoGrid = styled.ul`
   border: 1px solid red;
 `;
 
-export const Background = styled.div`
-  width: 100%;
-`;
-
 export const CoffeeImage = styled.span`
   img {
     width: 476px;
     height: 360px;
     position: relative;
 
-    display: flex;
+    //display: flex;
     margin: 92px 160px 92px 804px;
 
     border: 1px solid red;
