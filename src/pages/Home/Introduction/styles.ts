@@ -20,6 +20,15 @@ export const Container = styled.main`
 
   border: 1px solid red;
 
+  background-image: linear-gradient(
+    135deg,
+    ${(props) => props.theme["yellow-100"]} 0%,
+    ${(props) => props.theme["purple-100"]} 25%,
+    ${(props) => props.theme["yellow-100"]} 50%,
+    ${(props) => props.theme["purple-100"]} 75%,
+    ${(props) => props.theme["yellow-100"]} 100%
+  );
+
   img {
     width: 476px;
     height: 360px;
@@ -76,4 +85,8 @@ export const InfoGrid = styled.ul`
   list-style: none;
 
   border: 1px solid red;
+`;
+
+export const Background = styled.div`
+  width: 100%;
 `;

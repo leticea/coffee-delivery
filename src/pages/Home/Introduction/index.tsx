@@ -1,7 +1,8 @@
 import { ShoppingCart, Timer, Package, Coffee } from "phosphor-react";
 
-import { Container, InfoGrid, InfoText } from "./styles";
+import { Background, Container, InfoGrid, InfoText } from "./styles";
 import coffeeImage from "../../../assets/coffee-image.png";
+import background from "../../../assets/bg.png";
 
 export function Introduction() {
   return (
