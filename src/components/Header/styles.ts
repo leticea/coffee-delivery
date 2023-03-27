@@ -16,6 +16,7 @@ export const HeaderContainer = styled.header`
     span {
       min-width: 143px;
       height: 38px;
+      padding: 8px;
       border-radius: 6px;
 
       display: flex;

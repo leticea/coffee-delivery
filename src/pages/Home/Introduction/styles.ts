@@ -73,10 +73,13 @@ export const CoffeeImage = styled.span`
   img {
     width: 476px;
     height: 360px;
-    position: relative;
+    position: absolute;
 
     //display: flex;
-    margin: 92px 160px 92px 804px;
+    //margin: 92px 160px 92px 804px;
+
+    left: calc(50% - 476px/2 + 322px);
+    top: calc(50% - 360px/2);
 
     border: 1px solid red;
   }
