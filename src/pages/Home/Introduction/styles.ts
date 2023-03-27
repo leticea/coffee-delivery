@@ -45,11 +45,13 @@ export const InfoText = styled.div`
 
 export const InfoGrid = styled.ul`
   width: 56.7rem;
-  height: 8.4rem;
+  min-height: 8.4rem;
   margin: 35.2rem 71.3rem 10.8rem 16rem;
 
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   line-height: 130%;
+  color: ${(props) => props.theme["gray-700"]};
+
 
   display: grid;
   position: absolute;
@@ -58,25 +60,35 @@ export const InfoGrid = styled.ul`
 
   gap: 1.2rem;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 const ICON_COLORS = {
   yellowDark: "yellow-600",
   yellow: "yellow-400",
   purple: "purple-600",
-  grayDark: "gray-700",
+  gray: "gray-700",
 } as const;
 
 interface InfoWithIconProps {
-  iconColor: "yellowDark" | "yellow" | "purple" | "grayDark";
+  iconColor: keyof typeof ICON_COLORS;
 }
 
 export const InfoWithIcon = styled.li<InfoWithIconProps>`
+    display: flex;
+    gap: 12px;
+
+    //border: 1px solid red;
 
   svg {
     background: ${(props) => props.theme[ICON_COLORS[props.iconColor]]};
     color: ${(props) => props.theme["gray-100"]};
+
+    padding: 8px;
+    border-radius: 9999px;
+
+    width: 3.2rem;
+    height: 3.2rem;
   }
 `;
 

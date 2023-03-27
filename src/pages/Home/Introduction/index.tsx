@@ -24,22 +24,22 @@ export function Introduction() {
 
       <InfoGrid>
         <InfoWithIcon iconColor="yellowDark">
-          <ShoppingCart size={22} weight="fill" />
+          <ShoppingCart size={16} weight="fill" />
           Compra simples e segura
         </InfoWithIcon>
 
-        <InfoWithIcon iconColor="grayDark">
-          <Package size={22} weight="fill" />
+        <InfoWithIcon iconColor="gray">
+          <Package size={16} weight="fill" />
           Embalagem mantém o café intacto
         </InfoWithIcon>
 
         <InfoWithIcon iconColor="yellow">
-          <Timer size={22} weight="fill" />
+          <Timer size={16} weight="fill" />
           Entrega rápida e rastreada
         </InfoWithIcon>
 
         <InfoWithIcon iconColor="purple">
-          <Coffee size={22} weight="fill" />O café chega fresquinho até você
+          <Coffee size={16} weight="fill" />O café chega fresquinho até você
         </InfoWithIcon>
       </InfoGrid>
 
