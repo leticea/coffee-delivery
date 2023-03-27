@@ -1,6 +1,12 @@
 import { ShoppingCart, Timer, Package, Coffee } from "phosphor-react";
 
-import { CoffeeImage, Container, InfoGrid, InfoText, InfoWithIcon } from "./styles";
+import {
+  CoffeeImage,
+  Container,
+  InfoGrid,
+  InfoText,
+  InfoWithIcon,
+} from "./styles";
 import coffeeImage from "../../../assets/coffee-image.png";
 import background from "../../../assets/bg.png";
 
@@ -17,12 +23,12 @@ export function Introduction() {
       </InfoText>
 
       <InfoGrid>
-        <InfoWithIcon iconColor="yellow-dark">
+        <InfoWithIcon iconColor="yellow">
           <ShoppingCart size={22} weight="fill" />
           Compra simples e segura
         </InfoWithIcon>
 
-        <InfoWithIcon iconColor="yellow">
+        <InfoWithIcon iconColor="light">
           <Package size={22} weight="fill" />
           Embalagem mantém o café intacto
         </InfoWithIcon>

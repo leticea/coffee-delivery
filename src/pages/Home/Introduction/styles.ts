@@ -61,28 +61,20 @@ export const InfoGrid = styled.ul`
   border: 1px solid red;
 `;
 
-export const ICON_COLORS = {
-  yellow-dark: "yellow-600",
-  yellow:  "yellow-400",
+const ICON_COLORS = {
+  yellow: "yellow-600",
+  light: "yellow-400",
   purple: "purple-600",
   gray: "gray-700",
 } as const;
 
-interface IconProps {
-  iconColor: keyof typeof ICON_COLORS;
-}
-
 interface InfoWithIconProps {
-  iconColor: 'yellow-dark' | 'yellow' | 'purple' | 'gray';
+  iconColor: "yellow" | "light" | "purple" | "gray";
 }
 
 export const InfoWithIcon = styled.li<InfoWithIconProps>`
-  color: ${(props) => props.theme["purple-800"]};
+  color: ${(props) => props.theme[ICON_COLORS[props.iconColor]]};
 `;
-
-
-
-
 
 export const CoffeeImage = styled.span`
   img {
