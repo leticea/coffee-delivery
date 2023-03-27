@@ -17,22 +17,22 @@ export function Introduction() {
       </InfoText>
 
       <InfoGrid>
-        <InfoWithIcon>
+        <InfoWithIcon iconColor="yellow-dark">
           <ShoppingCart size={22} weight="fill" />
           Compra simples e segura
         </InfoWithIcon>
 
-        <InfoWithIcon>
+        <InfoWithIcon iconColor="yellow">
           <Package size={22} weight="fill" />
           Embalagem mantém o café intacto
         </InfoWithIcon>
 
-        <InfoWithIcon>
+        <InfoWithIcon iconColor="purple">
           <Timer size={22} weight="fill" />
           Entrega rápida e rastreada
         </InfoWithIcon>
 
-        <InfoWithIcon>
+        <InfoWithIcon iconColor="gray">
           <Coffee size={22} weight="fill" />O café chega fresquinho até você
         </InfoWithIcon>
       </InfoGrid>
