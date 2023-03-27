@@ -59,7 +59,7 @@ export const InfoGrid = styled.ul`
   height: 8.4rem;
   margin: 35.2rem 71.3rem 10.8rem 16rem;
 
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   line-height: 130%;
 
   display: grid;
@@ -67,7 +67,13 @@ export const InfoGrid = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   list-style: none;
 
+  gap: 1.2rem;
+
   border: 1px solid red;
+`;
+
+export const InfoWithIcon = styled.li`
+  color: ${(props) => props.theme["purple-800"]};
 `;
 
 export const CoffeeImage = styled.span`
