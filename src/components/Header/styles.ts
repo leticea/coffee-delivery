@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
     gap: 12px;
 
     span {
-      width: 143px;
+      min-width: 143px;
       height: 38px;
       border-radius: 6px;
 
