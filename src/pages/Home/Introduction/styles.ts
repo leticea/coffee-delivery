@@ -12,7 +12,7 @@ import styled from "styled-components";
 // }
 
 export const Container = styled.main`
-  height: 544px;
+  height: 54.4rem;
   display: flex;
   align-items: center;
 
@@ -20,20 +20,19 @@ export const Container = styled.main`
 
   img {
     width: 100%;
-    height: 544px;
+    height: 54.4rem;
     position: absolute;
   }
 `;
 
 export const InfoText = styled.div`
+  width: 58.8rem;
+
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.6rem;
 
-  width: 588px;
-  height: 192px;
-
-  margin: 94px 692px 258px 160px;
+  margin: 9.4rem 69.2rem 25.8rem 16rem;
   position: absolute;
 
   //border: 1px solid red;
@@ -41,25 +40,27 @@ export const InfoText = styled.div`
   h1 {
     font-family: "Baloo 2";
     font-weight: 800;
-    font-size: 48px;
+    font-size: 4.8rem;
     line-height: 130%;
 
     color: ${(props) => props.theme["gray-900"]};
   }
 
   p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 130%;
+
     color: ${(props) => props.theme["gray-800"]};
   }
 `;
 
 export const InfoGrid = styled.ul`
-  width: 567px;
-  height: 84px;
-  margin: 352px 713px 108px 160px;
+  width: 56.7rem;
+  height: 8.4rem;
+  margin: 35.2rem 71.3rem 10.8rem 16rem;
+
+  font-size: 1.6rem;
+  line-height: 130%;
 
   display: grid;
   position: absolute;
@@ -71,16 +72,11 @@ export const InfoGrid = styled.ul`
 
 export const CoffeeImage = styled.span`
   img {
-    width: 476px;
-    height: 360px;
-    position: absolute;
+    width: 47.6rem;
+    height: 36rem;
+    position: relative;
+    margin: 9.2rem 16rem 9.2rem 80.4rem;
 
-    //display: flex;
-    //margin: 92px 160px 92px 804px;
-
-    left: calc(50% - 476px/2 + 322px);
-    top: calc(50% - 360px/2);
-
-    border: 1px solid red;
+    //border: 1px solid red;
   }
 `;

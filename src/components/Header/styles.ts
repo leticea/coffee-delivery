@@ -17,6 +17,7 @@ export const HeaderContainer = styled.header`
       min-width: 143px;
       height: 38px;
       padding: 8px;
+      font-size: 1.4rem;
       border-radius: 6px;
 
       display: flex;
