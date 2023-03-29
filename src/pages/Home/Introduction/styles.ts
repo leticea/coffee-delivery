@@ -5,7 +5,7 @@ export const Container = styled.main`
   display: flex;
   align-items: center;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   img {
     width: 100%;

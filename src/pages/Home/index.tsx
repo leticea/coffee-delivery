@@ -1,6 +1,11 @@
-import background from "../../assets/bg.png";
+import { CoffeeList } from "./CoffeeList";
 import { Introduction } from "./Introduction";
 
 export function Home() {
-  return <Introduction />;
+  return (
+    <>
+      <Introduction />
+      <CoffeeList />
+    </>
+  );
 }
