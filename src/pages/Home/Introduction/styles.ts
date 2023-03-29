@@ -51,7 +51,6 @@ export const InfoGrid = styled.ul`
   line-height: 130%;
   color: ${(props) => props.theme["gray-700"]};
 
-
   display: grid;
   position: absolute;
   grid-template-columns: repeat(2, 1fr);
@@ -74,10 +73,10 @@ interface InfoWithIconProps {
 }
 
 export const InfoWithIcon = styled.li<InfoWithIconProps>`
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 
-    //border: 1px solid red;
+  //border: 1px solid red;
 
   svg {
     background: ${(props) => props.theme[ICON_COLORS[props.iconColor]]};
