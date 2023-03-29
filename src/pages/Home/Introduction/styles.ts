@@ -44,8 +44,7 @@ export const InfoText = styled.div`
 `;
 
 export const InfoGrid = styled.ul`
-  width: 56.7rem;
-  min-height: 8.4rem;
+  max-width: 56.7rem;
   margin: 35.2rem 71.3rem 10.8rem 16rem;
 
   font-size: 2.3rem;
@@ -58,7 +57,7 @@ export const InfoGrid = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   list-style: none;
 
-  gap: 1.2rem;
+  gap: 2rem;
 
   //border: 1px solid red;
 `;

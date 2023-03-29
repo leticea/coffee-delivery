@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 1645px;
-  left: 0px;
-  right: 0px;
-  top: 648px;
+  height: 164px;
 
   border: 1px solid red;
 `;
