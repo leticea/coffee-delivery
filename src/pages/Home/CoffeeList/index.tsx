@@ -1,4 +1,5 @@
-import { Container, List, OurCoffees } from "./styles";
+import { CoffeeCard, Container, List, OurCoffees } from "./styles";
+
 import traditional from "../../../assets/traditional.svg";
 import american from "../../../assets/american.svg";
 import creamy from "../../../assets/creamy.svg";
@@ -17,57 +18,56 @@ import hawaiian from "../../../assets/hawaiian.svg";
 import arabic from "../../../assets/arabic.svg";
 import irish from "../../../assets/irish.svg";
 
-
 export function CoffeeList() {
   return (
     <Container>
       <OurCoffees>Nossos cafés</OurCoffees>
       <List>
-        <li>
+        <CoffeeCard>
           <img src={traditional} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={american} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={creamy} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={iced} alt="" />
-        </li>
+        </CoffeeCard>
 
-        <li>
+        <CoffeeCard>
           <img src={coffeeWithMilk} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={latte} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={cappuccino} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={macchiato} alt="" />
-        </li>
+        </CoffeeCard>
 
-        <li>
+        <CoffeeCard>
           <img src={mocaccino} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={hotChocolate} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={cuban} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={hawaiian} alt="" />
-        </li>
+        </CoffeeCard>
 
-        <li>
+        <CoffeeCard>
           <img src={arabic} alt="" />
-        </li>
-        <li>
+        </CoffeeCard>
+        <CoffeeCard>
           <img src={irish} alt="" />
-        </li>
+        </CoffeeCard>
       </List>
     </Container>
   );
