@@ -1,7 +1,9 @@
-import { Container } from "./styles";
+import { Container, OurCoffees } from "./styles";
 
 export function CoffeeList() {
-  <Container>
-    <h1>Nossos cafés</h1>
-  </Container>
+  return (
+    <Container>
+      <OurCoffees>Nossos cafés</OurCoffees>
+    </Container>
+  );
 }
