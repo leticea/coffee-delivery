@@ -27,12 +27,25 @@ export const List = styled.ul`
 
   list-style: none;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const CoffeeCard = styled.li`
   background: ${(props) => props.theme["gray-200"]};
   width: 25.6rem;
   height: 31rem;
+  position: relative;
   border-radius: 6px 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+
+  img {
+    width: 12rem;
+    height: 12rem;
+    top: -20px;
+    position: absolute;
+  }
 `;

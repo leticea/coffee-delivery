@@ -24,7 +24,7 @@ export function CoffeeList() {
       <OurCoffees>Nossos cafés</OurCoffees>
       <List>
         <CoffeeCard>
-          <img src={traditional} alt="" />
+          <img src={traditional} alt="" />4
         </CoffeeCard>
         <CoffeeCard>
           <img src={american} alt="" />
