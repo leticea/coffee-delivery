@@ -22,9 +22,9 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
       {tags.map((tag) => {
         return <Tags>{tag}</Tags>;
       })}
-      <Name>{name}</Name>
+      {/* <Name>{name}</Name>
       <Description>{description}</Description>
-      <CoffeePrice>R${price}</CoffeePrice>
+      <CoffeePrice>R${price}</CoffeePrice> */}
     </CoffeesCard>
   );
 }

@@ -31,6 +31,21 @@ export const Tags = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
+  min-width: 8.1rem;
+  height: 2.1rem;
+  left: 20%;
+  top: 11.2rem;
+  border-radius: 100px;
+  background: ${(props) => props.theme["yellow-100"]};
+  color: ${(props) => props.theme["yellow-600"]};
+
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+
+  border: 1px solid red;
 `;
 
 export const Name = styled.h1`
