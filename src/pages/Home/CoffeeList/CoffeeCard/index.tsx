@@ -1,4 +1,4 @@
-import { CoffeesCard } from "../styles";
+import { CoffeePrice, CoffeesCard, Description, Name, Tags } from "./styles";
 
 interface CoffeeProps {
   id: number;
@@ -20,11 +20,11 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
     <CoffeesCard>
       <img src={image} alt="" />
       {tags.map((tag) => {
-        return <span>{tag}</span>;
+        return <Tags>{tag}</Tags>;
       })}
-      <h1>{name}</h1>
-      <p>{description}</p>
-      <div>R${price}</div>
+      <Name>{name}</Name>
+      <Description>{description}</Description>
+      <CoffeePrice>R${price}</CoffeePrice>
     </CoffeesCard>
   );
 }

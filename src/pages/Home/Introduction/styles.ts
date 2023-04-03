@@ -44,7 +44,7 @@ export const InfoText = styled.div`
 `;
 
 export const InfoGrid = styled.ul`
-  max-width: 56.7rem;
+  width: 56.7rem;
   margin: 35.2rem 71.3rem 10.8rem 16rem;
 
   font-size: 2.3rem;
