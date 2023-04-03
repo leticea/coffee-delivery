@@ -96,7 +96,7 @@ export const CoffeeImage = styled.span`
     height: 36rem;
     position: relative;
     margin: 9.2rem 16rem 9.2rem 80.4rem;
-    opacity: 0.8;
+    //opacity: 0.8;
 
     //border: 1px solid red;
   }

@@ -15,12 +15,11 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const { id, tags, name, image, description, price } = coffee;
-  console.log("id", id);
   return (
     <CoffeesCard>
       <img src={image} alt="" />
       {tags.map((tag) => {
-        return <Tags>{tag}</Tags>;
+        return <Tags>{tag}</Tags>
       })}
       {/* <Name>{name}</Name>
       <Description>{description}</Description>

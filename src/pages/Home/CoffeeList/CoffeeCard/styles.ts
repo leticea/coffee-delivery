@@ -32,9 +32,11 @@ export const Tags = styled.span`
   align-items: center;
   justify-content: center;
 
+  margin: 0 0.4rem;
   position: relative;
-  min-width: 8.1rem;
+  max-width: 8.1rem;
   height: 2.1rem;
+  padding: 4px 8px;
   left: 20%;
   top: 11.2rem;
   border-radius: 100px;
