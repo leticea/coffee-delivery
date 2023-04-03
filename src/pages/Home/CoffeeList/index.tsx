@@ -1,3 +1,4 @@
+import { coffees } from "../../../utils/coffees";
 import { CoffeeCard } from "./CoffeeCard";
 import { CoffeesCard, Container, List } from "./styles";
 
@@ -5,9 +6,12 @@ export function CoffeeList() {
   return (
     <Container>
       <List>
-        <CoffeesCard>
-          <CoffeeCard />
-        </CoffeesCard>
+          {coffees.map((coffee) => {
+            console.log(coffee )
+            return <CoffeeCard
+             key={coffee.id} coffee={coffee} />;
+          })}
+
       </List>
     </Container>
   );

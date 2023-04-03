@@ -27,11 +27,13 @@ export const CoffeesCard = styled.li`
   justify-content: center;
   align-items: flex-start;
 
+  border: 1px solid red;
+
 
   img {
     width: 12rem;
     height: 12rem;
     top: -20px;
-    position: absolute;
+    position: relative;
   }
 `;

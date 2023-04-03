@@ -126,7 +126,7 @@ export const coffees = [
     price: 9.9,
   },
   {
-    id: 13,
+    id: 14,
     tags: ["especial", "alcoólico"],
     name: "Irlândes",
     description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",

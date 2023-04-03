@@ -1,6 +1,5 @@
 import { CoffeeList } from "./CoffeeList";
 import { Introduction } from "./Introduction";
-import { coffees } from "../../utils/coffees";
 import { OurCoffees } from "./CoffeeList/OurCoffees";
 
 export function Home() {
@@ -8,10 +7,7 @@ export function Home() {
     <>
       <Introduction />
       <OurCoffees />
-
-      {coffees.map((coffee) => {
-        return <CoffeeList key={coffee.id} coffee={coffee} />;
-      })}
+      <CoffeeList />
     </>
   );
 }
