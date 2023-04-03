@@ -1,7 +1,7 @@
 import { CoffeeList } from "./CoffeeList";
 import { Introduction } from "./Introduction";
 import { coffees } from "../../utils/coffees";
-import { OurCoffees } from "./OurCoffees";
+import { OurCoffees } from "./CoffeeList/OurCoffees";
 
 export function Home() {
   return (

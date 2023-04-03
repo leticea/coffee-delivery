@@ -5,8 +5,6 @@ export const Container = styled.div`
   //border: 1px solid red;
 `;
 
-
-
 export const List = styled.ul`
   height: 136rem;
   margin: 5.4rem 16rem auto 16rem;
@@ -15,10 +13,10 @@ export const List = styled.ul`
 
   list-style: none;
 
-  //border: 1px solid red;
+  border: 1px solid red;
 `;
 
-export const CoffeeCard = styled.li`
+export const CoffeesCard = styled.li`
   background: ${(props) => props.theme["gray-200"]};
   width: 25.6rem;
   height: 31rem;

@@ -1,24 +1,13 @@
-import { CoffeeCard, Container, List } from "./styles";
+import { CoffeeCard } from "./CoffeeCard";
+import { CoffeesCard, Container, List } from "./styles";
 
-interface CoffeeProps {
-  id: number;
-  tags: string;
-  name: string;
-  description: string;
-  image: string;
-  price: number;
-}
-
-interface CoffeeCardProps {
-  coffee: CoffeeProps;
-}
-
-export function CoffeeList({ coffee }: CoffeeCardProps) {
+export function CoffeeList() {
   return (
     <Container>
       <List>
-        <CoffeeCard key={coffee.id}>
-        </CoffeeCard>
+        <CoffeesCard>
+          <CoffeeCard />
+        </CoffeesCard>
       </List>
     </Container>
   );
