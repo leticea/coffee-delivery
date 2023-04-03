@@ -1,4 +1,3 @@
-import { ImgHTMLAttributes } from "react";
 import { CoffeesCard } from "../styles";
 
 interface CoffeeProps {
@@ -25,7 +24,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
       })}
       <h1>{name}</h1>
       <p>{description}</p>
-      <div>{price}</div>
+      <div>R${price}</div>
     </CoffeesCard>
   );
 }

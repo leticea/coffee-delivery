@@ -1,6 +1,6 @@
 import { coffees } from "../../../utils/coffees";
 import { CoffeeCard } from "./CoffeeCard";
-import { CoffeesCard, Container, List } from "./styles";
+import { Container, List } from "./styles";
 
 export function CoffeeList() {
   return (
