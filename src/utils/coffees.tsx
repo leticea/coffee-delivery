@@ -1,10 +1,28 @@
+import traditional from "../../../assets/traditional.svg";
+import american from "../../../assets/american.svg";
+import creamy from "../../../assets/creamy.svg";
+import iced from "../../../assets/iced.svg";
+
+import coffeeWithMilk from "../../../assets/coffee-with-milk.svg";
+import latte from "../../../assets/latte.svg";
+import cappuccino from "../../../assets/cappuccino.svg";
+import macchiato from "../../../assets/macchiato.svg";
+
+import mocaccino from "../../../assets/mocaccino.svg";
+import hotChocolate from "../../../assets/hot-chocolate.svg";
+import cuban from "../../../assets/cuban.svg";
+import hawaiian from "../../../assets/hawaiian.svg";
+
+import arabic from "../../../assets/arabic.svg";
+import irish from "../../../assets/irish.svg";
+
 export const coffees = [
   {
     id: 1,
     tags: ["tradicional"],
     name: "Expresso Tradicional",
     description: "O tradicional café feito com água quente e grãos moídos",
-    image: "traditional.svg",
+    image: traditional,
     price: 9.9,
   },
   {
