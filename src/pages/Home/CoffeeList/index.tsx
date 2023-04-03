@@ -1,11 +1,11 @@
-import { CoffeeCard, Container, List, OurCoffees } from "./styles";
+import { CoffeeCard, Container, List } from "./styles";
 
 interface CoffeeProps {
   id: number;
-  tags: string[];
+  tags: string;
   name: string;
   description: string;
-  image: string[];
+  image: string;
   price: number;
 }
 
@@ -16,11 +16,8 @@ interface CoffeeCardProps {
 export function CoffeeList({ coffee }: CoffeeCardProps) {
   return (
     <Container>
-      <OurCoffees>Nossos cafés</OurCoffees>
       <List>
         <CoffeeCard key={coffee.id}>
-          <img src={coffee.image} alt="" />
-          <h1>{coffee.name}</h1>
         </CoffeeCard>
       </List>
     </Container>

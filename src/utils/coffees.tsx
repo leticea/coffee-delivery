@@ -1,20 +1,20 @@
-import traditional from "../../../assets/traditional.svg";
-import american from "../../../assets/american.svg";
-import creamy from "../../../assets/creamy.svg";
-import iced from "../../../assets/iced.svg";
+import traditional from "../assets/traditional.svg";
+import american from "../assets/american.svg";
+import creamy from "../assets/creamy.svg";
+import iced from "../assets/iced.svg";
 
-import coffeeWithMilk from "../../../assets/coffee-with-milk.svg";
-import latte from "../../../assets/latte.svg";
-import cappuccino from "../../../assets/cappuccino.svg";
-import macchiato from "../../../assets/macchiato.svg";
+import coffeeWithMilk from "../assets/coffee-with-milk.svg";
+import latte from "../assets/latte.svg";
+import cappuccino from "../assets/cappuccino.svg";
+import macchiato from "../assets/macchiato.svg";
 
-import mocaccino from "../../../assets/mocaccino.svg";
-import hotChocolate from "../../../assets/hot-chocolate.svg";
-import cuban from "../../../assets/cuban.svg";
-import hawaiian from "../../../assets/hawaiian.svg";
+import mocaccino from "../assets/mocaccino.svg";
+import hotChocolate from "../assets/hot-chocolate.svg";
+import cuban from "../assets/cuban.svg";
+import hawaiian from "../assets/hawaiian.svg";
 
-import arabic from "../../../assets/arabic.svg";
-import irish from "../../../assets/irish.svg";
+import arabic from "../assets/arabic.svg";
+import irish from "../assets/irish.svg";
 
 export const coffees = [
   {
@@ -30,7 +30,7 @@ export const coffees = [
     tags: ["tradicional"],
     name: "Expresso Americano",
     description: "Expresso diluído, menos intenso que o tradicional",
-    image: "american.svg",
+    image: american,
     price: 9.9,
   },
   {
@@ -38,7 +38,7 @@ export const coffees = [
     tags: ["tradicional"],
     name: "Expresso Cremoso",
     description: "Café expresso tradicional com espuma cremosa",
-    image: "creamy.svg",
+    image: creamy,
     price: 9.9,
   },
   {
@@ -46,7 +46,7 @@ export const coffees = [
     tags: ["tradicional", "gelado"],
     name: "Expresso Gelado",
     description: "Bebida preparada com café expresso e cubos de gelo",
-    image: "iced.svg",
+    image: iced,
     price: 9.9,
   },
   {
@@ -54,7 +54,7 @@ export const coffees = [
     tags: ["tradicional", "com leite"],
     name: "Café com Leite",
     description: "Meio a meio de expresso tradicional com leite vaporizado",
-    image: "coffee-with-milk.svg",
+    image: coffeeWithMilk,
     price: 9.9,
   },
   {
@@ -63,7 +63,7 @@ export const coffees = [
     name: "Latte",
     description:
       "Uma dose de café expresso com o dobro de leite e espuma cremosa",
-    image: "latte.svg",
+    image: latte,
     price: 9.9,
   },
   {
@@ -72,7 +72,7 @@ export const coffees = [
     name: "Capuccino",
     description:
       "Bebida com canela feita de doses iguais de café, leite e espuma",
-    image: "cappuccino.svg",
+    image: cappuccino,
     price: 9.9,
   },
   {
@@ -81,7 +81,7 @@ export const coffees = [
     name: "Macchiato",
     description:
       "Café expresso misturado com um pouco de leite quente e espuma",
-    image: "macchiato.svg",
+    image: macchiato,
     price: 9.9,
   },
   {
@@ -89,7 +89,7 @@ export const coffees = [
     tags: ["tradicional", "com leite"],
     name: "Mocaccino",
     description: "Café expresso com calda de chocolate, pouco leite e espuma",
-    image: "mocaccino.svg",
+    image: mocaccino,
     price: 9.9,
   },
   {
@@ -97,7 +97,7 @@ export const coffees = [
     tags: ["especial", "com leite"],
     name: "Chocolate Quente",
     description: "Bebida feita com chocolate dissolvido no leite quente e café",
-    image: "hot-chocolate.svg",
+    image: hotChocolate,
     price: 9.9,
   },
   {
@@ -106,7 +106,7 @@ export const coffees = [
     name: "Cubano",
     description:
       "Drink gelado de café expresso com rum, creme de leite e hortelã",
-    image: "cuban.svg",
+    image: cuban,
     price: 9.9,
   },
   {
@@ -114,7 +114,7 @@ export const coffees = [
     tags: ["especial"],
     name: "Havaiano",
     description: "Bebida adocicada preparada com café e leite de coco",
-    image: "hawaiian.svg",
+    image: hawaiian,
     price: 9.9,
   },
   {
@@ -122,7 +122,7 @@ export const coffees = [
     tags: ["especial"],
     name: "Árabe",
     description: "Bebida preparada com grãos de café árabe e especiarias",
-    image: "arabic.svg",
+    image: arabic,
     price: 9.9,
   },
   {
@@ -130,7 +130,7 @@ export const coffees = [
     tags: ["especial", "alcoólico"],
     name: "Irlândes",
     description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
-    image: "irish.svg",
+    image: irish,
     price: 9.9,
   },
 ];
