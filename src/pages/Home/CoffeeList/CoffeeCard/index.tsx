@@ -29,12 +29,12 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
         <p>R$
           <span>{moneyFormat(price)}</span>
         </p>
-        {/* <Buttons>
+        <Buttons>
           <span>
             - 1 +
           </span>
           <ShoppingCart weight="fill" size={22} />
-        </Buttons> */}
+        </Buttons>
       </Footer>
     </CoffeesCard>
   );

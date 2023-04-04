@@ -97,7 +97,7 @@ export const Footer = styled.h1`
   right: 2.4rem;
   bottom: 2rem;
 
-  //border: 1px solid red;
+  border: 1px solid red;
 
   p {
     width: 6.7rem;
@@ -105,7 +105,7 @@ export const Footer = styled.h1`
     display: flex;
     text-align: center;
     align-items: center;
-    gap: .4rem;
+    gap: 0.4rem;
 
     font-family: "Roboto";
     font-weight: 400;
@@ -125,6 +125,28 @@ export const Footer = styled.h1`
 `;
 
 export const Buttons = styled.button`
+  width: 11.8rem;
+  height: 3.8rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: .8rem;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 4px;
+    border-radius: 6px;
+
+    width: 7.2rem;
+
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: ${(props) => props.theme["purple-800"]};
+    background-color: ${(props) => props.theme["gray-400"]};
+  }
 `;

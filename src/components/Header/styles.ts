@@ -11,11 +11,11 @@ export const HeaderContainer = styled.header`
 
   nav {
     display: flex;
-    gap: 12px;
+    gap: 1.2rem;
 
     span {
-      min-width: 143px;
-      height: 38px;
+      min-width: 14.3rem;
+      height: 3.8rem;
       padding: 8px;
       font-size: 1.4rem;
       border-radius: 6px;
@@ -34,8 +34,8 @@ export const HeaderContainer = styled.header`
     }
 
     a {
-      width: 38px;
-      height: 38px;
+      width: 3.8rem;
+      height: 3.8rem;
       display: flex;
       justify-content: center;
       align-items: center;
