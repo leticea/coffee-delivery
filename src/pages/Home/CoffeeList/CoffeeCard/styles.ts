@@ -90,23 +90,30 @@ export const Footer = styled.h1`
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  gap: 29px;
 
   position: absolute;
-  height: 38px;
-  left: 24px;
-  right: 24px;
-  bottom: 20px;
-  border: 1px solid red;
+  height: 3.8rem;
+  left: 2.4rem;
+  right: 2.4rem;
+  bottom: 2rem;
+
+  //border: 1px solid red;
 
   p {
+    width: 6.7rem;
+    height: 3.1rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: .4rem;
+
     font-family: "Roboto";
-    font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 130%;
-    text-align: right;
     color: ${(props) => props.theme["gray-700"]};
+
+    //border: 1px solid red;
   }
 
   span {
