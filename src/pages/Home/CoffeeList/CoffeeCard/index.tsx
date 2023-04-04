@@ -34,7 +34,9 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   }
 
   function handleDecrease() {
-    setQuantity((state) => state - 1);
+    if (quantity > 0) {
+      setQuantity((state) => state - 1);
+    }
   }
 
   return (
