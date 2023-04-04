@@ -8,10 +8,10 @@ export const CoffeesCard = styled.li`
   border-radius: 6px 36px;
 
   display: flex;
-  /* justify-content: center;
-  align-items: flex-start; */
+  justify-content: center;
+  //align-items: center;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   img {
     display: flex;
@@ -23,7 +23,7 @@ export const CoffeesCard = styled.li`
     left: 27%;
     position: absolute;
 
-    border: 1px solid red;
+    //border: 1px solid red;
   }
 `;
 
@@ -31,13 +31,14 @@ export const Tags = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   margin: 0 0.4rem;
   position: relative;
-  max-width: 8.1rem;
+  max-width: 19.5rem;
   height: 2.1rem;
   padding: 4px 8px;
-  left: 20%;
+  //left: 10%;
   top: 11.2rem;
   border-radius: 100px;
   background: ${(props) => props.theme["yellow-100"]};
@@ -47,7 +48,7 @@ export const Tags = styled.span`
   font-size: 1rem;
   text-transform: uppercase;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const Name = styled.h1`
