@@ -130,15 +130,24 @@ export const Buttons = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
   border-radius: 6px;
 
   margin: 0 0 0 16px;
 
   font-weight: 400;
   font-size: 1.6rem;
-  color: ${(props) => props.theme["purple-800"]};
+  color: ${(props) => props.theme["gray-900"]};
   background-color: ${(props) => props.theme["gray-400"]};
+
+  svg {
+    cursor: pointer;
+    color: ${(props) => props.theme["purple-600"]};
+
+    &:hover {
+      color: ${(props) => props.theme["purple-800"]};
+    }
+  }
 
   //border: 1px solid red;
 `;

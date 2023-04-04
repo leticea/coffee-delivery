@@ -41,7 +41,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
     <CoffeesCard>
       <img src={image} alt="" />
       {tags.map((tag) => {
-        return <Tags>{tag}</Tags>;
+        return <Tags key={tag}>{tag}</Tags>;
       })}
       <Name>{name}</Name>
       <Description>{description}</Description>
@@ -51,9 +51,9 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           <span>{moneyFormat(price)}</span>
         </p>
         <Buttons>
-          <Minus onClick={handleDecrease} />
+          <Minus size={14} onClick={handleDecrease} />
           {quantity}
-          <Plus onClick={handleIncrease} />
+          <Plus size={14} onClick={handleIncrease} />
         </Buttons>
         <Button>
           <ShoppingCart weight="fill" size={21} />

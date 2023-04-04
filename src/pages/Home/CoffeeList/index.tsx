@@ -7,7 +7,6 @@ export function CoffeeList() {
     <Container>
       <List>
           {coffees.map((coffee) => {
-            console.log(coffee )
             return <CoffeeCard
              key={coffee.id} coffee={coffee} />;
           })}
