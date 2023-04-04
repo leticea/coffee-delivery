@@ -22,8 +22,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
         return <Tags>{tag}</Tags>
       })}
       <Name>{name}</Name>
-      {/* <Description>{description}</Description>
-      <CoffeePrice>R${price}</CoffeePrice> */}
+      <Description>{description}</Description>
+      {/* <CoffeePrice>R${price}</CoffeePrice> */}
     </CoffeesCard>
   );
 }

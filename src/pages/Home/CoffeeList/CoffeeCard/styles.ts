@@ -67,8 +67,21 @@ export const Name = styled.h1`
 
 export const Description = styled.h1`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+
+  position: absolute;
+  height: 3.6rem;
+  left: 2rem;
+  right: 2rem;
+  top: 18.3rem;
+
+  color: ${(props) => props.theme["gray-600"]};
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 130%;
+
+  //border: 1px solid red;
 `;
 
 export const CoffeePrice = styled.h1`
