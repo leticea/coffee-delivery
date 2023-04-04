@@ -84,8 +84,40 @@ export const Description = styled.h1`
   //border: 1px solid red;
 `;
 
-export const CoffeePrice = styled.h1`
+export const Footer = styled.h1`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 0px;
+  gap: 29px;
+
+  position: absolute;
+  height: 38px;
+  left: 24px;
+  right: 24px;
+  bottom: 20px;
+  border: 1px solid red;
+
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: right;
+    color: ${(props) => props.theme["gray-700"]};
+  }
+
+  span {
+    font-family: "Baloo 2";
+    font-weight: 800;
+    font-size: 2.4rem;
+    color: ${(props) => props.theme["gray-700"]};
+  }
+`;
+
+export const Buttons = styled.button`
+  display: flex;
   justify-content: center;
 `;

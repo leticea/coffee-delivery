@@ -1,4 +1,6 @@
-import { CoffeePrice, CoffeesCard, Description, Name, Tags } from "./styles";
+import { ShoppingCart } from "phosphor-react";
+import { moneyFormat } from "../../../../utils/moneyFormat";
+import { Buttons, CoffeesCard, Description, Footer, Name, Tags } from "./styles";
 
 interface CoffeeProps {
   id: number;
@@ -23,7 +25,17 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
       })}
       <Name>{name}</Name>
       <Description>{description}</Description>
-      {/* <CoffeePrice>R${price}</CoffeePrice> */}
+      <Footer>
+        <p>R$
+          <span>{moneyFormat(price)}</span>
+        </p>
+        {/* <Buttons>
+          <span>
+            - 1 +
+          </span>
+          <ShoppingCart weight="fill" size={22} />
+        </Buttons> */}
+      </Footer>
     </CoffeesCard>
   );
 }
