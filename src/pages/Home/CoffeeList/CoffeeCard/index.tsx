@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { ShoppingCart } from "phosphor-react";
+import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import {
   Button,
@@ -32,11 +32,11 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
     const [quantity, setQuantity] = useState(0);
 
     function handleIncrease() {
-
+      const quantity = setQuantity((state) => state + 1);
     }
 
     function handleDecrease() {
-
+      setQuantity((state) => state - 1);
     }
   }
 
@@ -53,7 +53,11 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           R$
           <span>{moneyFormat(price)}</span>
         </p>
-        <Buttons>- 1 +</Buttons>
+        <Buttons>
+          <Minus onClick={handleDecrease} />
+          {quantity}
+          <Plus onClick={handleIncrease} />
+        </Buttons>
         <Button>
           <ShoppingCart weight="fill" size={21} />
         </Button>
