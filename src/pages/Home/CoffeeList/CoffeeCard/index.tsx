@@ -27,17 +27,14 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const { id, tags, name, image, description, price } = coffee;
+  const [quantity, setQuantity] = useState(0);
 
-  function QuantityButton() {
-    const [quantity, setQuantity] = useState(0);
+  function handleIncrease() {
+    setQuantity((state) => state + 1);
+  }
 
-    function handleIncrease() {
-      const quantity = setQuantity((state) => state + 1);
-    }
-
-    function handleDecrease() {
-      setQuantity((state) => state - 1);
-    }
+  function handleDecrease() {
+    setQuantity((state) => state - 1);
   }
 
   return (
