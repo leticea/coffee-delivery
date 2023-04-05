@@ -1,3 +1,10 @@
+import { Checkout } from "./styles";
+
 export function Cart() {
-  return <h1>Carrinho</h1>
+  return (
+    <Checkout>
+      <h1>Complete seu pedido</h1>
+      <h1>Cafés selecionados</h1>
+    </Checkout>
+  );
 }

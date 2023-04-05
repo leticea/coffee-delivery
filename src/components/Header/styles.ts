@@ -7,7 +7,7 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 32px 160px;
 
-  //border: 1px solid red;
+  border: 1px solid red;
 
   nav {
     display: flex;
