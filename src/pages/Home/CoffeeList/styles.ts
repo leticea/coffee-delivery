@@ -13,6 +13,8 @@ export const List = styled.ul`
 
   list-style: none;
 
+  gap: 3.2rem;
+
   //border: 1px solid red;
 `;
 

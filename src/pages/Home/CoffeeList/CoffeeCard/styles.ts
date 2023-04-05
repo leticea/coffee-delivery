@@ -103,14 +103,12 @@ export const Footer = styled.h1`
     width: 6.7rem;
     height: 3.1rem;
     display: flex;
-    text-align: center;
     align-items: center;
     gap: 0.4rem;
 
     font-family: "Roboto";
     font-weight: 400;
     font-size: 1.4rem;
-    line-height: 130%;
     color: ${(props) => props.theme["gray-700"]};
 
     //border: 1px solid red;
@@ -143,6 +141,7 @@ export const Buttons = styled.div`
   svg {
     cursor: pointer;
     color: ${(props) => props.theme["purple-600"]};
+    user-select: none;
 
     &:hover {
       color: ${(props) => props.theme["purple-800"]};

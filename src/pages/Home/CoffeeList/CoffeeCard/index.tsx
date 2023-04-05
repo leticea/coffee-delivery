@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import {
   Button,
@@ -58,7 +58,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
         <Button>
-          <ShoppingCart weight="fill" size={21} />
+          <ShoppingCartSimple weight="fill" size={21} />
         </Button>
       </Footer>
     </CoffeesCard>
