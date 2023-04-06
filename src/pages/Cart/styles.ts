@@ -5,7 +5,6 @@ export const Title = styled.div`
   height: 2.3rem;
   margin: 4rem 0;
   padding: 0 0 0 160px;
-  gap: 15rem;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -17,7 +16,7 @@ export const Title = styled.div`
   line-height: 130%;
   color: ${(props) => props.theme["gray-800"]};
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const InfoContainer = styled.div`
@@ -25,17 +24,18 @@ export const InfoContainer = styled.div`
   height: 37.2rem;
   position: absolute;
   margin: -20px 0 0 160px;
+  border-radius: 6px;
 
   background: ${(props) => props.theme["gray-200"]};
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const Headline = styled.div`
   height: 4.4rem;
   margin: 4rem 4rem auto 4rem;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   h1 {
     display: flex;
@@ -60,7 +60,6 @@ export const Headline = styled.div`
 
   svg {
     margin: 0 0.8rem 0 0;
-
     color: ${(props) => props.theme["yellow-600"]};
   }
 `;
@@ -75,7 +74,7 @@ export const AddressInfo = styled.form`
 
   gap: 1.6rem;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   input {
     border: 0.1rem solid ${(props) => props.theme["gray-400"]};
@@ -106,8 +105,26 @@ export const AddressInfo = styled.form`
   }
 
   .complement {
-    width: 34.67rem;
+    width: 34.6rem;
+  }
 
-    border: 1px solid red;
+  .district {
+    width: 20rem;
+    margin: 0 1.2rem auto auto;
+
+    //border: 1px solid red;
+  }
+
+  .city {
+    width: 27rem;
+    margin: 0 1.2rem auto auto;
+
+    //border: 1px solid red;
+  }
+
+  .state {
+    width: 6.4rem;
+
+    //border: 1px solid red;
   }
 `;

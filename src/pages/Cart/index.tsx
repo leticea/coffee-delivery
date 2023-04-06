@@ -29,9 +29,11 @@ export function Cart() {
               placeholder="Complemento"
             />
           </section>
-          <input className="district" type="text" placeholder="Bairro" />
-          <input className="city" type="text" placeholder="Cidade" />
-          <input className="state" type="text" placeholder="UF" />
+          <section>
+            <input className="district" type="text" placeholder="Bairro" />
+            <input className="city" type="text" placeholder="Cidade" />
+            <input className="state" type="text" placeholder="UF" />
+          </section>
         </AddressInfo>
       </InfoContainer>
     </>
