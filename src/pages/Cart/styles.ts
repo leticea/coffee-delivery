@@ -161,3 +161,10 @@ export const PaymentInfo = styled.div`
     color: ${(props) => props.theme["purple-600"]};
   }
 `;
+
+export const PaymentMethods = styled.section`
+  width: 50rem;
+  height: 5rem;
+
+  border: 1px solid red;
+`;

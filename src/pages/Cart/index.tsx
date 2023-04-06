@@ -3,9 +3,10 @@ import {
   Headline,
   InfoContainer,
   PaymentInfo,
+  PaymentMethods,
   Title,
 } from "./styles";
-import { CurrencyDollar, MapPinLine } from "phosphor-react";
+import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
 
 export function Cart() {
   return (
@@ -49,6 +50,21 @@ export function Cart() {
           Pagamento
         </h1>
         <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+
+        <PaymentMethods>
+          <div>
+            <CreditCard size={22} />
+            Cartão de crédito
+          </div>
+          <div>
+            <Bank size={22} />
+            Cartão de débito
+          </div>
+          <div>
+            <Money size={22} />
+            Dinheiro
+          </div>
+        </PaymentMethods>
       </PaymentInfo>
     </>
   );
