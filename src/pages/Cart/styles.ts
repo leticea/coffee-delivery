@@ -35,8 +35,6 @@ export const Headline = styled.div`
   height: 4.4rem;
   margin: 4rem 4rem auto 4rem;
 
-  //border: 1px solid red;
-
   h1 {
     display: flex;
     font-weight: 400;
@@ -74,16 +72,14 @@ export const AddressInfo = styled.form`
   //border: 1px solid red;
 
   input {
-    border: 0.1rem solid ${(props) => props.theme["gray-400"]};
-    box-shadow: 0 0 0 0;
-    background: ${(props) => props.theme["gray-300"]};
-
     padding: 1.2rem;
     font-size: 1.4rem;
-
+    border: 0.1rem solid ${(props) => props.theme["gray-400"]};
     border-radius: 4px;
+    background: ${(props) => props.theme["gray-300"]};
 
     &:focus {
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
       border: 0.1rem solid ${(props) => props.theme["yellow-600"]};
     }
   }
@@ -108,21 +104,15 @@ export const AddressInfo = styled.form`
   .district {
     width: 20rem;
     margin: 0 1.2rem auto auto;
-
-    //border: 1px solid red;
   }
 
   .city {
     width: 27rem;
     margin: 0 1.2rem auto auto;
-
-    //border: 1px solid red;
   }
 
   .state {
     width: 6.4rem;
-
-    //border: 1px solid red;
   }
 `;
 
@@ -136,7 +126,7 @@ export const PaymentInfo = styled.div`
 
   background: ${(props) => props.theme["gray-200"]};
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   h1 {
     display: flex;
@@ -163,8 +153,47 @@ export const PaymentInfo = styled.div`
 `;
 
 export const PaymentMethods = styled.section`
-  width: 50rem;
-  height: 5rem;
+  width: 56rem;
+  height: 5.1rem;
 
-  border: 1px solid red;
+  margin: 3.2rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  color: ${(props) => props.theme["gray-700"]};
+
+  //border: 1px solid red;
+
+  div {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 160%;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    background: ${(props) => props.theme["gray-400"]};
+  }
+
+  .debit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    background: ${(props) => props.theme["gray-400"]};
+  }
+
+  .money {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1.6rem;
+    background: ${(props) => props.theme["gray-400"]};
+  }
 `;

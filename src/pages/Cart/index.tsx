@@ -52,16 +52,16 @@ export function Cart() {
         <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
 
         <PaymentMethods>
-          <div>
-            <CreditCard size={22} />
+          <div className="credit">
+            <CreditCard size={16} />
             Cartão de crédito
           </div>
-          <div>
-            <Bank size={22} />
+          <div className="debit">
+            <Bank size={16} />
             Cartão de débito
           </div>
-          <div>
-            <Money size={22} />
+          <div className="money">
+            <Money size={16} />
             Dinheiro
           </div>
         </PaymentMethods>
