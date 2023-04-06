@@ -10,8 +10,9 @@ export const Title = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  place-content: center;
+
   font-family: "Baloo 2";
-  font-weight: 700;
   font-size: 2.5rem;
   line-height: 130%;
   color: ${(props) => props.theme["gray-800"]};
@@ -20,14 +21,12 @@ export const Title = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  //display: flex;
-  /* flex-direction: column;
-  align-items: flex-start; */
-  margin: -20px 0 0 160px;
-  //gap: 32px;
-
   width: 64rem;
   height: 37.2rem;
+  position: absolute;
+  margin: -20px 0 0 160px;
+
+  background: ${(props) => props.theme["gray-200"]};
 
   border: 1px solid red;
 `;
@@ -74,28 +73,41 @@ export const AddressInfo = styled.form`
   display: flex;
   flex-direction: column;
 
-  background: ${(props) => props.theme["gray-300"]};
+  gap: 1.6rem;
 
-  border: 0.1rem solid ${(props) => props.theme["gray-400"]};
+  border: 1px solid red;
 
-  border-radius: 4px;
+  input {
+    border: 0.1rem solid ${(props) => props.theme["gray-400"]};
+    box-shadow: 0 0 0 0;
+    background: ${(props) => props.theme["gray-300"]};
 
-  //border: 1px solid red;
-
-  .cep {
-    display: flex;
-    align-items: center;
     padding: 1.2rem;
-    gap: 0.4rem;
-
-    width: 200px;
-    height: 42px;
     font-size: 1.4rem;
 
+    border-radius: 4px;
 
+    &:focus {
+      border: 0.1rem solid ${(props) => props.theme["yellow-600"]};
+    }
+  }
+
+  .cep {
+    width: 20rem;
+  }
+
+  .street {
+    width: 100%;
+  }
+
+  .number {
+    width: 20rem;
+    margin: 0 1.2rem auto auto;
+  }
+
+  .complement {
+    width: 34.67rem;
+
+    border: 1px solid red;
   }
 `;
-
-// addressInfo
-
-// paymentInfo
