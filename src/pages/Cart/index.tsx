@@ -1,5 +1,11 @@
-import { AddressInfo, Headline, InfoContainer, Title } from "./styles";
-import { MapPinLine } from "phosphor-react";
+import {
+  AddressInfo,
+  Headline,
+  InfoContainer,
+  PaymentInfo,
+  Title,
+} from "./styles";
+import { CurrencyDollar, MapPinLine } from "phosphor-react";
 
 export function Cart() {
   return (
@@ -29,6 +35,7 @@ export function Cart() {
               placeholder="Complemento"
             />
           </section>
+
           <section>
             <input className="district" type="text" placeholder="Bairro" />
             <input className="city" type="text" placeholder="Cidade" />
@@ -36,6 +43,13 @@ export function Cart() {
           </section>
         </AddressInfo>
       </InfoContainer>
+      <PaymentInfo>
+        <h1>
+          <CurrencyDollar size={22} />
+          Pagamento
+        </h1>
+        <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
+      </PaymentInfo>
     </>
   );
 }

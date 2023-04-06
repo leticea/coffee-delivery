@@ -23,7 +23,7 @@ export const InfoContainer = styled.div`
   width: 64rem;
   height: 37.2rem;
   position: absolute;
-  margin: -20px 0 0 160px;
+  margin: -2rem 0 0 16rem;
   border-radius: 6px;
 
   background: ${(props) => props.theme["gray-200"]};
@@ -39,7 +39,6 @@ export const Headline = styled.div`
 
   h1 {
     display: flex;
-    font-family: "Roboto";
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 130%;
@@ -50,8 +49,6 @@ export const Headline = styled.div`
   p {
     margin-top: 0.2rem;
     padding: 0 3.1rem;
-    font-family: "Roboto";
-    font-weight: 400;
     font-size: 1.4rem;
     line-height: 130%;
 
@@ -126,5 +123,41 @@ export const AddressInfo = styled.form`
     width: 6.4rem;
 
     //border: 1px solid red;
+  }
+`;
+
+export const PaymentInfo = styled.div`
+  width: 64rem;
+  height: 20.7rem;
+
+  margin: 40.5rem 0 10rem 16rem;
+  padding: 4rem;
+  border-radius: 6px;
+
+  background: ${(props) => props.theme["gray-200"]};
+
+  border: 1px solid red;
+
+  h1 {
+    display: flex;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+
+    color: ${(props) => props.theme["gray-800"]};
+  }
+
+  p {
+    margin-top: 0.2rem;
+    padding: 0 3rem;
+    font-size: 1.4rem;
+    line-height: 130%;
+
+    color: ${(props) => props.theme["gray-700"]};
+  }
+
+  svg {
+    margin: 0 0.8rem 0 0;
+    color: ${(props) => props.theme["purple-600"]};
   }
 `;
