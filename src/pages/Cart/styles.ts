@@ -20,7 +20,7 @@ export const Title = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  display: flex;
+  //display: flex;
   /* flex-direction: column;
   align-items: flex-start; */
   margin: -20px 0 0 160px;
@@ -33,37 +33,35 @@ export const InfoContainer = styled.div`
 `;
 
 export const Headline = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  margin: 4rem 4rem 0 4rem;
-  //gap: 8px;
-
-  width: 56rem;
   height: 4.4rem;
+  margin: 4rem 4rem auto 4rem;
 
   border: 1px solid red;
 
   h1 {
+    display: flex;
     font-family: "Roboto";
     font-weight: 400;
     font-size: 1.6rem;
-    margin: 0 0 0 2.2rem;
-    
+    line-height: 130%;
+
     color: ${(props) => props.theme["gray-800"]};
   }
 
   p {
+    margin-top: 0.2rem;
+    padding: 0 3.1rem;
     font-family: "Roboto";
+    font-weight: 400;
     font-size: 1.4rem;
     line-height: 130%;
-
-    margin: 0 0 0 2.2rem;
 
     color: ${(props) => props.theme["gray-700"]};
   }
 
   svg {
+    margin: 0 0.8rem 0 0;
+
     color: ${(props) => props.theme["yellow-600"]};
   }
 `;
