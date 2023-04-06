@@ -66,6 +66,15 @@ export const Headline = styled.div`
   }
 `;
 
+export const AddressInfo = styled.form`
+  width: 56rem;
+  height: 21.6rem;
+  margin: 3.2rem auto auto auto;
+
+
+  border: 1px solid red;
+`
+
 // addressInfo
 
 // paymentInfo

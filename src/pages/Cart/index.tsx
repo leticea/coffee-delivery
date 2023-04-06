@@ -1,4 +1,4 @@
-import { Headline, InfoContainer, Title } from "./styles";
+import { AddressInfo, Headline, InfoContainer, Title } from "./styles";
 import { MapPinLine } from "phosphor-react";
 
 export function Cart() {
@@ -16,9 +16,17 @@ export function Cart() {
           </h1>
           <p>Informe o endereço onde deseja receber seu pedido</p>
         </Headline>
+
+        <AddressInfo>
+          {/* <section>
+            <div>
+              <label htmlFor="cep"></label>
+              <input id="cep" type="text" placeholder="CEP" />
+            </div>
+          </section> */}
+        </AddressInfo>
       </InfoContainer>
     </>
   );
 }
 
-//section
