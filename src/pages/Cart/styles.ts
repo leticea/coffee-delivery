@@ -71,9 +71,30 @@ export const AddressInfo = styled.form`
   height: 21.6rem;
   margin: 3.2rem auto auto auto;
 
+  display: flex;
+  flex-direction: column;
 
-  border: 1px solid red;
-`
+  background: ${(props) => props.theme["gray-300"]};
+
+  border: 0.1rem solid ${(props) => props.theme["gray-400"]};
+
+  border-radius: 4px;
+
+  //border: 1px solid red;
+
+  .cep {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    gap: 0.4rem;
+
+    width: 200px;
+    height: 42px;
+    font-size: 1.4rem;
+
+
+  }
+`;
 
 // addressInfo
 

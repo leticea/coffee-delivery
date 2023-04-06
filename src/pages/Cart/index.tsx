@@ -18,15 +18,15 @@ export function Cart() {
         </Headline>
 
         <AddressInfo>
-          {/* <section>
-            <div>
-              <label htmlFor="cep"></label>
-              <input id="cep" type="text" placeholder="CEP" />
-            </div>
-          </section> */}
+          <input className="cep" type="text" placeholder="CEP" />
+          <input className="street" type="text" placeholder="Rua" />
+          <input className="number" type="text" placeholder="Número" />
+          <input className="complement" type="text" placeholder="Complemento" />
+          <input className="district" type="text" placeholder="Bairro" />
+          <input className="city" type="text" placeholder="Cidade" />
+          <input className="state" type="text" placeholder="UF" />
         </AddressInfo>
       </InfoContainer>
     </>
   );
 }
-
