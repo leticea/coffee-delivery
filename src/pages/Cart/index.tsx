@@ -2,9 +2,10 @@ import {
   AddressForm,
   Headline,
   InfoContainer,
+  OrderCard,
   PaymentInfo,
   PaymentMethods,
-  SelectedCoffeeContainer,
+  SelectedCoffeeCard,
   Title,
 } from "./styles";
 import {
@@ -80,14 +81,14 @@ export function Cart() {
         </PaymentMethods>
       </PaymentInfo>
 
-      <SelectedCoffeeContainer>
-        <section>
+      <OrderCard>
+        <SelectedCoffeeCard>
           <span>
             <img src={traditional} alt="" />
             Expresso Tradicional
           </span>
           <p>R$ 9,90</p>
-          <div>
+          {/* <div>
             <Minus size={14} />
             1
             <Plus size={14} />
@@ -95,9 +96,9 @@ export function Cart() {
               <Trash size={14} />
               Remover
             </button>
-          </div>
-        </section>
-      </SelectedCoffeeContainer>
+          </div> */}
+        </SelectedCoffeeCard>
+      </OrderCard>
     </>
   );
 }

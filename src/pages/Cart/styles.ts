@@ -198,14 +198,12 @@ export const PaymentMethods = styled.section`
   }
 `;
 
-export const SelectedCoffeeContainer = styled.div`
+export const OrderCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 4rem;
   //gap: 24px;
-
-  //margin: 0.5rem auto auto auto;
 
   position: absolute;
   width: 44.8rem;
@@ -217,4 +215,34 @@ export const SelectedCoffeeContainer = styled.div`
   border-radius: 6px 44px;
 
   border: 1px solid red;
+`;
+
+export const SelectedCoffeeCard = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.8rem 0.4rem;
+  gap: 59px;
+
+  width: 36.8rem;
+  height: 8rem;
+
+  border: 1px solid red;
+
+  span {
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: ${(props) => props.theme["gray-800"]};
+    user-select: none;
+  }
+
+  
+
+  img {
+    margin: auto 2rem auto auto;
+    width: 6.4rem;
+    height: 6.4rem;
+  }
 `;
