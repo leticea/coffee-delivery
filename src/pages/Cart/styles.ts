@@ -205,6 +205,8 @@ export const OrderCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   padding: 4rem;
+  user-select: none;
+
   //gap: 24px;
 
   position: absolute;
@@ -236,7 +238,6 @@ export const SelectedCoffeeCard = styled.section`
     font-size: 1.6rem;
     line-height: 130%;
     color: ${(props) => props.theme["gray-800"]};
-    user-select: none;
 
     width: 255px;
     height: 64px;
@@ -279,6 +280,32 @@ export const SelectedCoffeeCard = styled.section`
     width: 17.1rem;
     height: 3.2rem;
 
-    //border: 1px solid violet;
+    border: 1px solid violet;
+  }
+
+  .icons {
+    width: 7.2rem;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 6px;
+
+    margin: 0 0 0 16px;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: ${(props) => props.theme["gray-900"]};
+    background-color: ${(props) => props.theme["gray-400"]};
+
+    svg {
+      cursor: pointer;
+      color: ${(props) => props.theme["purple-600"]};
+
+      &:hover {
+        color: ${(props) => props.theme["purple-800"]};
+      }
+    }
   }
 `;

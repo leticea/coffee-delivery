@@ -87,9 +87,12 @@ export function Cart() {
             <div>
               Expresso Tradicional
               <span>
-                <Minus size={14} />
-                1
-                <Plus size={14} />
+                <div className="icons">
+                  <Minus size={14} />
+                  1
+                  <Plus size={14} />
+                </div>
+
                 <button>
                   <Trash size={14} />
                   Remover
