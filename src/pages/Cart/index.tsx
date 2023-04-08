@@ -7,7 +7,19 @@ import {
   SelectedCoffeeContainer,
   Title,
 } from "./styles";
-import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
+import {
+  Bank,
+  CreditCard,
+  CurrencyDollar,
+  MapPinLine,
+  Minus,
+  Money,
+  Plus,
+  Trash,
+} from "phosphor-react";
+
+import traditional from "../../assets/traditional.svg";
+
 
 export function Cart() {
   return (
@@ -69,7 +81,22 @@ export function Cart() {
       </PaymentInfo>
 
       <SelectedCoffeeContainer>
-
+        <section>
+          <span>
+            <img src={traditional} alt="" />
+            Expresso Tradicional
+          </span>
+          <p>R$ 9,90</p>
+          <div>
+            <Minus size={14} />
+            1
+            <Plus size={14} />
+            <button>
+              <Trash size={14} />
+              Remover
+            </button>
+          </div>
+        </section>
       </SelectedCoffeeContainer>
     </>
   );

@@ -202,16 +202,16 @@ export const SelectedCoffeeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px;
+  padding: 4rem;
   //gap: 24px;
 
-  margin: 0.5rem auto auto auto;
+  //margin: 0.5rem auto auto auto;
 
   position: absolute;
-  width: 448px;
-  height: 498px;
-  left: 832px;
-  top: 182px;
+  width: 44.8rem;
+  height: 49.8rem;
+  left: 83.2rem;
+  top: 18.7rem;
 
   background: ${(props) => props.theme["gray-200"]};
   border-radius: 6px 44px;
