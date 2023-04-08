@@ -273,7 +273,7 @@ export const SelectedCoffeeCard = styled.section`
   }
 `;
 
-export const ButtonsContainer = styled.div`
+export const ButtonsContainer = styled.section`
   display: flex;
 
   align-items: center;
@@ -282,7 +282,7 @@ export const ButtonsContainer = styled.div`
   width: 17.1rem;
   height: 3.2rem;
 
-  border: 1px solid violet;
+  //border: 1px solid violet;
 `;
 
 export const QuantityButtons = styled.span`
@@ -290,7 +290,11 @@ export const QuantityButtons = styled.span`
   justify-content: center;
   align-items: center;
 
-  font-weight: 400;
+  width: 7.2rem;
+  height: 3.2rem;
+  border-radius: 6px;
+  gap: 4px;
+
   font-size: 1.6rem;
   color: ${(props) => props.theme["gray-900"]};
   background-color: ${(props) => props.theme["gray-400"]};
@@ -302,5 +306,28 @@ export const QuantityButtons = styled.span`
     &:hover {
       color: ${(props) => props.theme["purple-800"]};
     }
+  }
+`;
+
+export const Button = styled.button`
+  width: 9.1rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0px 8px;
+  gap: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  background: ${(props) => props.theme["gray-400"]};
+  color: ${(props) => props.theme["gray-700"]};
+
+  svg {
+    color: ${(props) => props.theme["purple-600"]};
   }
 `;

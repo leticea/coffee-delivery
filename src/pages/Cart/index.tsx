@@ -1,6 +1,6 @@
 import {
   AddressForm,
-  Buttons,
+  Button,
   ButtonsContainer,
   Headline,
   InfoContainer,
@@ -96,10 +96,10 @@ export function Cart() {
                   <Plus size={14} />
                 </QuantityButtons>
 
-                {/* <button>
+                <Button>
                   <Trash size={14} />
                   Remover
-                </button> */}
+                </Button>
               </ButtonsContainer>
             </div>
           </div>
