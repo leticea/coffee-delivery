@@ -105,6 +105,7 @@ export function Cart() {
           </div>
           <p>R$ 9,90</p>
         </SelectedCoffeeCard>
+        <hr />
       </OrderCard>
     </>
   );

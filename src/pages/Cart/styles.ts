@@ -218,7 +218,13 @@ export const OrderCard = styled.div`
   border-radius: 6px 44px;
   background: ${(props) => props.theme["gray-200"]};
 
-  border: 1px solid red;
+  //border: 1px solid red;
+
+  hr {
+    margin-top: 24px;
+    width: 36.8rem;
+    border:  1px solid ${(props) => props.theme["gray-400"]};
+  }
 `;
 
 export const SelectedCoffeeCard = styled.section`
@@ -230,7 +236,7 @@ export const SelectedCoffeeCard = styled.section`
   width: 36.8rem;
   height: 8rem;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   div {
     display: flex;
