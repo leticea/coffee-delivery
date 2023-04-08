@@ -16,7 +16,7 @@ export const Title = styled.div`
   line-height: 130%;
   color: ${(props) => props.theme["gray-800"]};
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const InfoContainer = styled.div`
@@ -28,7 +28,7 @@ export const InfoContainer = styled.div`
 
   background: ${(props) => props.theme["gray-200"]};
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const Headline = styled.div`
@@ -238,11 +238,18 @@ export const SelectedCoffeeCard = styled.section`
     user-select: none;
   }
 
-  
+  p {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 130%;
+    color: ${(props) => props.theme["gray-700"]};
+  }
 
   img {
     margin: auto 2rem auto auto;
     width: 6.4rem;
     height: 6.4rem;
   }
+
+  
 `;
