@@ -1,10 +1,13 @@
 import {
   AddressForm,
+  Buttons,
+  ButtonsContainer,
   Headline,
   InfoContainer,
   OrderCard,
   PaymentInfo,
   PaymentMethods,
+  QuantityButtons,
   SelectedCoffeeCard,
   Title,
 } from "./styles";
@@ -86,18 +89,18 @@ export function Cart() {
             <img src={traditional} alt="" />
             <div>
               Expresso Tradicional
-              <span>
-                <div className="icons">
+              <ButtonsContainer>
+                <QuantityButtons>
                   <Minus size={14} />
                   1
                   <Plus size={14} />
-                </div>
+                </QuantityButtons>
 
-                <button>
+                {/* <button>
                   <Trash size={14} />
                   Remover
-                </button>
-              </span>
+                </button> */}
+              </ButtonsContainer>
             </div>
           </div>
           <p>R$ 9,90</p>
