@@ -59,7 +59,7 @@ export const Headline = styled.div`
   }
 `;
 
-export const AddressInfo = styled.form`
+export const AddressForm = styled.form`
   width: 56rem;
   height: 21.6rem;
   margin: 3.2rem auto auto auto;

@@ -1,5 +1,5 @@
 import {
-  AddressInfo,
+  AddressForm,
   Headline,
   InfoContainer,
   PaymentInfo,
@@ -24,7 +24,7 @@ export function Cart() {
           <p>Informe o endereço onde deseja receber seu pedido</p>
         </Headline>
 
-        <AddressInfo>
+        <AddressForm>
           <input className="cep" type="text" placeholder="CEP" />
           <input className="street" type="text" placeholder="Rua" />
 
@@ -42,7 +42,7 @@ export function Cart() {
             <input className="city" type="text" placeholder="Cidade" />
             <input className="state" type="text" placeholder="UF" />
           </section>
-        </AddressInfo>
+        </AddressForm>
       </InfoContainer>
       <PaymentInfo>
         <h1>
@@ -66,6 +66,10 @@ export function Cart() {
           </div>
         </PaymentMethods>
       </PaymentInfo>
+
+      <div>
+        E
+      </div>
     </>
   );
 }
