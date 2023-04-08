@@ -21,7 +21,6 @@ import {
 
 import traditional from "../../assets/traditional.svg";
 
-
 export function Cart() {
   return (
     <>
@@ -83,20 +82,22 @@ export function Cart() {
 
       <OrderCard>
         <SelectedCoffeeCard>
-          <span>
+          <div>
             <img src={traditional} alt="" />
-            Expresso Tradicional
-          </span>
+            <div>
+              Expresso Tradicional
+              <span>
+                <Minus size={14} />
+                1
+                <Plus size={14} />
+                <button>
+                  <Trash size={14} />
+                  Remover
+                </button>
+              </span>
+            </div>
+          </div>
           <p>R$ 9,90</p>
-          {/* <div>
-            <Minus size={14} />
-            1
-            <Plus size={14} />
-            <button>
-              <Trash size={14} />
-              Remover
-            </button>
-          </div> */}
         </SelectedCoffeeCard>
       </OrderCard>
     </>

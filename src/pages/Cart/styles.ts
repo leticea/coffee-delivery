@@ -171,6 +171,8 @@ export const PaymentMethods = styled.section`
     line-height: 160%;
     border-radius: 6px;
     cursor: pointer;
+
+    //border: 1px solid red;
   }
 
   .credit {
@@ -211,45 +213,72 @@ export const OrderCard = styled.div`
   left: 83.2rem;
   top: 18.7rem;
 
-  background: ${(props) => props.theme["gray-200"]};
   border-radius: 6px 44px;
+  background: ${(props) => props.theme["gray-200"]};
 
   border: 1px solid red;
 `;
 
 export const SelectedCoffeeCard = styled.section`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: flex-start;
   padding: 0.8rem 0.4rem;
-  gap: 59px;
+  gap: 48px;
 
   width: 36.8rem;
   height: 8rem;
 
   border: 1px solid red;
 
-  span {
+  div {
     display: flex;
+
     font-size: 1.6rem;
     line-height: 130%;
     color: ${(props) => props.theme["gray-800"]};
     user-select: none;
+
+    width: 255px;
+    height: 64px;
+
+    //border: 1px solid blue;
+
+    div {
+      gap: 0.8rem;
+      flex-direction: column;
+    }
   }
 
   p {
+    min-width: 6rem;
+    height: 2.1rem;
+
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 130%;
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
     color: ${(props) => props.theme["gray-700"]};
+    //border: 1px solid red;
   }
 
   img {
-    margin: auto 2rem auto auto;
+    margin: auto 2rem auto 0;
     width: 6.4rem;
     height: 6.4rem;
   }
 
-  
+  span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 17.1rem;
+    height: 3.2rem;
+
+    //border: 1px solid violet;
+  }
 `;
