@@ -4,6 +4,7 @@ import {
   InfoContainer,
   PaymentInfo,
   PaymentMethods,
+  SelectedCoffeeContainer,
   Title,
 } from "./styles";
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "phosphor-react";
@@ -67,9 +68,9 @@ export function Cart() {
         </PaymentMethods>
       </PaymentInfo>
 
-      <div>
-        E
-      </div>
+      <SelectedCoffeeContainer>
+
+      </SelectedCoffeeContainer>
     </>
   );
 }

@@ -4,7 +4,7 @@ export const Title = styled.div`
   width: 100%;
   height: 2.3rem;
   margin: 4rem 0;
-  padding: 0 0 0 160px;
+  padding: 0 3rem 0 16rem;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -16,7 +16,7 @@ export const Title = styled.div`
   line-height: 130%;
   color: ${(props) => props.theme["gray-800"]};
 
-  //border: 1px solid red;
+  border: 1px solid red;
 `;
 
 export const InfoContainer = styled.div`
@@ -28,7 +28,7 @@ export const InfoContainer = styled.div`
 
   background: ${(props) => props.theme["gray-200"]};
 
-  //border: 1px solid red;
+  border: 1px solid red;
 `;
 
 export const Headline = styled.div`
@@ -196,4 +196,25 @@ export const PaymentMethods = styled.section`
     padding: 0 1.6rem;
     background: ${(props) => props.theme["gray-400"]};
   }
+`;
+
+export const SelectedCoffeeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  //gap: 24px;
+
+  margin: 0.5rem auto auto auto;
+
+  position: absolute;
+  width: 448px;
+  height: 498px;
+  left: 832px;
+  top: 182px;
+
+  background: ${(props) => props.theme["gray-200"]};
+  border-radius: 6px 44px;
+
+  border: 1px solid red;
 `;
