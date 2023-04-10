@@ -25,8 +25,11 @@ import {
 } from "phosphor-react";
 
 import traditional from "../../assets/traditional.svg";
+import { useForm } from "react-hook-form";
 
 export function Cart() {
+  const { register, handleSubmit } = useForm();
+
   return (
     <>
       <Title>
@@ -43,22 +46,53 @@ export function Cart() {
         </Headline>
 
         <AddressForm>
-          <input className="cep" type="text" placeholder="CEP" />
-          <input className="street" type="text" placeholder="Rua" />
+          <input
+            className="cep"
+            type="text"
+            placeholder="CEP"
+            {...register("cep")}
+          />
+          <input
+            className="street"
+            type="text"
+            placeholder="Rua"
+            {...register("street")}
+          />
 
           <section>
-            <input className="number" type="text" placeholder="Número" />
+            <input
+              className="number"
+              type="text"
+              placeholder="Número"
+              {...register("number")}
+            />
             <input
               className="complement"
               type="text"
               placeholder="Complemento"
+              {...register("complement")}
             />
           </section>
 
           <section>
-            <input className="district" type="text" placeholder="Bairro" />
-            <input className="city" type="text" placeholder="Cidade" />
-            <input className="state" type="text" placeholder="UF" />
+            <input
+              className="district"
+              type="text"
+              placeholder="Bairro"
+              {...register("district")}
+            />
+            <input
+              className="city"
+              type="text"
+              placeholder="Cidade"
+              {...register("city")}
+            />
+            <input
+              className="state"
+              type="text"
+              placeholder="UF"
+              {...register("state")}
+            />
           </section>
         </AddressForm>
       </InfoContainer>
