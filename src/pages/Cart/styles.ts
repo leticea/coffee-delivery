@@ -128,13 +128,27 @@ export const PaymentInfo = styled.div`
 
   //border: 1px solid red;
 
-  h1 {
-    display: flex;
+  .payment {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 130%;
+    display: flex;
+    padding: 0;
+
+    margin-left: -0.4rem;
 
     color: ${(props) => props.theme["gray-800"]};
+    //border: 1px solid red;
+  }
+
+  span {
+    display: flex;
+
+    svg {
+      display: flex;
+      align-self: flex-end;
+      margin-top: 0.2rem;
+    }
   }
 
   p {
@@ -147,7 +161,7 @@ export const PaymentInfo = styled.div`
   }
 
   svg {
-    margin: 0 0.8rem 0 0;
+    margin: 0 1.2rem 0 0;
     color: ${(props) => props.theme["purple-600"]};
   }
 `;

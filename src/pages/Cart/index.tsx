@@ -106,10 +106,10 @@ export function Cart() {
         </AddressForm>
       </InfoContainer>
       <PaymentInfo>
-        <h1>
+        <span>
           <CurrencyDollar size={22} />
-          Pagamento
-        </h1>
+          <p className="payment">Pagamento</p>
+        </span>
         <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
 
         <PaymentMethods>
