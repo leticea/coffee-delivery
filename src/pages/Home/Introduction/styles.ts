@@ -89,7 +89,7 @@ export const InfoWithIcon = styled.li<InfoWithIconProps>`
   }
 `;
 
-export const CoffeeImage = styled.span`
+export const CoffeeImage = styled.div`
   img {
     width: 47.6rem;
     height: 36rem;

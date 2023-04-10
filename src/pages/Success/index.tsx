@@ -1,9 +1,19 @@
-import { OrderInfo, OrderInfoWithIcon, Title } from "./styles";
+import {
+  IllustrationImage,
+  OrderInfo,
+  OrderInfoWithIcon,
+  Title,
+} from "./styles";
 import { CurrencyDollarSimple, MapPin, Timer } from "phosphor-react";
+
+import illustration from "../../assets/illustration.png";
 
 export function Success() {
   return (
     <>
+      <IllustrationImage>
+        <img src={illustration} />
+      </IllustrationImage>
       <Title>
         <p className="bold">Uhu! Pedido confirmado</p>
         <p className="normal">

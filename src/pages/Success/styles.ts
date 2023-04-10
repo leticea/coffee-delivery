@@ -25,6 +25,16 @@ export const Title = styled.div`
   //border: 1px solid red;
 `;
 
+export const IllustrationImage = styled.div`
+  img {
+    position: absolute;
+    width: 49.2rem;
+    height: 29.3rem;
+    left: 52%;
+    top: 28.4rem;
+  }
+`;
+
 export const OrderInfo = styled.ul`
   width: 52.6rem;
   height: 27rem;
@@ -36,11 +46,11 @@ export const OrderInfo = styled.ul`
   border-radius: 6px 36px;
 
   position: relative;
-  background: white;
 
   display: flex;
   flex-direction: column;
 
+  background: white;
   list-style: none;
   gap: 3.2rem;
 
@@ -76,6 +86,7 @@ export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
   display: flex;
   align-items: center;
   color: ${(props) => props.theme["gray-700"]};
+  gap: 1.2rem;
 
   p {
     font-size: 1.6rem;
@@ -87,7 +98,6 @@ export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
   }
 
   svg {
-    margin: 0 2rem 0 0;
     border-radius: 9999px;
     width: 3.2rem;
     height: 3.2rem;
