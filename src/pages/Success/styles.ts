@@ -24,3 +24,16 @@ export const Title = styled.div`
 
   border: 1px solid red;
 `;
+
+export const OrderInfo = styled.div`
+  width: 526px;
+  height: 270px;
+  border-radius: 6px 36px;
+
+  margin: 19.2rem auto auto 16rem;
+
+
+  border:
+
+  border: 1px solid red;
+`;
