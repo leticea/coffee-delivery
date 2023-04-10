@@ -171,11 +171,16 @@ export const PaymentMethods = styled.section`
     line-height: 160%;
     border-radius: 6px;
     cursor: pointer;
+    user-select: none;
 
     //border: 1px solid red;
   }
 
   div:hover {
+    background: ${(props) => props.theme["gray-500"]};
+  }
+
+  div:active {
     background: ${(props) => props.theme["purple-100"]};
     border: 1px solid ${(props) => props.theme["purple-600"]};
   }
@@ -227,7 +232,7 @@ export const OrderCard = styled.div`
   hr {
     margin: 2.4rem 0 2.4rem 0;
     width: 36.8rem;
-    border:  1px solid ${(props) => props.theme["gray-400"]};
+    border: 1px solid ${(props) => props.theme["gray-400"]};
   }
 `;
 
