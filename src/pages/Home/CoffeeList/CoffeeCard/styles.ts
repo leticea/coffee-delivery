@@ -142,6 +142,7 @@ export const Buttons = styled.div`
     cursor: pointer;
     color: ${(props) => props.theme["purple-600"]};
     user-select: none;
+    transition: all 0.2s;
 
     &:hover {
       color: ${(props) => props.theme["purple-800"]};

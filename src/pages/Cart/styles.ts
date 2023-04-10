@@ -172,6 +172,7 @@ export const PaymentMethods = styled.section`
     border-radius: 6px;
     cursor: pointer;
     user-select: none;
+    transition: all 0.2s;
 
     //border: 1px solid red;
   }
@@ -341,6 +342,7 @@ export const RemoveButton = styled.button`
 
   background: ${(props) => props.theme["gray-400"]};
   color: ${(props) => props.theme["gray-700"]};
+  transition: all 0.2s;
 
   svg {
     color: ${(props) => props.theme["purple-600"]};
@@ -407,6 +409,7 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   color: ${(props) => props.theme["white"]};
+  transition: all 0.2s;
 
   &:hover {
     background: ${(props) => props.theme["yellow-600"]};

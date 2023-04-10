@@ -28,14 +28,19 @@ export const Title = styled.div`
 export const OrderInfo = styled.ul`
   width: 526px;
   height: 270px;
-  border-radius: 6px 36px;
 
   margin: 19.2rem auto auto 16rem;
   padding: 4rem;
-
-  background: white;
+  border-radius: 6px 36px;
 
   position: relative;
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+  gap: 3.2rem;
 
   &::before {
     content: "";
@@ -53,5 +58,33 @@ export const OrderInfo = styled.ul`
 `;
 
 export const OrderInfoWithIcon = styled.li`
+  border: 1px solid red;
 
-`
+  height: 5.2rem;
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.theme["gray-700"]};
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  b {
+    font-size: 1.6rem;
+  }
+
+  svg {
+    margin: 0 2rem 0 0;
+    border-radius: 9999px;
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 9999px;
+
+    background: ${(props) => props.theme["gray-400"]};
+
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+`;

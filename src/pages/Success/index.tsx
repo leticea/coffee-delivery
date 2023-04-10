@@ -14,22 +14,28 @@ export function Success() {
       <OrderInfo>
         <OrderInfoWithIcon>
           <MapPin size={15} />
-          <p>
-            Entrega em <span>Rua João Daniel Martinelli, 102</span>
-          </p>
-          <p>Farrapos - Porto Alegre, RS</p>
+          <div>
+            <p>
+              Entrega em <b>Rua João Daniel Martinelli, 102</b>
+            </p>
+            <p>Farrapos - Porto Alegre, RS</p>
+          </div>
         </OrderInfoWithIcon>
 
         <OrderInfoWithIcon>
           <Timer size={15} />
-          <p>Previsão de entrega</p>
-          <span>20 min - 30 min</span>
+          <div>
+            <p>Previsão de entrega</p>
+            <b>20 min - 30 min</b>
+          </div>
         </OrderInfoWithIcon>
 
         <OrderInfoWithIcon>
           <CurrencyDollar size={15} />
-          <p>Pagamento na entrega</p>
-          <span>Cartão de Crédito</span>
+          <div>
+            <p>Pagamento na entrega</p>
+            <b>Cartão de Crédito</b>
+          </div>
         </OrderInfoWithIcon>
       </OrderInfo>
     </>
