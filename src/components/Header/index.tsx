@@ -6,7 +6,7 @@ import { HeaderContainer } from "./styles";
 export function Header() {
   return (
     <HeaderContainer>
-      <NavLink to="/">
+      <NavLink title="Home" to="/">
         <img src={pageLogo} alt="Logotipo Coffee Delivery" />
       </NavLink>
       <nav>

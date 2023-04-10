@@ -1,3 +1,12 @@
+import { Title } from "./styles";
+
 export function Success() {
-  return <h1>Pedido confirmado</h1>
+  return (
+    <>
+      <Title>
+        <p className="bold">Uhu! Pedido confirmado</p>
+        <p className="normal">Agora é só aguardar que logo o café chegará até você</p>
+      </Title>
+    </>
+  );
 }
