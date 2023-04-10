@@ -26,9 +26,22 @@ import {
 
 import traditional from "../../assets/traditional.svg";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as zod from "zod";
+
+const newAddressFormValidationSchema = zod.object({
+  cep: zod.number().min(8, 'Informe o CEP'),
+  street: zod.string().min(5).max(60),
+})
 
 export function Cart() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({
+    resolver: zodResolver(newAddressFormValidationSchema)
+  });
+
+  function handleConfirmOrder(data: any) {
+    
+  }
 
   return (
     <>
@@ -176,7 +189,7 @@ export function Cart() {
             Total <span>R$ 33,20</span>
           </h1>
         </Amount>
-        <Button>Confirmar pedido</Button>
+        <Button onSubmit={handleSubmit(handleConfirmOrder)}>Confirmar pedido</Button>
       </OrderCard>
     </>
   );
