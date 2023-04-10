@@ -22,7 +22,7 @@ export const Title = styled.div`
     color: ${(props) => props.theme["gray-800"]};
   }
 
-  border: 1px solid red;
+  //border: 1px solid red;
 `;
 
 export const OrderInfo = styled.div`
@@ -31,9 +31,23 @@ export const OrderInfo = styled.div`
   border-radius: 6px 36px;
 
   margin: 19.2rem auto auto 16rem;
+  padding: 4rem;
 
+  background: white;
 
-  border:
+  position: relative;
 
-  border: 1px solid red;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      ${(props) => props.theme["yellow-400"]},
+      ${(props) => props.theme["purple-600"]}
+    );
+    z-index: -1;
+    margin: -1px;
+    border-radius: 6px 36px;
+  }
 `;

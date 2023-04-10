@@ -10,11 +10,11 @@ export function Success() {
       </Title>
 
       <OrderInfo>
-        {/* <section>
+        <section>
           <MapPin size={15} />
           <p>Entrega em Rua João Daniel Martinelli, 102</p>
           <p>Farrapos - Porto Alegre, RS</p>
-        </section> */}
+        </section>
       </OrderInfo>
     </>
   );
