@@ -16,12 +16,11 @@ export const Container = styled.main`
 
 export const InfoText = styled.div`
   width: 58.8rem;
-
+  margin: 9.4rem 69.2rem 25.8rem 16rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
 
-  margin: 9.4rem 69.2rem 25.8rem 16rem;
   position: absolute;
 
   //border: 1px solid red;
@@ -82,7 +81,7 @@ export const InfoWithIcon = styled.li<InfoWithIconProps>`
     background: ${(props) => props.theme[ICON_COLORS[props.iconColor]]};
     color: ${(props) => props.theme["gray-100"]};
 
-    padding: 8px;
+    padding: 0.8rem;
     border-radius: 9999px;
 
     width: 3.2rem;

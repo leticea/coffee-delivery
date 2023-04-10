@@ -33,7 +33,7 @@ export const Tags = styled.span`
   position: relative;
   max-width: 19.5rem;
   height: 2.1rem;
-  padding: 4px 8px;
+  padding: 0.4rem 0.8rem;
   top: 11.2rem;
   border-radius: 100px;
 
