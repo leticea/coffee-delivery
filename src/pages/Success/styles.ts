@@ -26,10 +26,12 @@ export const Title = styled.div`
 `;
 
 export const OrderInfo = styled.ul`
-  width: 526px;
-  height: 270px;
+  width: 52.6rem;
+  height: 27rem;
 
-  margin: 19.2rem auto auto 16rem;
+  margin-top: 19.2rem;
+  margin-left: 16rem;
+
   padding: 4rem;
   border-radius: 6px 36px;
 
@@ -52,7 +54,7 @@ export const OrderInfo = styled.ul`
       ${(props) => props.theme["purple-600"]}
     );
     z-index: -1;
-    margin: -1px;
+    margin: -1.6px;
     border-radius: 6px 36px;
   }
 `;
@@ -68,7 +70,7 @@ interface OrderInfoWithIconProps {
 }
 
 export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
-  border: 1px solid red;
+  //border: 1px solid red;
 
   height: 5.2rem;
   display: flex;
