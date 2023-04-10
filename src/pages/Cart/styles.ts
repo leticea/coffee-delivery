@@ -175,6 +175,11 @@ export const PaymentMethods = styled.section`
     //border: 1px solid red;
   }
 
+  div:hover {
+    background: ${(props) => props.theme["purple-100"]};
+    border: 1px solid ${(props) => props.theme["purple-600"]};
+  }
+
   .credit {
     display: flex;
     align-items: center;
@@ -194,7 +199,6 @@ export const PaymentMethods = styled.section`
   .money {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding: 0 1.6rem;
     background: ${(props) => props.theme["gray-400"]};
   }
@@ -335,5 +339,9 @@ export const Button = styled.button`
 
   svg {
     color: ${(props) => props.theme["purple-600"]};
+  }
+
+  &:hover {
+    background: ${(props) => props.theme["gray-500"]};
   }
 `;
