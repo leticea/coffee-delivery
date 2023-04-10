@@ -1,5 +1,5 @@
 import { OrderInfo, OrderInfoWithIcon, Title } from "./styles";
-import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
+import { CurrencyDollarSimple, MapPin, Timer } from "phosphor-react";
 
 export function Success() {
   return (
@@ -12,8 +12,8 @@ export function Success() {
       </Title>
 
       <OrderInfo>
-        <OrderInfoWithIcon>
-          <MapPin size={15} />
+        <OrderInfoWithIcon iconColor="purple">
+          <MapPin size={15} weight="fill" />
           <div>
             <p>
               Entrega em <b>Rua João Daniel Martinelli, 102</b>
@@ -22,16 +22,16 @@ export function Success() {
           </div>
         </OrderInfoWithIcon>
 
-        <OrderInfoWithIcon>
-          <Timer size={15} />
+        <OrderInfoWithIcon iconColor="yellow">
+          <Timer size={15} weight="fill" />
           <div>
             <p>Previsão de entrega</p>
             <b>20 min - 30 min</b>
           </div>
         </OrderInfoWithIcon>
 
-        <OrderInfoWithIcon>
-          <CurrencyDollar size={15} />
+        <OrderInfoWithIcon iconColor="yellowDark">
+          <CurrencyDollarSimple size={15} />
           <div>
             <p>Pagamento na entrega</p>
             <b>Cartão de Crédito</b>

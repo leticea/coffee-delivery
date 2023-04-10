@@ -57,7 +57,17 @@ export const OrderInfo = styled.ul`
   }
 `;
 
-export const OrderInfoWithIcon = styled.li`
+const ICON_COLORS = {
+  yellowDark: "yellow-600",
+  yellow: "yellow-400",
+  purple: "purple-600",
+} as const;
+
+interface OrderInfoWithIconProps {
+  iconColor: keyof typeof ICON_COLORS;
+}
+
+export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
   border: 1px solid red;
 
   height: 5.2rem;
@@ -67,6 +77,7 @@ export const OrderInfoWithIcon = styled.li`
 
   p {
     font-size: 1.6rem;
+    line-height: 130%;
   }
 
   b {
@@ -82,7 +93,8 @@ export const OrderInfoWithIcon = styled.li`
     padding: 0.8rem;
     border-radius: 9999px;
 
-    background: ${(props) => props.theme["gray-400"]};
+    background: ${(props) => props.theme[ICON_COLORS[props.iconColor]]};
+    color: ${(props) => props.theme["gray-100"]};
 
     width: 3.2rem;
     height: 3.2rem;
