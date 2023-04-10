@@ -131,9 +131,15 @@ export function Cart() {
         <hr />
 
         <Amount>
-          <p>Total de itens <span>R$ 29,70</span></p>
-          <p>Entrega <span>R$ 3,50</span></p>
-          <h1>Total <span>R$ 33,20</span></h1>
+          <p>
+            Total de itens <span>R$ 29,70</span>
+          </p>
+          <p>
+            Entrega <span>R$ 3,50</span>
+          </p>
+          <h1>
+            Total <span>R$ 33,20</span>
+          </h1>
         </Amount>
       </OrderCard>
     </>

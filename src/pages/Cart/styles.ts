@@ -354,8 +354,9 @@ export const Button = styled.button`
 export const Amount = styled.section`
   width: 36.8rem;
   height: 9.2rem;
+  display: grid;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   p {
     display: flex;
@@ -376,7 +377,7 @@ export const Amount = styled.section`
   h1 {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-self: end;
 
     font-size: 2rem;
     line-height: 130%;
