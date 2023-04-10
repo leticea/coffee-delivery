@@ -221,7 +221,7 @@ export const OrderCard = styled.div`
   //border: 1px solid red;
 
   hr {
-    margin-top: 24px;
+    margin: 2.4rem 0 2.4rem 0;
     width: 36.8rem;
     border:  1px solid ${(props) => props.theme["gray-400"]};
   }

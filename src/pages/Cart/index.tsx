@@ -106,6 +106,28 @@ export function Cart() {
           <p>R$ 9,90</p>
         </SelectedCoffeeCard>
         <hr />
+        <SelectedCoffeeCard>
+          <div>
+            <img src={traditional} alt="" />
+            <div>
+              Expresso Tradicional
+              <ButtonsContainer>
+                <QuantityButtons>
+                  <Minus size={14} />
+                  1
+                  <Plus size={14} />
+                </QuantityButtons>
+
+                <Button>
+                  <Trash size={14} />
+                  Remover
+                </Button>
+              </ButtonsContainer>
+            </div>
+          </div>
+          <p>R$ 9,90</p>
+        </SelectedCoffeeCard>
+        <hr />
       </OrderCard>
     </>
   );
