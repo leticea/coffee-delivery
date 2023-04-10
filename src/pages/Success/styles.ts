@@ -25,7 +25,7 @@ export const Title = styled.div`
   //border: 1px solid red;
 `;
 
-export const OrderInfo = styled.div`
+export const OrderInfo = styled.ul`
   width: 526px;
   height: 270px;
   border-radius: 6px 36px;
@@ -51,3 +51,7 @@ export const OrderInfo = styled.div`
     border-radius: 6px 36px;
   }
 `;
+
+export const OrderInfoWithIcon = styled.li`
+
+`
