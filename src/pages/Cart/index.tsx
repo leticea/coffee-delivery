@@ -9,6 +9,7 @@ import {
   PaymentInfo,
   PaymentMethods,
   QuantityButtons,
+  RemoveButton,
   SelectedCoffeeCard,
   Title,
 } from "./styles";
@@ -97,10 +98,10 @@ export function Cart() {
                   <Plus size={14} />
                 </QuantityButtons>
 
-                <Button>
+                <RemoveButton>
                   <Trash size={14} />
                   Remover
-                </Button>
+                </RemoveButton>
               </ButtonsContainer>
             </div>
           </div>
@@ -119,10 +120,10 @@ export function Cart() {
                   <Plus size={14} />
                 </QuantityButtons>
 
-                <Button>
+                <RemoveButton>
                   <Trash size={14} />
                   Remover
-                </Button>
+                </RemoveButton>
               </ButtonsContainer>
             </div>
           </div>
@@ -141,6 +142,7 @@ export function Cart() {
             Total <span>R$ 33,20</span>
           </h1>
         </Amount>
+        <Button>Confirmar pedido</Button>
       </OrderCard>
     </>
   );

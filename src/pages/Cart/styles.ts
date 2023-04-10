@@ -324,7 +324,7 @@ export const QuantityButtons = styled.span`
   }
 `;
 
-export const Button = styled.button`
+export const RemoveButton = styled.button`
   width: 9.1rem;
   height: 3.2rem;
   display: flex;
@@ -387,5 +387,28 @@ export const Amount = styled.section`
     span {
       font-size: 2rem;
     }
+  }
+`;
+
+export const Button = styled.button`
+  width: 36.8rem;
+  height: 4.6rem;
+  padding: 1.2rem 0.8rem;
+  margin-top: 2.4rem;
+
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+
+  background: ${(props) => props.theme["yellow-400"]};
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+
+  color: ${(props) => props.theme["white"]};
+
+  &:hover {
+    background: ${(props) => props.theme["yellow-600"]};
   }
 `;
