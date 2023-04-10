@@ -1,5 +1,6 @@
 import {
   AddressForm,
+  Amount,
   Button,
   ButtonsContainer,
   Headline,
@@ -128,6 +129,12 @@ export function Cart() {
           <p>R$ 9,90</p>
         </SelectedCoffeeCard>
         <hr />
+
+        <Amount>
+          <p>Total de itens <span>R$ 29,70</span></p>
+          <p>Entrega <span>R$ 3,50</span></p>
+          <h1>Total <span>R$ 33,20</span></h1>
+        </Amount>
       </OrderCard>
     </>
   );

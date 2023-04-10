@@ -350,3 +350,41 @@ export const Button = styled.button`
     background: ${(props) => props.theme["gray-500"]};
   }
 `;
+
+export const Amount = styled.section`
+  width: 36.8rem;
+  height: 9.2rem;
+
+  border: 1px solid red;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.2rem;
+
+    font-size: 1.4rem;
+    line-height: 130%;
+
+    color: ${(props) => props.theme["gray-700"]};
+
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 2rem;
+    line-height: 130%;
+
+    color: ${(props) => props.theme["gray-800"]};
+
+    span {
+      font-size: 2rem;
+    }
+  }
+`;
