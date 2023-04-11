@@ -31,7 +31,12 @@ import * as zod from "zod";
 
 const newAddressFormValidationSchema = zod.object({
   cep: zod.number().min(8, "Informe o CEP"),
-  street: zod.string().min(5).max(60),
+  street: zod.string().min(5, "Informe a rua"),
+  number: zod.number().min(1, "Informe o número"),
+  complement: zod.string().min(8).max(60),
+  district: zod.string().min(5, "Informe o bairro"),
+  city: zod.string().min(1, "Informe a cidade"),
+  state: zod.string().max(2, "Informe o estado"),
 });
 
 export function Cart() {
