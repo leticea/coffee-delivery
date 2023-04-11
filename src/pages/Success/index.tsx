@@ -26,7 +26,7 @@ export function Success() {
           <MapPin size={15} weight="fill" />
           <div>
             <p>
-              Entrega em <b>Rua João Daniel Martinelli, 102</b>
+              Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
             </p>
             <p>Farrapos - Porto Alegre, RS</p>
           </div>
@@ -36,7 +36,7 @@ export function Success() {
           <Timer size={15} weight="fill" />
           <div>
             <p>Previsão de entrega</p>
-            <b>20 min - 30 min</b>
+            <strong>20 min - 30 min</strong>
           </div>
         </OrderInfoWithIcon>
 
@@ -44,7 +44,7 @@ export function Success() {
           <CurrencyDollarSimple size={15} />
           <div>
             <p>Pagamento na entrega</p>
-            <b>Cartão de Crédito</b>
+            <strong>Cartão de Crédito</strong>
           </div>
         </OrderInfoWithIcon>
       </OrderInfo>

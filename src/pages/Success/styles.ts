@@ -93,7 +93,7 @@ export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
     line-height: 130%;
   }
 
-  b {
+  strong {
     font-size: 1.6rem;
   }
 
