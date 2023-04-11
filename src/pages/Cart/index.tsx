@@ -29,19 +29,19 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
 
-const newAddressFormValidationSchema = zod.object({
-  cep: zod.number().min(8, "Informe o CEP"),
-  street: zod.string().min(5, "Informe a rua"),
-  number: zod.number().min(1, "Informe o número"),
-  complement: zod.string().min(8).max(60),
-  district: zod.string().min(5, "Informe o bairro"),
-  city: zod.string().min(1, "Informe a cidade"),
-  state: zod.string().max(2, "Informe o estado"),
+const confirmOrderFormValidationSchema = zod.object({
+  cep: zod.number().min(1, "Informe o CEP"),
+  street: zod.string().min(1, "Informe a Rua"),
+  number: zod.number().min(1, "Informe o Número"),
+  complement: zod.string(),
+  district: zod.string().min(1, "Informe o Bairro"),
+  city: zod.string().min(1, "Informe a Cidade"),
+  state: zod.string().min(1, "Informe o Estado"),
 });
 
 export function Cart() {
   const { register, handleSubmit } = useForm({
-    resolver: zodResolver(newAddressFormValidationSchema),
+    resolver: zodResolver(confirmOrderFormValidationSchema),
   });
 
   return (
