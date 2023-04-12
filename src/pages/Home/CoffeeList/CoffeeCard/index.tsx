@@ -42,8 +42,6 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;
 
-  console.log(isSubmitDisabled);
-
   return (
     <CoffeesCard>
       <img src={image} alt="" />

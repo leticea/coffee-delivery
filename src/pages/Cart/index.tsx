@@ -29,6 +29,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
 
+import { coffees } from "../../utils/coffees";
+
+
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
@@ -43,6 +46,13 @@ export function Cart() {
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
+
+
+  function removeSelectedCoffee(id: number)<HTMLButtonElement> {
+    coffees.filter((coffee) => {
+      return coffee.id !== id;
+    })
+  }
 
   return (
     <>
@@ -168,7 +178,7 @@ export function Cart() {
                   <Plus size={14} />
                 </QuantityButtons>
 
-                <RemoveButton>
+                <RemoveButton onClick={removeSelectedCoffee}>
                   <Trash size={14} />
                   Remover
                 </RemoveButton>
