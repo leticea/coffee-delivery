@@ -163,7 +163,12 @@ export const Button = styled.button`
   color: ${(props) => props.theme["gray-200"]};
   transition: all 0.2s;
 
-  &:hover {
+  &:not(:disabled):hover {
     background: ${(props) => props.theme["purple-600"]};
+  }
+
+  &:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
   }
 `;
