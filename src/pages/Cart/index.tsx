@@ -31,7 +31,7 @@ import * as zod from "zod";
 
 import { coffees } from "../../utils/coffees";
 import { moneyFormat } from "../../utils/moneyFormat";
-import { CoffeeCardProps } from "../Home/CoffeeList/CoffeeCard";
+import { CoffeeProps } from "../Home/CoffeeList/CoffeeCard";
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
@@ -43,9 +43,13 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
+interface CoffeesProps {
+  coffeesOrder: CoffeeProps;
+}
 
-export function Cart({ coffee }: CoffeeCardProps) {
-  const { id, name, image, price } = coffee;
+export function Cart({ coffeesOrder }: CoffeesProps) {
+  const { id, tags, name, image, description, price } = coffeesOrder;
+
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
@@ -149,13 +153,13 @@ export function Cart({ coffee }: CoffeeCardProps) {
       <OrderCard>
         <SelectedCoffeeCard>
           <div>
-            <img src={traditional} alt="" />
+            <img src={image} alt="" />
             <div>
-              Expresso Tradicional
+              {name}
               <ButtonsContainer>
                 <QuantityButtons>
                   <Minus size={14} />
-                  1
+                  {quantity}
                   <Plus size={14} />
                 </QuantityButtons>
 

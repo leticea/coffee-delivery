@@ -12,7 +12,7 @@ import {
   Tags,
 } from "./styles";
 
-interface CoffeeProps {
+export interface CoffeeProps {
   id: number;
   tags: string[];
   name: string;
@@ -21,7 +21,7 @@ interface CoffeeProps {
   price: number;
 }
 
-export interface CoffeeCardProps {
+interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
 
