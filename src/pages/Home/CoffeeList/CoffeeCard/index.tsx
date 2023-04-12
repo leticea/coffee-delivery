@@ -21,7 +21,7 @@ interface CoffeeProps {
   price: number;
 }
 
-interface CoffeeCardProps {
+export interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
 

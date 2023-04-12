@@ -30,7 +30,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
 
 import { coffees } from "../../utils/coffees";
-
+import { moneyFormat } from "../../utils/moneyFormat";
+import { CoffeeCardProps } from "../Home/CoffeeList/CoffeeCard";
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
@@ -42,16 +43,18 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
-export function Cart() {
+
+export function Cart({ coffee }: CoffeeCardProps) {
+  const { id, name, image, price } = coffee;
+
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
 
-
-  function removeSelectedCoffee(id: number)<HTMLButtonElement> {
+  function removeSelectedCoffee(id: number) {
     coffees.filter((coffee) => {
       return coffee.id !== id;
-    })
+    });
   }
 
   return (
@@ -163,7 +166,7 @@ export function Cart() {
               </ButtonsContainer>
             </div>
           </div>
-          <p>R$ 9,90</p>
+          <p>R$ {moneyFormat(price)}</p>
         </SelectedCoffeeCard>
         <hr />
         <SelectedCoffeeCard>
