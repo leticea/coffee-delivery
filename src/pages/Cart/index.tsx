@@ -24,10 +24,11 @@ import {
   Trash,
 } from "phosphor-react";
 
-import traditional from "../../assets/traditional.svg";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
+import traditional from "../../assets/traditional.svg";
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
@@ -39,17 +40,19 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
+interface CoffeeOrder {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+}
+
 export function Cart() {
+  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>([]);
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
-
-  function removeSelectedCoffee(id: number) {
-    coffees.filter((coffee) => {
-      return coffee.id !== id;
-    });
-  }
 
   return (
     <>
@@ -175,7 +178,7 @@ export function Cart() {
                   <Plus size={14} />
                 </QuantityButtons>
 
-                <RemoveButton onClick={removeSelectedCoffee}>
+                <RemoveButton>
                   <Trash size={14} />
                   Remover
                 </RemoveButton>
