@@ -65,6 +65,10 @@ export function Cart() {
     setCoffeeOrders(state => [...state, newOrder]);
   }
 
+  function handleCreateNewOrder(data: any) {
+    console.log(data);
+  }
+
   return (
     <>
       <Title>
