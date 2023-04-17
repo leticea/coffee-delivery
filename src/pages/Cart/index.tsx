@@ -30,6 +30,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
 import traditional from "../../assets/traditional.svg";
 
+import { coffees } from "../../utils/coffees";
+
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
@@ -44,15 +46,24 @@ interface CoffeeOrder {
   id: number;
   name: string;
   price: number;
-  quantity: number;
 }
 
 export function Cart() {
-  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>([]);
+  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>(coffees);
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
+
+  function handleCreateNewCoffeeOrder(coffees: CoffeeOrder) {
+    const newOrder: CoffeeOrder = {
+      id: coffees.id,
+      name: coffees.name,
+      price: coffees.price,
+    };
+
+    setCoffeeOrders(state => [...state, newOrder]);
+  }
 
   return (
     <>
