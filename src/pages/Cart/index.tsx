@@ -29,10 +29,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
 
-import { coffees } from "../../utils/coffees";
-import { moneyFormat } from "../../utils/moneyFormat";
-import { CoffeeProps } from "../Home/CoffeeList/CoffeeCard";
-
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
@@ -43,13 +39,7 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
-interface CoffeesProps {
-  coffeesOrder: CoffeeProps;
-}
-
-export function Cart({ coffeesOrder }: CoffeesProps) {
-  const { id, tags, name, image, description, price } = coffeesOrder;
-
+export function Cart() {
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
@@ -153,13 +143,13 @@ export function Cart({ coffeesOrder }: CoffeesProps) {
       <OrderCard>
         <SelectedCoffeeCard>
           <div>
-            <img src={image} alt="" />
+            <img src={traditional} alt="" />
             <div>
-              {name}
+              Expresso Tradicional
               <ButtonsContainer>
                 <QuantityButtons>
                   <Minus size={14} />
-                  {quantity}
+                  1
                   <Plus size={14} />
                 </QuantityButtons>
 
@@ -170,7 +160,7 @@ export function Cart({ coffeesOrder }: CoffeesProps) {
               </ButtonsContainer>
             </div>
           </div>
-          <p>R$ {moneyFormat(price)}</p>
+          <p>R$ 9,90</p>
         </SelectedCoffeeCard>
         <hr />
         <SelectedCoffeeCard>
