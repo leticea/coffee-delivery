@@ -11,6 +11,7 @@ import {
   Name,
   Tags,
 } from "./styles";
+import { coffees } from "../../../../utils/coffees";
 
 export interface CoffeeProps {
   id: number;
@@ -26,6 +27,8 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
+  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeProps[]>(coffees);
+
   const { id, tags, name, image, description, price } = coffee;
   const [quantity, setQuantity] = useState(0);
 
@@ -43,8 +46,17 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const isSubmitDisabled = !handleQuantity;
 
   function handleAddToCart(event: React.MouseEvent<HTMLButtonElement>) {
-    const totalAmount = coffee.price * quantity;
-    console.log(totalAmount);
+    const newOrder: CoffeeProps = {
+      id: coffee.id,
+      name: coffee.name,
+      price: coffee.price,
+      image: coffee.image,
+      tags: [],
+      description: ""
+    };
+
+    setCoffeeOrders(state => [...state, newOrder]);
+    console.log(newOrder);
   }
 
   return (
