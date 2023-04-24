@@ -42,6 +42,10 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;
 
+  function handleAddToCart(data: CoffeeProps) {
+    console.log(data);
+  }
+
   return (
     <CoffeesCard>
       <img src={image} alt="" />
@@ -60,7 +64,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           {quantity}
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
-        <Button disabled={isSubmitDisabled} type="submit">
+        <Button onClick={handleAddToCart} disabled={isSubmitDisabled} type="submit">
           <ShoppingCartSimple weight="fill" size={21} />
         </Button>
       </Footer>

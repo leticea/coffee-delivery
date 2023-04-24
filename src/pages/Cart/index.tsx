@@ -56,9 +56,7 @@ interface CoffeeCardProps {
 
 export function Cart({ coffee }: CoffeeCardProps) {
   const [coffeeOrders, setCoffeeOrders] = useState<CoffeeProps[]>(coffees);
-  const [quantity, setQuantity] = useState(0);
-
-  //const { id } = coffee;
+  const [quantity, setQuantity] = useState(0)
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
@@ -87,11 +85,12 @@ export function Cart({ coffee }: CoffeeCardProps) {
     //setCoffeeOrders(undeletedCoffees);
   }
 
-  // function handleCreateNewCoffeeOrder(coffees: CoffeeOrder) {
-  //   const newOrder: CoffeeOrder = {
+  // function handleCreateNewCoffeeOrder(coffees: CoffeeCardProps) {
+  //   const newOrder: CoffeeCardProps = {
   //     id: coffees.id,
   //     name: coffees.name,
   //     price: coffees.price,
+  //     image: coffees.image
   //   };
 
   //   setCoffeeOrders(state => [...state, newOrder]);
