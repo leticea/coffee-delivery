@@ -65,22 +65,26 @@ export function Cart({ coffee }: CoffeeCardProps) {
   });
 
   function handleIncrease() {
-    setQuantity((state) => state + 1);
+    setQuantity((state) => {
+      return state + 1;
+    });
   }
 
   function handleDecrease() {
     if (quantity > 0) {
-      setQuantity((state) => state - 1);
+      setQuantity((state) => {
+        return state - 1;
+      });
     }
   }
 
   function removeSelectedCoffee(id: number) {
-    const undeletedCoffees = coffees.filter((coffee) => {
+    coffees.filter((coffee) => {
       return coffee.id !== id;
     });
 
-    console.log('clicou');
-    setCoffeeOrders(undeletedCoffees);
+    console.log("clicou");
+    //setCoffeeOrders(undeletedCoffees);
   }
 
   // function handleCreateNewCoffeeOrder(coffees: CoffeeOrder) {
