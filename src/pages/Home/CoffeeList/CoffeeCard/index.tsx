@@ -43,7 +43,8 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const isSubmitDisabled = !handleQuantity;
 
   function handleAddToCart(event: React.MouseEvent<HTMLButtonElement>) {
-    console.log(quantity);
+    const totalAmount = coffee.price * quantity;
+    console.log(totalAmount);
   }
 
   return (
