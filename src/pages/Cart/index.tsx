@@ -32,6 +32,8 @@ import traditional from "../../assets/traditional.svg";
 
 import { coffees } from "../../utils/coffees";
 
+import { CoffeeProps } from "../Home/CoffeeList/CoffeeCard";
+
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
@@ -42,15 +44,21 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
-// interface CoffeeOrder {
-//   id: number;
-//   name: string;
-//   price: number;
-// }
+interface CoffeeOrder {
+  id: number;
+  name: string;
+  price: number;
+}
 
-export function Cart() {
-  //const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>(coffees);
+interface CoffeeCardProps {
+  coffee: CoffeeProps;
+}
+
+export function Cart({ coffee }: CoffeeCardProps) {
+  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>(coffees);
   const [quantity, setQuantity] = useState(0);
+
+  //const { id } = coffee;
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
@@ -66,6 +74,13 @@ export function Cart() {
     }
   }
 
+  function removeSelectedCoffee(id: number) {
+    const undeletedCoffees = coffees.filter((coffee) => {
+      return coffee.id !== id;
+    });
+
+    setCoffeeOrders(undeletedCoffees);
+  }
 
   // function handleCreateNewCoffeeOrder(coffees: CoffeeOrder) {
   //   const newOrder: CoffeeOrder = {
@@ -79,7 +94,7 @@ export function Cart() {
 
   // function handleCreateNewOrder(data: any) {
   //   console.log(data);
-  // }
+  // };
 
   return (
     <>
@@ -183,7 +198,7 @@ export function Cart() {
                   <Plus size={14} onClick={handleIncrease} />
                 </QuantityButtons>
 
-                <RemoveButton>
+                <RemoveButton onClick={removeSelectedCoffee}>
                   <Trash size={14} />
                   Remover
                 </RemoveButton>
