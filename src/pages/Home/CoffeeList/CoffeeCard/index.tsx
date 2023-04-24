@@ -55,8 +55,9 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
       description: ""
     };
 
-    setCoffeeOrders(state => [...state, newOrder]);
-    console.log(newOrder);
+    //setCoffeeOrders(state => [...state, setQuantity]);
+
+    console.log(newOrder, quantity);
   }
 
   return (
