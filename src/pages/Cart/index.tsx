@@ -44,18 +44,18 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
-interface CoffeeOrder {
-  id: number;
-  name: string;
-  price: number;
-}
+// interface CoffeeOrder {
+//   id: number;
+//   name: string;
+//   price: number;
+// }
 
 interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
 
 export function Cart({ coffee }: CoffeeCardProps) {
-  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>(coffees);
+  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeProps[]>(coffees);
   const [quantity, setQuantity] = useState(0);
 
   //const { id } = coffee;
@@ -79,6 +79,7 @@ export function Cart({ coffee }: CoffeeCardProps) {
       return coffee.id !== id;
     });
 
+    console.log('clicou');
     setCoffeeOrders(undeletedCoffees);
   }
 
