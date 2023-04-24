@@ -43,7 +43,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const isSubmitDisabled = !handleQuantity;
 
   function handleAddToCart(event: React.MouseEvent<HTMLButtonElement>) {
-    //console.log(data);
+    console.log(quantity);
   }
 
   return (
