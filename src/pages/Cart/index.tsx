@@ -42,32 +42,44 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
-interface CoffeeOrder {
-  id: number;
-  name: string;
-  price: number;
-}
+// interface CoffeeOrder {
+//   id: number;
+//   name: string;
+//   price: number;
+// }
 
 export function Cart() {
-  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>(coffees);
+  //const [coffeeOrders, setCoffeeOrders] = useState<CoffeeOrder[]>(coffees);
+  const [quantity, setQuantity] = useState(0);
 
   const { register, handleSubmit } = useForm({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
 
-  function handleCreateNewCoffeeOrder(coffees: CoffeeOrder) {
-    const newOrder: CoffeeOrder = {
-      id: coffees.id,
-      name: coffees.name,
-      price: coffees.price,
-    };
-
-    setCoffeeOrders(state => [...state, newOrder]);
+  function handleIncrease() {
+    setQuantity((state) => state + 1);
   }
 
-  function handleCreateNewOrder(data: any) {
-    console.log(data);
+  function handleDecrease() {
+    if (quantity > 0) {
+      setQuantity((state) => state - 1);
+    }
   }
+
+
+  // function handleCreateNewCoffeeOrder(coffees: CoffeeOrder) {
+  //   const newOrder: CoffeeOrder = {
+  //     id: coffees.id,
+  //     name: coffees.name,
+  //     price: coffees.price,
+  //   };
+
+  //   setCoffeeOrders(state => [...state, newOrder]);
+  // }
+
+  // function handleCreateNewOrder(data: any) {
+  //   console.log(data);
+  // }
 
   return (
     <>
@@ -89,7 +101,7 @@ export function Cart() {
             className="cep"
             type="text"
             placeholder="CEP"
-            {...register("cep")}
+            {...register("cep", { valueAsNumber: true })}
           />
           <input
             className="street"
@@ -166,9 +178,9 @@ export function Cart() {
               Expresso Tradicional
               <ButtonsContainer>
                 <QuantityButtons>
-                  <Minus size={14} />
-                  1
-                  <Plus size={14} />
+                  <Minus size={14} onClick={handleDecrease} />
+                  {quantity}
+                  <Plus size={14} onClick={handleIncrease} />
                 </QuantityButtons>
 
                 <RemoveButton>
