@@ -29,7 +29,7 @@ interface CoffeeOrderProps {
 
 interface CoffeeCardProps {
   coffee: CoffeeProps;
-  addCoffeeToCart:  (item: CoffeeOrderProps) => void;
+  addCoffeeToCart: (item: CoffeeOrderProps) => void;
 }
 
 export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
@@ -50,9 +50,9 @@ export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
   const isSubmitDisabled = !handleQuantity;
 
   function handleAddToCart(id: number) {
-    const item = {id: id, quantity: quantity};
+    const item = { id: id, quantity: quantity };
 
-    addCoffeeToCart(item)
+    addCoffeeToCart(item);
   }
 
   return (

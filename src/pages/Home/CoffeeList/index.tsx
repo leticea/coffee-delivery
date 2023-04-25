@@ -2,7 +2,6 @@ import { useState } from "react";
 import { coffees } from "../../../utils/coffees";
 import { CoffeeCard } from "./CoffeeCard";
 import { Container, List } from "./styles";
-import { Header } from "../../../components/Header";
 
 interface CoffeeOrderProps {
   id: number;
@@ -20,7 +19,6 @@ export function CoffeeList({ receiveCartValue }: CoffeeListProps) {
     const aux = [...newOrder, item];
 
     setNewOrder(aux);
-
     receiveCartValue();
   }
 
