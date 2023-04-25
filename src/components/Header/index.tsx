@@ -4,6 +4,9 @@ import pageLogo from "../../assets/page-logo.svg";
 import { HeaderContainer } from "./styles";
 
 export function Header() {
+
+  
+
   return (
     <HeaderContainer>
       <NavLink title="Home" to="/">

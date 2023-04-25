@@ -22,13 +22,17 @@ export interface CoffeeProps {
   price: number;
 }
 
-interface CoffeeCardProps {
-  coffee: CoffeeProps;
+interface CoffeeOrderProps {
+  id: number;
+  quantity: number;
 }
 
-export function CoffeeCard({ coffee }: CoffeeCardProps) {
-  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeProps[]>(coffees);
+interface CoffeeCardProps {
+  coffee: CoffeeProps;
+  addCoffeeToCart:  (item: CoffeeOrderProps) => void;
+}
 
+export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
   const { id, tags, name, image, description, price } = coffee;
   const [quantity, setQuantity] = useState(0);
 
@@ -45,19 +49,10 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;
 
-  function handleAddToCart(event: React.MouseEvent<HTMLButtonElement>) {
-    const newOrder: CoffeeProps = {
-      id: coffee.id,
-      name: coffee.name,
-      price: coffee.price,
-      image: coffee.image,
-      tags: [],
-      description: ""
-    };
+  function handleAddToCart(id: number) {
+    const item = {id: id, quantity: quantity};
 
-    //setCoffeeOrders(state => [...state, setQuantity]);
-
-    console.log(newOrder, quantity);
+    addCoffeeToCart(item)
   }
 
   return (
@@ -79,7 +74,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
         <Button
-          onClick={handleAddToCart}
+          onClick={() => handleAddToCart(id)}
           disabled={isSubmitDisabled}
           type="submit"
         >
