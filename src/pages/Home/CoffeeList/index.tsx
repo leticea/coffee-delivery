@@ -16,12 +16,11 @@ export function CoffeeList({ receiveCartValue }: CoffeeListProps) {
   const [newOrder, setNewOrder] = useState<CoffeeOrderProps[]>([]);
 
   useEffect(() => {
-
     if (newOrder.length !== 0) {
-      avisarAPI()
+      avisarAPI();
     }
-    console.log(newOrder)
-  }, [newOrder])
+    console.log(newOrder);
+  }, [newOrder]);
 
   function addCoffeeToCart(item: CoffeeOrderProps) {
     const aux = [...newOrder, item];
@@ -31,7 +30,7 @@ export function CoffeeList({ receiveCartValue }: CoffeeListProps) {
   }
 
   function avisarAPI() {
-    console.log('Pedido feito!');
+    console.log("Pedido feito!");
   }
 
   return (
