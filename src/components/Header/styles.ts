@@ -7,8 +7,6 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 3.2rem 16rem;
 
-  //border: 1px solid red;
-
   nav {
     display: flex;
     gap: 1.2rem;
