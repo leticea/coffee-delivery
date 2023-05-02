@@ -49,7 +49,7 @@ interface CoffeeCardProps {
 }
 
 export function Cart({ coffee }: CoffeeCardProps) {
-  const [coffeeOrders, setCoffeeOrders] = useState<CoffeeProps[]>(coffees);
+  const [cartItems, setCartItems] = useState<CoffeeProps[]>(coffees);
   const [quantity, setQuantity] = useState(0)
 
   const { register, handleSubmit } = useForm({
@@ -79,7 +79,7 @@ export function Cart({ coffee }: CoffeeCardProps) {
     //setCoffeeOrders(undeletedCoffees);
   }
 
-  // function handleCreateNewCoffeeOrder(coffees: CoffeeCardProps) {
+  // function handleCreateNewOrder(coffees: CoffeeCardProps) {
   //   const newOrder: CoffeeCardProps = {
   //     id: coffees.id,
   //     name: coffees.name,
@@ -87,12 +87,8 @@ export function Cart({ coffee }: CoffeeCardProps) {
   //     image: coffees.image
   //   };
 
-  //   setCoffeeOrders(state => [...state, newOrder]);
+  //   setCartItems(state => [...state, newOrder]);
   // }
-
-  // function handleCreateNewOrder(data: any) {
-  //   console.log(data);
-  // };
 
   return (
     <>
