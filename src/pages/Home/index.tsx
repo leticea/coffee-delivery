@@ -6,18 +6,18 @@ import { CoffeeProps } from "./CoffeeList/CoffeeCard";
 
 interface CartContextType {
   cartItems: CoffeeProps;
-  cartQuantity: number;
-  cartItemsTotal: number;
 }
 
-const CartContext = createContext({})
+const CartContext = createContext({} as CartContextType);
 
 export function Home() {
   return (
     <>
       <Introduction />
-      <OurCoffees />
-      <CoffeeList />
+      <CartContext.Provider value={{ cartItems }}>
+        <OurCoffees />
+        <CoffeeList />
+      </CartContext.Provider>
     </>
   );
 }
