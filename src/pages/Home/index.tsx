@@ -1,6 +1,16 @@
 import { CoffeeList } from "./CoffeeList";
 import { Introduction } from "./Introduction";
 import { OurCoffees } from "./CoffeeList/OurCoffees";
+import { createContext } from "react";
+import { CoffeeProps } from "./CoffeeList/CoffeeCard";
+
+interface CartContextType {
+  cartItems: CoffeeProps;
+  cartQuantity: number;
+  cartItemsTotal: number;
+}
+
+const CartContext = createContext({})
 
 export function Home() {
   return (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { coffees } from "../../../utils/coffees";
 import { CoffeeCard } from "./CoffeeCard";
 import { Container, List } from "./styles";

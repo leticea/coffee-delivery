@@ -44,12 +44,6 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
-// interface CoffeeOrder {
-//   id: number;
-//   name: string;
-//   price: number;
-// }
-
 interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
