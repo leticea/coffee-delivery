@@ -195,7 +195,7 @@ export const PaymentMethods = styled.section`
     background: ${(props) => props.theme["gray-500"]};
   }
 
-  div:active {
+  div.active {
     background: ${(props) => props.theme["purple-100"]};
     border: 1px solid ${(props) => props.theme["purple-600"]};
   }

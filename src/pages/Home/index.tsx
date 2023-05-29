@@ -14,10 +14,8 @@ export function Home() {
   return (
     <>
       <Introduction />
-      <CartContext.Provider value={{ cartItems }}>
-        <OurCoffees />
-        <CoffeeList />
-      </CartContext.Provider>
+      <OurCoffees />
+      <CoffeeList />
     </>
   );
 }
