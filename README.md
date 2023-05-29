@@ -7,9 +7,9 @@
 
 <br>
 
-<p align="center">
+<div align="center">
   <img alt="" src=".github/image.png">
-</p>
+</div>
 
 # Coffee Delivery
 
