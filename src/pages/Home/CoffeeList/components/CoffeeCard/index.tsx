@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
-import { moneyFormat } from "../../../../utils/moneyFormat";
+import { moneyFormat } from "../../../../../utils/moneyFormat";
 import {
   Button,
   Buttons,
@@ -11,7 +11,7 @@ import {
   Name,
   Tags,
 } from "./styles";
-import { coffees } from "../../../../utils/coffees";
+//import { coffees } from "../../../../utils/coffees";
 
 export interface CoffeeProps {
   id: number;
