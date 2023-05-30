@@ -1,5 +1,5 @@
 import { MapPinLine } from "phosphor-react";
-import { InfoContainer, Headline, AddressForm } from "../../styles";
+import { InfoContainer, Headline, AddressForm } from "./styles";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as zod from "zod";
@@ -35,7 +35,7 @@ export function OrderForm() {
             className="cep"
             type="text"
             placeholder="CEP"
-            {...register("cep", { valueAsNumber: true })}
+            {...register("cep")}
           />
           <input
             className="street"
