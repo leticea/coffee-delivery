@@ -6,6 +6,9 @@ import { CoffeeProps } from "./CoffeeList/components/CoffeeCard";
 
 interface CartContextType {
   cartItems: CoffeeProps;
+  quantity: number;
+  addCoffeeToCart: () => void;
+  removeSelectedCoffee: () => void;
 }
 
 const CartContext = createContext({} as CartContextType);

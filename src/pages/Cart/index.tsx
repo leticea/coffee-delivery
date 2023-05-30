@@ -59,7 +59,7 @@ export function Cart({ coffee }: CoffeeCardProps) {
       </Title>
       <CheckoutForm />
       <Payment />
-      <CheckoutCart />
+      <CheckoutCart coffee={coffee} />
     </>
   );
 }
