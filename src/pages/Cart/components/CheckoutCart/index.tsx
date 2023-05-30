@@ -20,7 +20,7 @@ interface CoffeeCardProps {
 }
 
 export function CheckoutCart({ coffee }: CoffeeCardProps) {
-  const { handleIncrease, handleDecrease } = useContext(CartContext)
+  const { quantity, handleIncrease, handleDecrease } = useContext(CartContext);
 
   //const [quantity, setQuantity] = useState(0);
 
