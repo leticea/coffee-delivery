@@ -3,8 +3,6 @@ import { Introduction } from "./Introduction";
 import { OurCoffees } from "./CoffeeList/components/OurCoffees";
 //import { CoffeeProps } from "./CoffeeList/components/CoffeeCard";
 
-
-
 export function Home() {
   return (
     <>

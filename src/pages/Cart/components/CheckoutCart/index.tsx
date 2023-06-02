@@ -35,15 +35,6 @@ export function CheckoutCart({ coffee }: CoffeeCardProps) {
     }
   }
 
-  function removeSelectedCoffee(id: number) {
-    coffees.filter((coffee) => {
-      return coffee.id !== id;
-    });
-
-    console.log("clicou");
-    //setCoffeeOrders(undeletedCoffees);
-  }
-
   return (
     <>
       <OrderCard>
@@ -59,7 +50,7 @@ export function CheckoutCart({ coffee }: CoffeeCardProps) {
                   <Plus size={14} onClick={handleIncrease} />
                 </QuantityButtons>
 
-                <RemoveButton onClick={removeSelectedCoffee}>
+                <RemoveButton>
                   <Trash size={14} />
                   Remover
                 </RemoveButton>

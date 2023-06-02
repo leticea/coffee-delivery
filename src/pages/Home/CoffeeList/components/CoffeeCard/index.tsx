@@ -11,8 +11,6 @@ import {
   Name,
   Tags,
 } from "./styles";
-import { CartContext } from "../../..";
-//import { coffees } from "../../../../utils/coffees";
 
 export interface CoffeeProps {
   id: number;
@@ -50,12 +48,6 @@ export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;
 
-  function handleAddToCart(id: number) {
-    const item = { id: id, quantity: quantity };
-
-    addCoffeeToCart(item);
-  }
-
   return (
     <CoffeesCard>
       <img src={image} alt="" />
@@ -75,7 +67,7 @@ export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
         <Button
-          onClick={() => handleAddToCart(id)}
+          onClick={addCoffeeToCart}
           disabled={isSubmitDisabled}
           type="submit"
         >
