@@ -9,7 +9,9 @@ export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
-        <Router />
+        <CartContext.Provider value={{}}>
+          <Router />
+        </CartContext.Provider>
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>

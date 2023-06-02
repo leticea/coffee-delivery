@@ -35,19 +35,17 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
   const { id, tags, name, image, description, price } = coffee;
-  const { quantity, handleIncrease, handleDecrease } = useContext(CartContext)
+  const [quantity, setQuantity] = useState(0);
 
-  //const [quantity, setQuantity] = useState(0);
+  function handleIncrease() {
+    setQuantity((state) => state + 1);
+  }
 
-  // function handleIncrease() {
-  //   setQuantity((state) => state + 1);
-  // }
-
-  // function handleDecrease() {
-  //   if (quantity > 0) {
-  //     setQuantity((state) => state - 1);
-  //   }
-  // }
+  function handleDecrease() {
+    if (quantity > 0) {
+      setQuantity((state) => state - 1);
+    }
+  }
 
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;
