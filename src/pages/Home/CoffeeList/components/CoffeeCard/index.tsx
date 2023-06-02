@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { moneyFormat } from "../../../../../utils/moneyFormat";
@@ -11,6 +11,7 @@ import {
   Name,
   Tags,
 } from "./styles";
+import { CartContext } from "../../..";
 //import { coffees } from "../../../../utils/coffees";
 
 export interface CoffeeProps {
@@ -34,17 +35,19 @@ interface CoffeeCardProps {
 
 export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
   const { id, tags, name, image, description, price } = coffee;
-  const [quantity, setQuantity] = useState(0);
+  const { quantity, handleIncrease, handleDecrease } = useContext(CartContext)
 
-  function handleIncrease() {
-    setQuantity((state) => state + 1);
-  }
+  //const [quantity, setQuantity] = useState(0);
 
-  function handleDecrease() {
-    if (quantity > 0) {
-      setQuantity((state) => state - 1);
-    }
-  }
+  // function handleIncrease() {
+  //   setQuantity((state) => state + 1);
+  // }
+
+  // function handleDecrease() {
+  //   if (quantity > 0) {
+  //     setQuantity((state) => state - 1);
+  //   }
+  // }
 
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;

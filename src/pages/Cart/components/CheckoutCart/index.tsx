@@ -8,35 +8,32 @@ import {
   Amount,
   Button,
 } from "./styles";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { coffees } from "../../../../utils/coffees";
 import traditional from "../../../../assets/traditional.svg";
 
 import { CoffeeProps } from "../../../Home/CoffeeList/components/CoffeeCard";
-import { CartContext } from "../../../Home";
 
 interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
 
 export function CheckoutCart({ coffee }: CoffeeCardProps) {
-  const { quantity, handleIncrease, handleDecrease } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(0);
 
-  //const [quantity, setQuantity] = useState(0);
+  function handleIncrease() {
+    setQuantity((state) => {
+      return state + 1;
+    });
+  }
 
-  // function handleIncrease() {
-  //   setQuantity((state) => {
-  //     return state + 1;
-  //   });
-  // }
-
-  // function handleDecrease() {
-  //   if (quantity > 0) {
-  //     setQuantity((state) => {
-  //       return state - 1;
-  //     });
-  //   }
-  // }
+  function handleDecrease() {
+    if (quantity > 0) {
+      setQuantity((state) => {
+        return state - 1;
+      });
+    }
+  }
 
   function removeSelectedCoffee(id: number) {
     coffees.filter((coffee) => {

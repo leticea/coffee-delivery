@@ -33,7 +33,7 @@ Projeto de Front-end de React de uma cafeteria.
 
 - Módulo ReactJS do Ignite na plataforma da [Rocketseat](https://www.rocketseat.com.br/).
 
-## 🚀 Como Rodar
+## ⚙️ Como Rodar
 
 - Clone o projeto.
 - Entre na pasta do projeto e rode 'npm install' (use 'yarn install' se for essa a sua configuração).
