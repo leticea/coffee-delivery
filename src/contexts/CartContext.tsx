@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useState } from "react";
 import { CoffeeProps } from "../pages/Home/CoffeeList/components/CoffeeCard";
 
-interface CartItem extends CoffeeProps {
+export interface CartItem extends CoffeeProps {
   quantity: number;
 }
 
@@ -21,8 +21,7 @@ interface CartContextProviderProps {
 }
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
-  const [cartItems, setCartItems] = useState<CartItem[]>()
-
+  const [cartItems, setCartItems] = useState<CartItem[]>();
 
   const cartQuantity = cartItems.length;
   const cartItemsTotal = cartItems.reduce((total, cartItem) => {
@@ -55,7 +54,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   // }
 
   return (
-    <CartContext.Provider value={{ addCoffeeToCart, cartItems, cartQuantity }}>
+    <CartContext.Provider value={{ addCoffeeToCart, cartItems, cartQuantity, cartItemsTotal }}>
       {children}
     </CartContext.Provider>
   );

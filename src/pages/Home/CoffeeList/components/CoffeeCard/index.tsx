@@ -11,6 +11,7 @@ import {
   Name,
   Tags,
 } from "./styles";
+import { CartContext } from "../../../../../contexts/CartContext";
 
 export interface CoffeeProps {
   id: number;
@@ -26,7 +27,8 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
-  const { id, tags, name, image, description, price } = coffee;
+  // const { id, tags, name, image, description, price } = coffee;
+  const { addCoffeeToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
@@ -39,32 +41,37 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
     }
   }
 
+  function addToCart() {
+    const coffeeToAdd = {
+      ...coffee,
+      quantity,
+    };
+
+    addCoffeeToCart(coffeeToAdd);
+  }
+
   const handleQuantity = quantity;
   const isSubmitDisabled = !handleQuantity;
 
   return (
-    <CoffeesCard>
-      <img src={image} alt="" />
-      {tags.map((tag) => {
+    <CoffeesCard key={coffee.id}>
+      <img src={`/coffees/${coffee.image}`} alt="" />
+      {coffee.tags.map((tag) => {
         return <Tags key={tag}>{tag}</Tags>;
       })}
-      <Name>{name}</Name>
-      <Description>{description}</Description>
+      <Name>{coffee.name}</Name>
+      <Description>{coffee.description}</Description>
       <Footer>
         <p>
           R$
-          <span>{moneyFormat(price)}</span>
+          <span>{moneyFormat(coffee.price)}</span>
         </p>
         <Buttons>
           <Minus size={14} onClick={handleDecrease} />
           {quantity}
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
-        <Button
-          onClick={}
-          disabled={isSubmitDisabled}
-          type="submit"
-        >
+        <Button onClick={addToCart} disabled={isSubmitDisabled} type="submit">
           <ShoppingCartSimple weight="fill" size={21} />
         </Button>
       </Footer>
