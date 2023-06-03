@@ -14,13 +14,16 @@ import traditional from "../../../../assets/traditional.svg";
 
 import { CoffeeProps } from "../../../Home/CoffeeList/components/CoffeeCard";
 import { CartContext } from "../../../../contexts/CartContext";
+import { moneyFormat } from "../../../../utils/moneyFormat";
 
 interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
 
 export function CheckoutCart({ coffee }: CoffeeCardProps) {
-  const { cartItems, cartQuantity } = useContext(CartContext);
+  const { cartItems, cartQuantity, cartItemsTotal } = useContext(CartContext);
+  const DELIVERY_PRICE = 3.5;
+  const cartTotal = DELIVERY_PRICE + cartItemsTotal;
   const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
@@ -87,13 +90,13 @@ export function CheckoutCart({ coffee }: CoffeeCardProps) {
 
         <Amount>
           <p>
-            Total de itens <span>R$ 29,70</span>
+            Total de itens <span>R$ {moneyFormat(cartItemsTotal)}</span>
           </p>
           <p>
-            Entrega <span>R$ 3,50</span>
+            Entrega <span>R$ {moneyFormat(DELIVERY_PRICE)}</span>
           </p>
           <h1>
-            Total <span>R$ 33,20</span>
+            Total <span>R$ {moneyFormat(cartTotal)}</span>
           </h1>
         </Amount>
         <Button>Confirmar pedido</Button>
