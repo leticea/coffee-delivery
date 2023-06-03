@@ -21,17 +21,11 @@ export interface CoffeeProps {
   price: number;
 }
 
-interface CoffeeOrderProps {
-  id: number;
-  quantity: number;
-}
-
 interface CoffeeCardProps {
   coffee: CoffeeProps;
-  addCoffeeToCart: (item: CoffeeOrderProps) => void;
 }
 
-export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
+export function CoffeeCard({ coffee }: CoffeeCardProps) {
   const { id, tags, name, image, description, price } = coffee;
   const [quantity, setQuantity] = useState(0);
 
@@ -67,7 +61,7 @@ export function CoffeeCard({ coffee, addCoffeeToCart }: CoffeeCardProps) {
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
         <Button
-          onClick={addCoffeeToCart}
+          onClick={}
           disabled={isSubmitDisabled}
           type="submit"
         >

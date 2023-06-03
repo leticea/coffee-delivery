@@ -8,17 +8,19 @@ import {
   Amount,
   Button,
 } from "./styles";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { coffees } from "../../../../utils/coffees";
 import traditional from "../../../../assets/traditional.svg";
 
 import { CoffeeProps } from "../../../Home/CoffeeList/components/CoffeeCard";
+import { CartContext } from "../../../../contexts/CartContext";
 
 interface CoffeeCardProps {
   coffee: CoffeeProps;
 }
 
 export function CheckoutCart({ coffee }: CoffeeCardProps) {
+  const { cartItems, cartQuantity } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {

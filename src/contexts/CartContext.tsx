@@ -1,18 +1,14 @@
-import { ReactNode, createContext } from "react";
+import { ReactNode, createContext, useState } from "react";
+import { CoffeeProps } from "../pages/Home/CoffeeList/components/CoffeeCard";
 
-interface CoffeeProps {
-  id: number;
-  tags: string[];
-  name: string;
-  image: string;
-  description: string;
-  price: number;
+interface CartItem extends CoffeeProps {
+  quantity: number;
 }
 
 interface CartContextType {
-  cartItems: CoffeeProps;
+  cartItems: CartItem[];
   cartQuantity: number;
-  addCoffeeToCart: (coffee: CoffeeProps) => void;
+  addCoffeeToCart: (coffee: CartItem) => void;
   // handleIncrease: () => void;
   // handleDecrease: () => void;
   // removeSelectedCoffee: () => void;
@@ -25,8 +21,28 @@ interface CartContextProviderProps {
 }
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
-  function addCoffeeToCart(coffee: CoffeeProps) {
-    //const item = { id: id, quantity: quantity };
+  const [cartItems, setCartItems] = useState<CartItem[]>()
+
+
+  const cartQuantity = cartItems.length;
+  const cartItemsTotal = cartItems.reduce((total, cartItem) => {
+    return total + cartItem.price * cartItem.quantity;
+  }, 0);
+
+  function addCoffeeToCart(coffee: CartItem) {
+    const coffeeAlreadyExistsInCart = cartItems.findIndex(
+      (cartItem) => cartItem.id === coffee.id
+    );
+
+    const newCart = produce(cartItems, (draft) => {
+      if (coffeeAlreadyExistsInCart < 0) {
+        draft.push(coffee);
+      } else {
+        draft[coffeeAlreadyExistsInCart].quantity += coffee.quantity;
+      }
+    });
+
+    setCartItems(newCart);
   }
 
   // function removeSelectedCoffee(id: number) {
@@ -39,7 +55,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   // }
 
   return (
-    <CartContext.Provider value={{ addCoffeeToCart }}>
+    <CartContext.Provider value={{ addCoffeeToCart, cartItems, cartQuantity }}>
       {children}
     </CartContext.Provider>
   );
