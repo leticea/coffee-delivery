@@ -9,22 +9,32 @@ import {
   Button,
 } from "./styles";
 import { useContext, useState } from "react";
-import { coffees } from "../../../../utils/coffees";
 import traditional from "../../../../assets/traditional.svg";
 
-import { CoffeeProps } from "../../../Home/CoffeeList/components/CoffeeCard";
-import { CartContext } from "../../../../contexts/CartContext";
+import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 
-interface CoffeeCardProps {
-  coffee: CoffeeProps;
+interface CoffeeCartCardProps {
+  coffee: CartItem;
 }
 
-export function CheckoutCart({ coffee }: CoffeeCardProps) {
+export interface CoffeeProps {
+  id: number;
+  tags: string[];
+  name: string;
+  image: string;
+  description: string;
+  price: number;
+}
+
+export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
   const { cartItems, cartQuantity, cartItemsTotal } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(0);
+
+  const coffeeTotal = coffee.price * coffee.quantity;
   const DELIVERY_PRICE = 3.5;
   const cartTotal = DELIVERY_PRICE + cartItemsTotal;
-  const [quantity, setQuantity] = useState(0);
+
 
   function handleIncrease() {
     setQuantity((state) => {
@@ -45,13 +55,13 @@ export function CheckoutCart({ coffee }: CoffeeCardProps) {
       <OrderCard>
         <SelectedCoffeeCard>
           <div>
-            <img src={traditional} alt="" />
+            <img src={coffee.image} alt="" />
             <div>
-              Expresso Tradicional
+              {coffee.name}
               <ButtonsContainer>
                 <QuantityButtons>
                   <Minus size={14} onClick={handleDecrease} />
-                  {quantity}
+                  {coffee.quantity}
                   <Plus size={14} onClick={handleIncrease} />
                 </QuantityButtons>
 
@@ -62,10 +72,10 @@ export function CheckoutCart({ coffee }: CoffeeCardProps) {
               </ButtonsContainer>
             </div>
           </div>
-          <p>R$ 9,90</p>
+          <p>R$ {moneyFormat(coffeeTotal)}</p>
         </SelectedCoffeeCard>
         <hr />
-        <SelectedCoffeeCard>
+        {/* <SelectedCoffeeCard>
           <div>
             <img src={traditional} alt="" />
             <div>
@@ -85,7 +95,7 @@ export function CheckoutCart({ coffee }: CoffeeCardProps) {
             </div>
           </div>
           <p>R$ 9,90</p>
-        </SelectedCoffeeCard>
+        </SelectedCoffeeCard> */}
         <hr />
 
         <Amount>

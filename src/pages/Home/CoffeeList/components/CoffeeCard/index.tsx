@@ -70,7 +70,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           {quantity}
           <Plus size={14} onClick={handleIncrease} />
         </Buttons>
-        <Button onClick={addToCart} disabled={isSubmitDisabled} type="submit">
+        <Button onClick={addToCart} disabled={isSubmitDisabled}>
           <ShoppingCartSimple weight="fill" size={21} />
         </Button>
       </Footer>

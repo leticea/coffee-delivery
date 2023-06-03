@@ -24,7 +24,9 @@ interface CartContextProviderProps {
 
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
-    const storedCartItems = localStorage.getItem("@coffee-delivery:cart-items-1.0.0");
+    const storedCartItems = localStorage.getItem(
+      "@coffee-delivery:cart-items-1.0.0"
+    );
 
     if (storedCartItems) {
       return JSON.parse(storedCartItems);
@@ -64,7 +66,9 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   // }
 
   return (
-    <CartContext.Provider value={{ addCoffeeToCart, cartItems, cartQuantity, cartItemsTotal }}>
+    <CartContext.Provider
+      value={{ addCoffeeToCart, cartItems, cartQuantity, cartItemsTotal }}
+    >
       {children}
     </CartContext.Provider>
   );
