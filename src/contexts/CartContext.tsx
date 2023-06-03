@@ -1,5 +1,6 @@
 import { ReactNode, createContext, useState } from "react";
 import { CoffeeProps } from "../pages/Home/CoffeeList/components/CoffeeCard";
+import { produce } from "immer";
 
 export interface CartItem extends CoffeeProps {
   quantity: number;
@@ -23,13 +24,13 @@ interface CartContextProviderProps {
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>();
 
-  const cartQuantity = cartItems.length;
-  const cartItemsTotal = cartItems.reduce((total, cartItem) => {
+  const cartQuantity = cartItems?.length;
+  const cartItemsTotal = cartItems?.reduce((total, cartItem) => {
     return total + cartItem.price * cartItem.quantity;
   }, 0);
 
   function addCoffeeToCart(coffee: CartItem) {
-    const coffeeAlreadyExistsInCart = cartItems.findIndex(
+    const coffeeAlreadyExistsInCart = cartItems?.findIndex(
       (cartItem) => cartItem.id === coffee.id
     );
 

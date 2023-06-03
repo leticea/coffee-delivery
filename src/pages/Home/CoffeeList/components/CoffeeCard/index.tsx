@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { CartContext } from "../../../../../contexts/CartContext";
 
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { moneyFormat } from "../../../../../utils/moneyFormat";
@@ -11,7 +12,6 @@ import {
   Name,
   Tags,
 } from "./styles";
-import { CartContext } from "../../../../../contexts/CartContext";
 
 export interface CoffeeProps {
   id: number;
@@ -27,7 +27,6 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
-  // const { id, tags, name, image, description, price } = coffee;
   const { addCoffeeToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
@@ -55,7 +54,7 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
 
   return (
     <CoffeesCard key={coffee.id}>
-      <img src={`/coffees/${coffee.image}`} alt="" />
+      <img src={coffee.image} alt="" />
       {coffee.tags.map((tag) => {
         return <Tags key={tag}>{tag}</Tags>;
       })}
