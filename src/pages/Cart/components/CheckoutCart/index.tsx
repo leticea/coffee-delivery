@@ -31,8 +31,8 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
   const { cartItems, cartQuantity, cartItemsTotal } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
+  const DELIVERY_PRICE = 5;
   const coffeeTotal = coffee.price * coffee.quantity;
-  const DELIVERY_PRICE = 3.5;
   const cartTotal = DELIVERY_PRICE + cartItemsTotal;
 
 
