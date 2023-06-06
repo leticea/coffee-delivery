@@ -18,22 +18,13 @@ interface CoffeeCartCardProps {
   coffee: CartItem;
 }
 
-export interface CoffeeProps {
-  id: number;
-  tags: string[];
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-}
-
 export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
-  const { cartItems, cartQuantity, cartItemsTotal } = useContext(CartContext);
+  const { cartQuantity, totalCartItems } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
   const DELIVERY_PRICE = 5;
   const coffeeTotal = coffee.price * coffee.quantity;
-  const cartTotal = DELIVERY_PRICE + cartItemsTotal;
+  const cartTotal = DELIVERY_PRICE + totalCartItems;
 
 
   function handleIncrease() {
@@ -100,7 +91,7 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
 
         <Amount>
           <p>
-            Total de itens <span>R$ {moneyFormat(cartItemsTotal)}</span>
+            Total de itens <span>R$ {moneyFormat(totalCartItems)}</span>
           </p>
           <p>
             Entrega <span>R$ {moneyFormat(DELIVERY_PRICE)}</span>
