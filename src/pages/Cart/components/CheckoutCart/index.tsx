@@ -109,7 +109,7 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
             Total <span>R$ {moneyFormat(cartTotal)}</span>
           </h1>
         </Amount>
-        <Button>Confirmar pedido</Button>
+        <Button type="submit" disabled={cartQuantity <= 0}>Confirmar pedido</Button>
       </OrderCard>
     </>
   );
