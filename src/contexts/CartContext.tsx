@@ -45,7 +45,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
       (cartItem) => cartItem.id === coffee.id
     );
 
-    const newCart = produce(cartItems, (draft) => {
+    const newOrder = produce(cartItems, (draft) => {
       if (coffeeAlreadyExistsInCart < 0) {
         draft.push(coffee);
       } else {
@@ -53,7 +53,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
       }
     });
 
-    setCartItems(newCart);
+    setCartItems(newOrder);
   }
 
   // function removeSelectedCoffee(id: number) {

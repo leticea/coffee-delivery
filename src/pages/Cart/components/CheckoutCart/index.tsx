@@ -9,8 +9,6 @@ import {
   Button,
 } from "./styles";
 import { useContext, useState } from "react";
-import traditional from "../../../../assets/traditional.svg";
-
 import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 
@@ -25,7 +23,6 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
   const DELIVERY_PRICE = 5;
   const coffeeTotal = coffee.price * coffee.quantity;
   const cartTotal = DELIVERY_PRICE + totalCartItems;
-
 
   function handleIncrease() {
     setQuantity((state) => {
@@ -100,7 +97,9 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
             Total <span>R$ {moneyFormat(cartTotal)}</span>
           </h1>
         </Amount>
-        <Button type="submit" disabled={cartQuantity <= 0}>Confirmar pedido</Button>
+        <Button type="submit" disabled={cartQuantity <= 0}>
+          Confirmar pedido
+        </Button>
       </OrderCard>
     </>
   );

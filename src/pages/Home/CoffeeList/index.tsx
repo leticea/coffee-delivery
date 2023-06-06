@@ -13,13 +13,13 @@ interface CoffeeListProps {
 }
 
 export function CoffeeList({ receiveCartValue }: CoffeeListProps) {
-  const [newOrder, setNewOrder] = useState<CoffeeOrderProps[]>([]);
+  //const [newOrder, setNewOrder] = useState<CoffeeOrderProps[]>([]);
 
-  function addCoffeeToCart(item: CoffeeOrderProps) {
-    const aux = [...newOrder, item];
-    setNewOrder(aux);
-    receiveCartValue();
-  }
+  // function addCoffeeToCart(item: CoffeeOrderProps) {
+  //   const aux = [...newOrder, item];
+  //   setNewOrder(aux);
+  //   receiveCartValue();
+  // }
 
   return (
     <Container>
@@ -29,7 +29,7 @@ export function CoffeeList({ receiveCartValue }: CoffeeListProps) {
             <CoffeeCard
               key={coffee.id}
               coffee={coffee}
-              addCoffeeToCart={addCoffeeToCart}
+              // addCoffeeToCart={addCoffeeToCart}
             />
           );
         })}
