@@ -15,12 +15,13 @@ interface CoffeeCartCardProps {
   coffee: CartItem;
 }
 
-export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
-  const { cartQuantity, totalCartItems } = useContext(CartContext);
+export function CheckoutCart() {
+  const { cartItems, cartQuantity, totalCartItems } = useContext(CartContext);
+
   const [quantity, setQuantity] = useState(0);
 
   const DELIVERY_PRICE = 5;
-  const coffeeTotal = coffee.price * coffee.quantity;
+  // const coffeeTotal = coffee.price * coffee.quantity;
   const cartTotal = DELIVERY_PRICE + totalCartItems;
 
   function handleIncrease() {
@@ -41,24 +42,29 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
     <>
       <OrderCard>
         <SelectedCoffeeCard>
-          <div>
-            <img src={coffee.image} alt="" />
-            <div>
-              {coffee.name}
-              <ButtonsContainer>
-                <QuantityButtons>
-                  <Minus size={14} onClick={handleDecrease} />
-                  {coffee.quantity}
-                  <Plus size={14} onClick={handleIncrease} />
-                </QuantityButtons>
+          {cartItems.map((coffee) => {
+            return (
+              <div>
+                <img src={coffee.image} alt="" />
+                <div>
+                  {coffee.name}
+                  <ButtonsContainer>
+                    <QuantityButtons>
+                      <Minus size={14} onClick={handleDecrease} />
+                      {coffee.quantity}
+                      <Plus size={14} onClick={handleIncrease} />
+                    </QuantityButtons>
 
-                <RemoveButton>
-                  <Trash size={14} />
-                  Remover
-                </RemoveButton>
-              </ButtonsContainer>
-            </div>
-          </div>
+                    <RemoveButton>
+                      <Trash size={14} />
+                      Remover
+                    </RemoveButton>
+                  </ButtonsContainer>
+                </div>
+              </div>
+            );
+          })}
+
           <p>R$ {moneyFormat(coffeeTotal)}</p>
         </SelectedCoffeeCard>
         <hr />

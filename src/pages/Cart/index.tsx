@@ -4,11 +4,8 @@ import { CheckoutCart } from "./components/CheckoutCart";
 import { CheckoutForm } from "./components/CheckoutForm";
 import { Payment } from "./components/Payment";
 import { Title } from "./styles";
-import ConfirmationCard from "./components/ConfirmationCard";
 
 export function Cart() {
-  const { cartItems } = useContext(CartContext);
-
   return (
     <>
       <Title>
@@ -17,7 +14,7 @@ export function Cart() {
       </Title>
       <CheckoutForm />
       <Payment />
-      <ConfirmationCard />
+      <CheckoutCart />
     </>
   );
 }
