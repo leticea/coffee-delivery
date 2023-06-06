@@ -5,12 +5,11 @@ import {
   ButtonsContainer,
   QuantityButtons,
   RemoveButton,
-  Amount,
-  Button,
 } from "./styles";
 import { useContext, useState } from "react";
 import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
+import ConfirmationCard from "../ConfirmationCard";
 
 interface CoffeeCartCardProps {
   coffee: CartItem;
@@ -63,21 +62,7 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
           <p>R$ {moneyFormat(coffeeTotal)}</p>
         </SelectedCoffeeCard>
         <hr />
-
-        <Amount>
-          <p>
-            Total de itens <span>R$ {moneyFormat(totalCartItems)}</span>
-          </p>
-          <p>
-            Entrega <span>R$ {moneyFormat(DELIVERY_PRICE)}</span>
-          </p>
-          <h1>
-            Total <span>R$ {moneyFormat(cartTotal)}</span>
-          </h1>
-        </Amount>
-        <Button type="submit" disabled={cartQuantity <= 0}>
-          Confirmar pedido
-        </Button>
+        <ConfirmationCard />
       </OrderCard>
     </>
   );
