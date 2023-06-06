@@ -1,17 +1,13 @@
-import {
-  Title,
-} from "./styles";
-
-import { CoffeeProps } from "../Home/CoffeeList/components/CoffeeCard";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
+import { CheckoutCart } from "./components/CheckoutCart";
 import { CheckoutForm } from "./components/CheckoutForm";
 import { Payment } from "./components/Payment";
-import { CheckoutCart } from "./components/CheckoutCart";
+import { Title } from "./styles";
 
-interface CoffeeCardProps {
-  coffee: CoffeeProps;
-}
+export function Cart() {
+  const { cartItems } = useContext(CartContext);
 
-export function Cart({ coffee }: CoffeeCardProps) {
   return (
     <>
       <Title>
@@ -20,7 +16,9 @@ export function Cart({ coffee }: CoffeeCardProps) {
       </Title>
       <CheckoutForm />
       <Payment />
-      <CheckoutCart coffee={coffee} />
+      {cartItems.map((coffee) => (
+        <CheckoutCart key={coffee.id} coffee={coffee} />
+      ))}
     </>
   );
 }

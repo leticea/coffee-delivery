@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { coffees } from "../../../utils/coffees";
 import { CoffeeCard } from "./components/CoffeeCard";
 import { Container, List } from "./styles";

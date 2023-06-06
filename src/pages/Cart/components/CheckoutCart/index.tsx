@@ -63,28 +63,6 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
           <p>R$ {moneyFormat(coffeeTotal)}</p>
         </SelectedCoffeeCard>
         <hr />
-        {/* <SelectedCoffeeCard>
-          <div>
-            <img src={traditional} alt="" />
-            <div>
-              Expresso Tradicional
-              <ButtonsContainer>
-                <QuantityButtons>
-                  <Minus size={14} />
-                  1
-                  <Plus size={14} />
-                </QuantityButtons>
-
-                <RemoveButton>
-                  <Trash size={14} />
-                  Remover
-                </RemoveButton>
-              </ButtonsContainer>
-            </div>
-          </div>
-          <p>R$ 9,90</p>
-        </SelectedCoffeeCard> */}
-        <hr />
 
         <Amount>
           <p>
