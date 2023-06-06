@@ -4,6 +4,7 @@ import { CheckoutCart } from "./components/CheckoutCart";
 import { CheckoutForm } from "./components/CheckoutForm";
 import { Payment } from "./components/Payment";
 import { Title } from "./styles";
+import ConfirmationCard from "./components/ConfirmationCard";
 
 export function Cart() {
   const { cartItems } = useContext(CartContext);
@@ -16,9 +17,7 @@ export function Cart() {
       </Title>
       <CheckoutForm />
       <Payment />
-      {cartItems.map((coffee) => (
-        <CheckoutCart key={coffee.id} coffee={coffee} />
-      ))}
+      <ConfirmationCard />
     </>
   );
 }

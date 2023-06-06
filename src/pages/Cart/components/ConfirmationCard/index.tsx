@@ -12,6 +12,9 @@ export default function ConfirmationCard() {
 
   return (
     <>
+      {cartItems.map((coffee) => (
+        <CheckoutCart key={coffee.id} coffee={coffee} />
+      ))}
       <Confirmation>
         <p>
           Total de itens <span>R$ {moneyFormat(totalCartItems)}</span>
