@@ -11,18 +11,15 @@ import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
 
-interface CoffeeCartCardProps {
+export interface CoffeeCartCardProps {
   coffee: CartItem;
 }
 
-export function CheckoutCart() {
-  const { cartItems, cartQuantity, totalCartItems } = useContext(CartContext);
-
+export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
+  const { cartItems } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
-  const DELIVERY_PRICE = 5;
-  // const coffeeTotal = coffee.price * coffee.quantity;
-  const cartTotal = DELIVERY_PRICE + totalCartItems;
+  const coffeeTotal = coffee.price * coffee.quantity;
 
   function handleIncrease() {
     setQuantity((state) => {

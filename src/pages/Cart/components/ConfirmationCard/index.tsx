@@ -1,11 +1,10 @@
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import { Button, Confirmation } from "./styles";
-import { CheckoutCart } from "../CheckoutCart";
 import { useContext } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
 
 export default function ConfirmationCard() {
-  const { cartItems, cartQuantity, totalCartItems } = useContext(CartContext);
+  const { cartQuantity, totalCartItems } = useContext(CartContext);
 
   const DELIVERY_PRICE = 5;
   const cartTotal = DELIVERY_PRICE + totalCartItems;

@@ -1,11 +1,9 @@
-import { useContext } from "react";
-import { CartContext } from "../../contexts/CartContext";
-import { CheckoutCart } from "./components/CheckoutCart";
+import { CheckoutCart, CoffeeCartCardProps } from "./components/CheckoutCart";
 import { CheckoutForm } from "./components/CheckoutForm";
 import { Payment } from "./components/Payment";
 import { Title } from "./styles";
 
-export function Cart() {
+export function Cart({coffee}: CoffeeCartCardProps) {
   return (
     <>
       <Title>
@@ -14,7 +12,7 @@ export function Cart() {
       </Title>
       <CheckoutForm />
       <Payment />
-      <CheckoutCart />
+      <CheckoutCart coffee={coffee} />
     </>
   );
 }
