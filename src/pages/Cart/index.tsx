@@ -3,7 +3,7 @@ import { CheckoutForm } from "./components/CheckoutForm";
 import { Payment } from "./components/Payment";
 import { Title } from "./styles";
 
-export function Cart({coffee}: CoffeeCartCardProps) {
+export function Cart() {
   return (
     <>
       <Title>
@@ -12,7 +12,7 @@ export function Cart({coffee}: CoffeeCartCardProps) {
       </Title>
       <CheckoutForm />
       <Payment />
-      <CheckoutCart coffee={coffee} />
+      <CheckoutCart />
     </>
   );
 }

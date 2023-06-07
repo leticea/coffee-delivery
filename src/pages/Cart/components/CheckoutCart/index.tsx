@@ -15,11 +15,9 @@ export interface CoffeeCartCardProps {
   coffee: CartItem;
 }
 
-export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
+export function CheckoutCart() {
   const { cartItems, removeCoffeeFromCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
-
-  //const coffeeTotal = coffee.price * coffee.quantity;
 
   function handleIncrease() {
     setQuantity((state) => {
@@ -43,6 +41,7 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
     <>
       <OrderCard>
         {cartItems.map((coffee) => {
+          const totalCoffees = coffee.price * coffee.quantity;
           return (
             <SelectedCoffeeCard>
               <div>
@@ -61,14 +60,13 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
                       Remover
                     </RemoveButton>
                   </ButtonsContainer>
+                  <hr />
                 </div>
               </div>
-              <p>R$ {moneyFormat(0)}</p>
+              <p>R$ {moneyFormat(totalCoffees)}</p>
             </SelectedCoffeeCard>
           );
         })}
-
-        <hr />
         <ConfirmationCard />
       </OrderCard>
     </>

@@ -21,9 +21,10 @@ export const OrderCard = styled.div`
   //border: 1px solid red;
 
   hr {
-    margin: 2.4rem 0 2.4rem 0;
+    margin: 1.4rem 0 2.4rem 0;
     width: 36.8rem;
     border: 1px solid ${(props) => props.theme["gray-400"]};
+    //border: 1px solid red;
   }
 `;
 
@@ -32,6 +33,8 @@ export const SelectedCoffeeCard = styled.section`
   align-items: flex-start;
   padding: 0.8rem 0.4rem;
   gap: 48px;
+
+  margin: auto;
 
   width: 36.8rem;
   height: 8rem;
@@ -53,6 +56,7 @@ export const SelectedCoffeeCard = styled.section`
     div {
       gap: 0.8rem;
       flex-direction: column;
+      //border: 1px solid blue;
     }
   }
 
@@ -142,4 +146,3 @@ export const RemoveButton = styled.button`
     background: ${(props) => props.theme["gray-500"]};
   }
 `;
-
