@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { produce } from "immer";
 import { CoffeeProps } from "../pages/Home/CoffeeList/components/CoffeeCard";
 
@@ -11,6 +11,7 @@ interface CartContextType {
   cartQuantity: number;
   totalCartItems: number;
   addCoffeeToCart: (coffee: CartItem) => void;
+  removeCoffeeFromCart: (cartItemId: number) => void;
   // handleIncrease: () => void;
   // handleDecrease: () => void;
   // removeSelectedCoffee: () => void;
@@ -56,18 +57,29 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     setCartItems(newOrder);
   }
 
-  // function removeSelectedCoffee(id: number) {
-  //   coffees.filter((coffee) => {
-  //     return coffee.id !== id;
-  //   });
+  function removeCoffeeFromCart(cartItemId: number) {
+    const newCart = produce(cartItems, (draft) => {
+      const coffeeExistsInCart = cartItems.findIndex(
+        (cartItem) => cartItem.id === cartItemId
+      );
 
-  //   console.log("clicou");
-  //   //setCoffeeOrders(undeletedCoffees);
-  // }
+      if (coffeeExistsInCart >= 0) {
+        draft.splice(coffeeExistsInCart, 1);
+      }
+    });
+
+    setCartItems(newCart);
+  }
 
   return (
     <CartContext.Provider
-      value={{ addCoffeeToCart, cartItems, cartQuantity, totalCartItems }}
+      value={{
+        addCoffeeToCart,
+        cartItems,
+        cartQuantity,
+        totalCartItems,
+        removeCoffeeFromCart,
+      }}
     >
       {children}
     </CartContext.Provider>

@@ -16,10 +16,10 @@ export interface CoffeeCartCardProps {
 }
 
 export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, removeCoffeeFromCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(0);
 
-  const coffeeTotal = coffee.price * coffee.quantity;
+  //const coffeeTotal = coffee.price * coffee.quantity;
 
   function handleIncrease() {
     setQuantity((state) => {
@@ -35,12 +35,16 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
     }
   }
 
+  function handleRemove() {
+    removeCoffeeFromCart(coffee.id);
+  }
+
   return (
     <>
       <OrderCard>
-        <SelectedCoffeeCard>
-          {cartItems.map((coffee) => {
-            return (
+        {cartItems.map((coffee) => {
+          return (
+            <SelectedCoffeeCard>
               <div>
                 <img src={coffee.image} alt="" />
                 <div>
@@ -52,18 +56,18 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
                       <Plus size={14} onClick={handleIncrease} />
                     </QuantityButtons>
 
-                    <RemoveButton>
+                    <RemoveButton type="button" onClick={handleRemove}>
                       <Trash size={14} />
                       Remover
                     </RemoveButton>
                   </ButtonsContainer>
                 </div>
               </div>
-            );
-          })}
+              <p>R$ {moneyFormat(0)}</p>
+            </SelectedCoffeeCard>
+          );
+        })}
 
-          <p>R$ {moneyFormat(coffeeTotal)}</p>
-        </SelectedCoffeeCard>
         <hr />
         <ConfirmationCard />
       </OrderCard>
