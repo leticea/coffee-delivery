@@ -60,10 +60,10 @@ export function CheckoutCart() {
                       Remover
                     </RemoveButton>
                   </ButtonsContainer>
-                  <hr />
                 </div>
               </div>
               <p>R$ {moneyFormat(totalCoffees)}</p>
+              <hr />
             </SelectedCoffeeCard>
           );
         })}

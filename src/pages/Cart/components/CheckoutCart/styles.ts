@@ -7,25 +7,18 @@ export const OrderCard = styled.div`
   padding: 4rem;
   user-select: none;
 
-  //gap: 24px;
+  gap: 24px;
 
   position: absolute;
   width: 44.8rem;
-  height: 49.8rem;
+  min-height: 49.8rem;
   left: 83.2rem;
   top: 18.7rem;
 
   border-radius: 6px 44px;
   background: ${(props) => props.theme["gray-200"]};
 
-  //border: 1px solid red;
-
-  hr {
-    margin: 1.4rem 0 2.4rem 0;
-    width: 36.8rem;
-    border: 1px solid ${(props) => props.theme["gray-400"]};
-    //border: 1px solid red;
-  }
+  border: 1px solid red;
 `;
 
 export const SelectedCoffeeCard = styled.section`
@@ -34,12 +27,13 @@ export const SelectedCoffeeCard = styled.section`
   padding: 0.8rem 0.4rem;
   gap: 48px;
 
-  margin: auto;
+  //margin: auto;
 
   width: 36.8rem;
   height: 8rem;
+  margin-bottom: 2.4rem;
 
-  //border: 1px solid red;
+  border: 1px solid red;
 
   div {
     display: flex;
@@ -60,8 +54,17 @@ export const SelectedCoffeeCard = styled.section`
     }
   }
 
+  hr {
+    position: absolute;
+    margin: 10.4rem 0;
+    width: 36.8rem;
+    //height: 2rem;
+    border: 1px solid ${(props) => props.theme["gray-400"]};
+    //border: 1px solid red;
+  }
+
   p {
-    min-width: 6rem;
+    min-width: 8rem;
     height: 2.1rem;
 
     font-weight: 700;
