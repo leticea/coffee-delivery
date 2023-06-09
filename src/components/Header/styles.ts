@@ -46,26 +46,27 @@ export const HeaderContainer = styled.header`
 
       position: relative;
 
-      border: 1px solid red;
+      //border: 1px solid red;
 
       svg {
         color: ${(props) => props.theme["yellow-600"]};
       }
 
       span {
-      width: 1.25rem;
-      height: 1.25rem;
+      width: 2rem;
+      height: 2rem;
+      clip-path: circle();
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: -0.5rem;
-      right: -6.5rem;
+      top: -0.8rem;
+      right: -7rem;
       background: ${(props) => props.theme["yellow-600"]};
       color: ${(props) => props.theme["white"]};
       font-weight: 700;
-      font-size: 0.75rem;
+      font-size: 1.2rem;
     }
     }
   }
