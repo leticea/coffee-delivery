@@ -29,11 +29,11 @@ export const SelectedCoffeeCard = styled.section`
 
   //margin: auto;
 
-  width: 36.8rem;
+  min-width: 36.8rem;
   height: 8rem;
   margin-bottom: 2.4rem;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   div {
     display: flex;
@@ -56,9 +56,8 @@ export const SelectedCoffeeCard = styled.section`
 
   hr {
     position: absolute;
-    margin: 10.4rem 0;
+    margin: 9.6rem 0;
     width: 36.8rem;
-    //height: 2rem;
     border: 1px solid ${(props) => props.theme["gray-400"]};
     //border: 1px solid red;
   }

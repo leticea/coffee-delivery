@@ -4,9 +4,9 @@ export const Confirmation = styled.section`
   width: 36.8rem;
   height: 9.2rem;
   display: grid;
-  //margin-top: 2rem;
+  margin-top: 0.5rem;
 
-  border: 1px solid red;
+  //border: 1px solid red;
 
   p {
     display: flex;
