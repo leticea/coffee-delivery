@@ -10,6 +10,7 @@ import { useContext, useState } from "react";
 import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
+import { EmptyCart } from "../EmptyCart";
 
 // export interface CoffeeCartCardProps {
 //   coffee: CartItem;
@@ -40,33 +41,37 @@ export function CheckoutCart() {
   return (
     <>
       <OrderCard>
-        {cartItems.map((coffee) => {
-          const totalCoffees = coffee.price * coffee.quantity;
-          return (
-            <SelectedCoffeeCard>
-              <div>
-                <img src={coffee.image} alt="" />
+        {cartItems.length !== 0 ? (
+          cartItems.map((coffee) => {
+            const totalCoffees = coffee.price * coffee.quantity;
+            return (
+              <SelectedCoffeeCard>
                 <div>
-                  {coffee.name}
-                  <ButtonsContainer>
-                    <QuantityButtons>
-                      <Minus size={14} onClick={handleDecrease} />
-                      {coffee.quantity}
-                      <Plus size={14} onClick={handleIncrease} />
-                    </QuantityButtons>
+                  <img src={coffee.image} alt="" />
+                  <div>
+                    {coffee.name}
+                    <ButtonsContainer>
+                      <QuantityButtons>
+                        <Minus size={14} onClick={handleDecrease} />
+                        {coffee.quantity}
+                        <Plus size={14} onClick={handleIncrease} />
+                      </QuantityButtons>
 
-                    <RemoveButton type="button" onClick={handleRemove}>
-                      <Trash size={14} />
-                      Remover
-                    </RemoveButton>
-                  </ButtonsContainer>
+                      <RemoveButton type="button" onClick={handleRemove}>
+                        <Trash size={14} />
+                        Remover
+                      </RemoveButton>
+                    </ButtonsContainer>
+                  </div>
                 </div>
-              </div>
-              <p>R$ {moneyFormat(totalCoffees)}</p>
-              <hr />
-            </SelectedCoffeeCard>
-          );
-        })}
+                <p>R$ {moneyFormat(totalCoffees)}</p>
+                <hr />
+              </SelectedCoffeeCard>
+            );
+          })
+        ) : (
+          <EmptyCart />
+        )}
         <ConfirmationCard />
       </OrderCard>
     </>

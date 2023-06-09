@@ -6,7 +6,8 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
 export function Header() {
-  const {cartQuantity} = useContext(CartContext)
+  const { cartQuantity } = useContext(CartContext);
+
   return (
     <HeaderContainer>
       <NavLink title="Home" to="/">

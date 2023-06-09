@@ -53,21 +53,21 @@ export const HeaderContainer = styled.header`
       }
 
       span {
-      width: 2rem;
-      height: 2rem;
-      clip-path: circle();
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: -0.8rem;
-      right: -7rem;
-      background: ${(props) => props.theme["yellow-600"]};
-      color: ${(props) => props.theme["white"]};
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
+        width: 2rem;
+        height: 2rem;
+        clip-path: circle();
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -0.8rem;
+        right: -7rem;
+        background: ${(props) => props.theme["yellow-600"]};
+        color: ${(props) => props.theme["white"]};
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
     }
   }
 `;
