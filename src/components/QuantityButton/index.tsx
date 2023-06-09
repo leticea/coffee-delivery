@@ -11,7 +11,5 @@ export function QuantityInput({
   onIncrease,
   onDecrease,
 }: QuantityButtonProps) {
-  return (
-
-  )
+  
 }

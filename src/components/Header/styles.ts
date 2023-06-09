@@ -11,8 +11,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap: 1.2rem;
 
-   // border: 1px solid red;
-
+    // border: 1px solid red;
 
     span {
       min-width: 14.3rem;
@@ -45,11 +44,29 @@ export const HeaderContainer = styled.header`
       border-radius: 6px;
       background-color: ${(props) => props.theme["yellow-100"]};
 
+      position: relative;
+
       border: 1px solid red;
 
       svg {
         color: ${(props) => props.theme["yellow-600"]};
       }
+
+      span {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -0.5rem;
+      right: -6.5rem;
+      background: ${(props) => props.theme["yellow-600"]};
+      color: ${(props) => props.theme["white"]};
+      font-weight: 700;
+      font-size: 0.75rem;
+    }
     }
   }
 `;
