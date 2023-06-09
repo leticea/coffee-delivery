@@ -11,6 +11,9 @@ export const HeaderContainer = styled.header`
     display: flex;
     gap: 1.2rem;
 
+   // border: 1px solid red;
+
+
     span {
       min-width: 14.3rem;
       height: 3.8rem;
@@ -29,6 +32,8 @@ export const HeaderContainer = styled.header`
       svg {
         color: ${(props) => props.theme["purple-600"]};
       }
+
+      //border: 1px solid red;
     }
 
     a {
@@ -38,8 +43,9 @@ export const HeaderContainer = styled.header`
       justify-content: center;
       align-items: center;
       border-radius: 6px;
-
       background-color: ${(props) => props.theme["yellow-100"]};
+
+      border: 1px solid red;
 
       svg {
         color: ${(props) => props.theme["yellow-600"]};

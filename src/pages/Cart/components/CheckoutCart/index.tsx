@@ -11,9 +11,9 @@ import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
 
-export interface CoffeeCartCardProps {
-  coffee: CartItem;
-}
+// export interface CoffeeCartCardProps {
+//   coffee: CartItem;
+// }
 
 export function CheckoutCart() {
   const { cartItems, removeCoffeeFromCart } = useContext(CartContext);
@@ -34,7 +34,7 @@ export function CheckoutCart() {
   }
 
   function handleRemove() {
-    removeCoffeeFromCart(coffee.id);
+    removeCoffeeFromCart(cartItems.id);
   }
 
   return (

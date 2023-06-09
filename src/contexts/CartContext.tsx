@@ -58,7 +58,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   }
 
   function removeCoffeeFromCart(cartItemId: number) {
-    const newCart = produce(cartItems, (draft) => {
+    const newOrder = produce(cartItems, (draft) => {
       const coffeeExistsInCart = cartItems.findIndex(
         (cartItem) => cartItem.id === cartItemId
       );
@@ -68,7 +68,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
       }
     });
 
-    setCartItems(newCart);
+    setCartItems(newOrder);
   }
 
   return (
