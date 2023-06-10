@@ -1,4 +1,4 @@
-import { Minus, Plus, Trash } from "phosphor-react";
+import { Trash } from "phosphor-react";
 import {
   OrderCard,
   SelectedCoffeeCard,
@@ -6,30 +6,26 @@ import {
   RemoveButton,
 } from "./styles";
 import { useContext, useState } from "react";
-import { CartContext, CartItem } from "../../../../contexts/CartContext";
+import { CartContext } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";
 import { QuantityButton } from "../../../../components/QuantityButton";
 
-export interface CoffeeCartCardProps {
-  coffee: CartItem;
-}
+// export interface CoffeeCartCardProps {
+//   coffee: CartItem;
+// }
 
-export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
-  const { cartItems, removeCoffeeFromCart, changeCartItemQuantity } = useContext(CartContext);
-  //const [quantity, setQuantity] = useState(0);
+export function CheckoutCart() {
+  const { cartItems, changeCartItemQuantity } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
-    changeCartItemQuantity(coffee.id, "increase");
+    changeCartItemQuantity(cartItems.id, "increase");
   }
 
   function handleDecrease() {
-    changeCartItemQuantity(coffee.id, "decrease");
-  }
-
-  function handleRemove() {
-    removeCoffeeFromCart(cartItems.id);
+    changeCartItemQuantity(cartItems.id, "decrease");
   }
 
   return (
@@ -48,10 +44,10 @@ export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
                       <QuantityButton
                         onIncrease={handleIncrease}
                         onDecrease={handleDecrease}
-                        quantity={coffee.quantity}
+                        quantity={quantity}
                       />
 
-                      <RemoveButton type="button" onClick={handleRemove}>
+                      <RemoveButton type="button">
                         <Trash size={14} />
                         Remover
                       </RemoveButton>
