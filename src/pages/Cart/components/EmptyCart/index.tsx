@@ -4,7 +4,7 @@ import { EmptyCartCard } from "./styles";
 export function EmptyCart() {
   return (
     <EmptyCartCard>
-        Seu carrinho está vazio <ShoppingCartSimple />
+        <p>Seu carrinho está vazio</p><ShoppingCartSimple />
     </EmptyCartCard>
   );
 }

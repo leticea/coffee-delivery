@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const EmptyCartCard = styled.div`
-  font-size: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 36rem;
+  height: 20rem;
+  display: grid;
+  justify-items: center;
+
+  p {
+    font-size: 3.4rem;
+  }
 
   svg {
-    font-size: 4rem;
+    font-size: 10rem;
   }
 `;

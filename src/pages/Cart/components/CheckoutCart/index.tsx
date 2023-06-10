@@ -68,11 +68,11 @@ export function CheckoutCart() {
                 <hr />
               </SelectedCoffeeCard>
             );
-            <ConfirmationCard />
           })
         ) : (
           <EmptyCart />
         )}
+        <ConfirmationCard />
       </OrderCard>
     </>
   );
