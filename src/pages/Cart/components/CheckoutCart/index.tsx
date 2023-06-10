@@ -11,6 +11,7 @@ import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";
+import { QuantityButton } from "../../../../components/QuantityButton";
 
 // export interface CoffeeCartCardProps {
 //   coffee: CartItem;
@@ -51,11 +52,11 @@ export function CheckoutCart() {
                   <div>
                     {coffee.name}
                     <ButtonsContainer>
-                      <QuantityButtons>
-                        <Minus size={14} onClick={handleDecrease} />
-                        {coffee.quantity}
-                        <Plus size={14} onClick={handleIncrease} />
-                      </QuantityButtons>
+                      <QuantityButton
+                        onIncrease={handleIncrease}
+                        onDecrease={handleDecrease}
+                        quantity={coffee.quantity}
+                      />
 
                       <RemoveButton type="button" onClick={handleRemove}>
                         <Trash size={14} />
