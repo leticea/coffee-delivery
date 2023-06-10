@@ -1,4 +1,4 @@
-import { CheckoutCart, CoffeeCartCardProps } from "./components/CheckoutCart";
+import { CheckoutCart } from "./components/CheckoutCart";
 import { CheckoutForm } from "./components/CheckoutForm";
 import { Payment } from "./components/Payment";
 import { Title } from "./styles";
