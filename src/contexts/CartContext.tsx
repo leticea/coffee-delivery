@@ -12,6 +12,10 @@ interface CartContextType {
   totalCartItems: number;
   addCoffeeToCart: (coffee: CartItem) => void;
   removeCoffeeFromCart: (cartItemId: number) => void;
+  changeCartItemQuantity: (
+    cartItemId: number,
+    type: "increase" | "decrease"
+  ) => void;
   // handleIncrease: () => void;
   // handleDecrease: () => void;
   // removeSelectedCoffee: () => void;
@@ -57,6 +61,25 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     setCartItems(newOrder);
   }
 
+  function changeCartItemQuantity(
+    cartItemId: number,
+    type: "increase" | "decrease"
+  ) {
+    const newOrder = produce(cartItems, (draft) => {
+      const coffeeExistsInCart = cartItems.findIndex(
+        (cartItem) => cartItem.id === cartItemId
+      );
+
+      if (coffeeExistsInCart >= 0) {
+        const item = draft[coffeeExistsInCart];
+        draft[coffeeExistsInCart].quantity =
+          type === "increase" ? item.quantity + 1 : item.quantity - 1;
+      }
+    });
+
+    setCartItems(newOrder);
+  }
+
   function removeCoffeeFromCart(cartItemId: number) {
     const newOrder = produce(cartItems, (draft) => {
       const coffeeExistsInCart = cartItems.findIndex(
@@ -78,6 +101,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartItems,
         cartQuantity,
         totalCartItems,
+        changeCartItemQuantity,
         removeCoffeeFromCart,
       }}
     >
