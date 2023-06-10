@@ -12,6 +12,7 @@ import {
   Name,
   Tags,
 } from "./styles";
+import { QuantityButton } from "../../../../../components/QuantityButton";
 
 export interface CoffeeProps {
   id: number;
@@ -27,8 +28,8 @@ interface CoffeeCardProps {
 }
 
 export function CoffeeCard({ coffee }: CoffeeCardProps) {
-  const [quantity, setQuantity] = useState(0);
   const { addCoffeeToCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
     setQuantity((state) => state + 1);
@@ -66,9 +67,11 @@ export function CoffeeCard({ coffee }: CoffeeCardProps) {
           <span>{moneyFormat(coffee.price)}</span>
         </p>
         <Buttons>
-          <Minus size={14} onClick={handleDecrease} />
-          {quantity}
-          <Plus size={14} onClick={handleIncrease} />
+          <QuantityButton
+            onIncrease={handleIncrease}
+            onDecrease={handleDecrease}
+            quantity={quantity}
+          />
         </Buttons>
         <Button onClick={addToCart} disabled={isSubmitDisabled}>
           <ShoppingCartSimple weight="fill" size={21} />

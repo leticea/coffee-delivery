@@ -84,7 +84,7 @@ export const Description = styled.h1`
   //border: 1px solid red;
 `;
 
-export const Footer = styled.h1`
+export const Footer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -138,6 +138,13 @@ export const Buttons = styled.div`
   color: ${(props) => props.theme["gray-900"]};
   background-color: ${(props) => props.theme["gray-400"]};
 
+  span {
+    font-weight: 400;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    color: ${(props) => props.theme["gray-900"]};
+  }
+
   svg {
     cursor: pointer;
     color: ${(props) => props.theme["purple-600"]};
@@ -148,8 +155,6 @@ export const Buttons = styled.div`
       color: ${(props) => props.theme["purple-800"]};
     }
   }
-
-  //border: 1px solid red;
 `;
 
 export const Button = styled.button`

@@ -15,9 +15,9 @@ export function QuantityButton({
   return (
     <>
       <QuantityButtons>
-        <Minus size={14} onClick={handleDecrease} />
-        {coffee.quantity}
-        <Plus size={14} onClick={handleIncrease} />
+        <Minus size={14} onClick={onDecrease} />
+        <span>{quantity}</span>
+        <Plus size={14} onClick={onIncrease} />
       </QuantityButtons>
     </>
   );

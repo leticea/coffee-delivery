@@ -14,6 +14,13 @@ export const QuantityButtons = styled.span`
   color: ${(props) => props.theme["gray-900"]};
   background-color: ${(props) => props.theme["gray-400"]};
 
+  span {
+    font-weight: 400;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    color: ${(props) => props.theme["gray-900"]};
+  }
+
   svg {
     cursor: pointer;
     color: ${(props) => props.theme["purple-600"]};

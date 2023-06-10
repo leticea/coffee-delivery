@@ -3,7 +3,6 @@ import {
   OrderCard,
   SelectedCoffeeCard,
   ButtonsContainer,
-  QuantityButtons,
   RemoveButton,
 } from "./styles";
 import { useContext, useState } from "react";
@@ -13,26 +12,20 @@ import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";
 import { QuantityButton } from "../../../../components/QuantityButton";
 
-// export interface CoffeeCartCardProps {
-//   coffee: CartItem;
-// }
+export interface CoffeeCartCardProps {
+  coffee: CartItem;
+}
 
-export function CheckoutCart() {
-  const { cartItems, removeCoffeeFromCart } = useContext(CartContext);
-  const [quantity, setQuantity] = useState(0);
+export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
+  const { cartItems, removeCoffeeFromCart, changeCartItemQuantity } = useContext(CartContext);
+  //const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
-    setQuantity((state) => {
-      return state + 1;
-    });
+    changeCartItemQuantity(coffee.id, "increase");
   }
 
   function handleDecrease() {
-    if (quantity > 0) {
-      setQuantity((state) => {
-        return state - 1;
-      });
-    }
+    changeCartItemQuantity(coffee.id, "decrease");
   }
 
   function handleRemove() {
