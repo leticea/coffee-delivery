@@ -44,7 +44,7 @@ export function CheckoutCart() {
                       <QuantityButton
                         onIncrease={handleIncrease}
                         onDecrease={handleDecrease}
-                        quantity={quantity}
+                        quantity={coffee.quantity}
                       />
 
                       <RemoveButton type="button">
