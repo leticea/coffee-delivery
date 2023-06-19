@@ -11,7 +11,7 @@ export const OrderCard = styled.div`
 
   position: absolute;
   width: 44.8rem;
-  min-height: 49.8rem;
+  min-height: 30.8rem;
   left: 83.2rem;
   top: 18.7rem;
 

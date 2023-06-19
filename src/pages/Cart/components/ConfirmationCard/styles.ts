@@ -4,7 +4,6 @@ export const Confirmation = styled.section`
   width: 36.8rem;
   height: 9.2rem;
   display: grid;
-  margin-top: 0.5rem;
 
   //border: 1px solid red;
 
@@ -58,6 +57,8 @@ export const Button = styled.button`
 
   color: ${(props) => props.theme["white"]};
   transition: all 0.2s;
+
+  //border: 1px solid red;
 
   &:hover {
     background: ${(props) => props.theme["yellow-600"]};
