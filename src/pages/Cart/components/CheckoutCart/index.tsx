@@ -6,27 +6,30 @@ import {
   RemoveButton,
 } from "./styles";
 import { useContext, useState } from "react";
-import { CartContext } from "../../../../contexts/CartContext";
+import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";
 import { QuantityButton } from "../../../../components/QuantityButton";
 
-// export interface CoffeeCartCardProps {
-//   coffee: CartItem;
-// }
+interface CoffeeCartCardProps {
+  coffee: CartItem;
+}
 
-export function CheckoutCart() {
-  const { cartItems, changeCartItemQuantity } = useContext(CartContext);
-  const [quantity, setQuantity] = useState(0);
+export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
+  const { cartItems, cartQuantity, changeCartItemQuantity } =
+    useContext(CartContext);
+  //const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
-    changeCartItemQuantity(cartItems.id, "increase");
+    changeCartItemQuantity(coffee.quantity, "increase");
   }
 
   function handleDecrease() {
-    changeCartItemQuantity(cartItems.id, "decrease");
+    changeCartItemQuantity(coffee.quantity, "decrease");
   }
+
+  console.log(coffee);
 
   return (
     <>

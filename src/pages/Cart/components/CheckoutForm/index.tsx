@@ -1,8 +1,8 @@
 import { MapPinLine } from "phosphor-react";
 import { InfoContainer, Headline, AddressForm } from "./styles";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import * as zod from "zod";
+import { useForm } from "react-hook-form";
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
@@ -14,8 +14,10 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1, "Informe o Estado"),
 });
 
+type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
+
 export function CheckoutForm() {
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit } = useForm<OrderData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
 

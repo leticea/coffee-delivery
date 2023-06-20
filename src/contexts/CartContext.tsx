@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useState } from "react";
 import { produce } from "immer";
 import { CoffeeProps } from "../pages/Home/CoffeeList/components/CoffeeCard";
 
