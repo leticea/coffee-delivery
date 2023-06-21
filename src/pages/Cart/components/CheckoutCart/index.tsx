@@ -5,8 +5,8 @@ import {
   ButtonsContainer,
   RemoveButton,
 } from "./styles";
-import { useContext, useState } from "react";
-import { CartContext, CartItem } from "../../../../contexts/CartContext";
+import { useContext } from "react";
+import { CartContext } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
 import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";

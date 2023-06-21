@@ -11,7 +11,7 @@ const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
   number: zod.number().min(1, "Informe o Número"),
-  complement: zod.string(),
+  complement: zod.string().optional(),
   district: zod.string().min(1, "Informe o Bairro"),
   city: zod.string().min(1, "Informe a Cidade"),
   state: zod.string().min(1, "Informe o Estado"),
@@ -29,22 +29,21 @@ export function Cart() {
   const { handleSubmit } = confirmOrderForm;
   const navigate = useNavigate();
 
-  function handleConfirmOrder(data: ConfirmOrderFormData) {
-    navigate("/success", {
-      state: data,
-    });
+  function confirmOrder(data: ConfirmOrderFormData) {
+    navigate("/success");
   }
+
   return (
-    <>
+    <form onSubmit={handleSubmit(confirmOrder)}>
+      <Title>
+        <h1>Complete seu pedido</h1>
+        <h1>Cafés selecionados</h1>
+      </Title>
       <FormProvider {...confirmOrderForm}>
-        <Title onSubmit={handleSubmit(handleConfirmOrder)}>
-          <h1>Complete seu pedido</h1>
-          <h1>Cafés selecionados</h1>
-        </Title>
-        <CheckoutForm />
+        <CheckoutForm  />
         <Payment />
         <CheckoutCart />
       </FormProvider>
-    </>
+    </form>
   );
 }
