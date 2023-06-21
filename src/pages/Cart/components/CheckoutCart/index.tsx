@@ -12,24 +12,23 @@ import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";
 import { QuantityButton } from "../../../../components/QuantityButton";
 
-interface CoffeeCartCardProps {
-  coffee: CartItem;
-}
+// interface CoffeeCartCardProps {
+//   coffee: CartItem;
+// }
 
-export function CheckoutCart({ coffee }: CoffeeCartCardProps) {
-  const { cartItems, cartQuantity, changeCartItemQuantity } =
-    useContext(CartContext);
+export function CheckoutCart() {
+  const { cartItems, changeCartItemQuantity } = useContext(CartContext);
   //const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
-    changeCartItemQuantity(coffee.quantity, "increase");
+    changeCartItemQuantity(cartItems.id, "increase");
   }
 
   function handleDecrease() {
-    changeCartItemQuantity(coffee.quantity, "decrease");
+    changeCartItemQuantity(cartItems.id, "decrease");
   }
 
-  console.log(coffee);
+  console.log(cartItems);
 
   return (
     <>

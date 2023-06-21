@@ -2,24 +2,24 @@ import { MapPinLine } from "phosphor-react";
 import { InfoContainer, Headline, AddressForm } from "./styles";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as zod from "zod";
-import { useForm } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
-const confirmOrderFormValidationSchema = zod.object({
-  cep: zod.number().min(1, "Informe o CEP"),
-  street: zod.string().min(1, "Informe a Rua"),
-  number: zod.number().min(1, "Informe o Número"),
-  complement: zod.string(),
-  district: zod.string().min(1, "Informe o Bairro"),
-  city: zod.string().min(1, "Informe a Cidade"),
-  state: zod.string().min(1, "Informe o Estado"),
-});
+// const confirmOrderFormValidationSchema = zod.object({
+//   cep: zod.number().min(1, "Informe o CEP"),
+//   street: zod.string().min(1, "Informe a Rua"),
+//   number: zod.number().min(1, "Informe o Número"),
+//   complement: zod.string(),
+//   district: zod.string().min(1, "Informe o Bairro"),
+//   city: zod.string().min(1, "Informe a Cidade"),
+//   state: zod.string().min(1, "Informe o Estado"),
+// });
 
-type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
+// type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
 
 export function CheckoutForm() {
-  const { register, handleSubmit } = useForm<OrderData>({
-    resolver: zodResolver(confirmOrderFormValidationSchema),
-  });
+  const { register, formState } = useFormContext()
+
+  console.log(formState.errors);
 
   return (
     <>

@@ -2,9 +2,11 @@ import { moneyFormat } from "../../../../utils/moneyFormat";
 import { Button, Confirmation } from "./styles";
 import { useContext } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
+import { useForm } from "react-hook-form";
 
 export default function ConfirmationCard() {
   const { cartQuantity, totalCartItems } = useContext(CartContext);
+  const { handleSubmit } = useForm()
 
   const DELIVERY_PRICE = 5;
   const cartTotal = DELIVERY_PRICE + totalCartItems;
