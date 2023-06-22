@@ -1,25 +1,16 @@
 import { Trash } from "phosphor-react";
-import {
-  OrderCard,
-  SelectedCoffeeCard,
-  ButtonsContainer,
-  RemoveButton,
-} from "./styles";
+import { SelectedCoffeeCard, ButtonsContainer, RemoveButton } from "./styles";
 import { useContext } from "react";
 import { CartContext, CartItem } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
-import { EmptyCart } from "../EmptyCart";
 import { QuantityButton } from "../../../../components/QuantityButton";
-import ConfirmationCard from "../ConfirmationCard";
 
 interface CoffeeCartCardProps {
   coffee: CartItem;
 }
 
 export function CheckoutCartItem({ coffee }: CoffeeCartCardProps) {
-  const { removeCartItem, changeCartItemQuantity } =
-    useContext(CartContext);
-  //const [quantity, setQuantity] = useState(0);
+  const { removeCartItem, changeCartItemQuantity } = useContext(CartContext);
 
   const coffeesTotal = coffee.price * coffee.quantity;
 
@@ -34,10 +25,6 @@ export function CheckoutCartItem({ coffee }: CoffeeCartCardProps) {
   function handleRemove() {
     removeCartItem(coffee.id);
   }
-
-
-
-  //onsole.log(cartItems);
 
   return (
     <>

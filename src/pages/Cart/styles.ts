@@ -15,6 +15,4 @@ export const Title = styled.div`
   font-size: 2.5rem;
   line-height: 130%;
   color: ${(props) => props.theme["gray-800"]};
-
-  //border: 1px solid red;
 `;

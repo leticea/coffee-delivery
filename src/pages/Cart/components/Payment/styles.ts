@@ -10,19 +10,15 @@ export const PaymentInfo = styled.div`
 
   background: ${(props) => props.theme["gray-200"]};
 
-  //border: 1px solid red;
-
   .payment {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 130%;
     display: flex;
     padding: 0;
-
     margin-left: -0.4rem;
 
     color: ${(props) => props.theme["gray-800"]};
-    //border: 1px solid red;
   }
 
   span {

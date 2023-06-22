@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 164.5rem;
-  //border: 1px solid red;
 `;
 
 export const List = styled.ul`
@@ -12,9 +11,5 @@ export const List = styled.ul`
   grid-template-columns: repeat(4, 1fr);
 
   list-style: none;
-
   gap: 3.2rem;
-
-  //border: 1px solid red;
 `;
-

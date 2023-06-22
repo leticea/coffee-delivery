@@ -34,8 +34,6 @@ export const Content = styled.div`
   transition: 0.3s;
   user-select: none;
 
-  //border: 1px solid red;
-
   svg {
     color: ${(props) => props.theme["purple-600"]};
   }

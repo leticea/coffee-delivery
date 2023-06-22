@@ -47,9 +47,7 @@ export function Payment() {
             />
           ))}
 
-          {paymentMethodError && (
-            <p>{paymentMethodError}</p>
-          )}
+          {paymentMethodError && <p>{paymentMethodError}</p>}
         </PaymentMethods>
       </PaymentInfo>
     </>

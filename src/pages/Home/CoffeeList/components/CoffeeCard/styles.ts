@@ -10,8 +10,6 @@ export const CoffeesCard = styled.li`
   display: flex;
   justify-content: center;
 
-  //border: 1px solid red;
-
   img {
     display: flex;
     justify-content: center;
@@ -20,8 +18,6 @@ export const CoffeesCard = styled.li`
     top: -20px;
     left: 27%;
     position: absolute;
-
-    //border: 1px solid red;
   }
 `;
 
@@ -42,8 +38,6 @@ export const Tags = styled.span`
   font-weight: 700;
   font-size: 1rem;
   text-transform: uppercase;
-
-  //border: 1px solid red;
 `;
 
 export const Name = styled.h1`
@@ -61,8 +55,6 @@ export const Name = styled.h1`
   font-family: "Baloo 2";
   font-size: 2rem;
   line-height: 130%;
-
-  //border: 1px solid red;
 `;
 
 export const Description = styled.h1`
@@ -80,8 +72,6 @@ export const Description = styled.h1`
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 130%;
-
-  //border: 1px solid red;
 `;
 
 export const Footer = styled.div`
@@ -97,8 +87,6 @@ export const Footer = styled.div`
   right: 2.4rem;
   bottom: 2rem;
 
-  //border: 1px solid red;
-
   p {
     width: 6.7rem;
     height: 3.1rem;
@@ -110,8 +98,6 @@ export const Footer = styled.div`
     font-weight: 400;
     font-size: 1.4rem;
     color: ${(props) => props.theme["gray-700"]};
-
-    //border: 1px solid red;
   }
 
   span {

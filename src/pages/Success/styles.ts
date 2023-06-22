@@ -21,8 +21,6 @@ export const Title = styled.div`
 
     color: ${(props) => props.theme["gray-800"]};
   }
-
-  //border: 1px solid red;
 `;
 
 export const IllustrationImage = styled.div`
@@ -80,8 +78,6 @@ interface OrderInfoWithIconProps {
 }
 
 export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
-  //border: 1px solid red;
-
   height: 5.2rem;
   display: flex;
   align-items: center;

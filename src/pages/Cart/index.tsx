@@ -40,7 +40,7 @@ export function Cart() {
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
     defaultValues: {
-      paymentMethod: undefined
+      paymentMethod: undefined,
     },
   });
 

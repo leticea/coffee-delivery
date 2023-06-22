@@ -37,7 +37,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
   });
 
   const cartQuantity = cartItems.length;
-  
+
   const totalCartItems = cartItems.reduce((total, cartItem) => {
     return total + cartItem.price * cartItem.quantity;
   }, 0);

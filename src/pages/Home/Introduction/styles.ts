@@ -5,8 +5,6 @@ export const Container = styled.main`
   display: flex;
   align-items: center;
 
-  //border: 1px solid red;
-
   img {
     width: 100%;
     height: 54.4rem;
@@ -22,8 +20,6 @@ export const InfoText = styled.div`
   gap: 1.6rem;
 
   position: absolute;
-
-  //border: 1px solid red;
 
   h1 {
     font-family: "Baloo 2";
@@ -56,8 +52,6 @@ export const InfoGrid = styled.ul`
   list-style: none;
 
   gap: 2rem;
-
-  //border: 1px solid red;
 `;
 
 const ICON_COLORS = {
@@ -74,8 +68,6 @@ interface InfoWithIconProps {
 export const InfoWithIcon = styled.li<InfoWithIconProps>`
   display: flex;
   gap: 12px;
-
-  //border: 1px solid red;
 
   svg {
     background: ${(props) => props.theme[ICON_COLORS[props.iconColor]]};
@@ -95,8 +87,5 @@ export const CoffeeImage = styled.div`
     height: 36rem;
     position: relative;
     margin: 9.2rem 16rem 9.2rem 80.4rem;
-    //opacity: 0.8;
-
-    //border: 1px solid red;
   }
 `;

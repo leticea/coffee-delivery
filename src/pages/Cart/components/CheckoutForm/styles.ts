@@ -8,8 +8,6 @@ export const InfoContainer = styled.div`
   border-radius: 6px;
 
   background: ${(props) => props.theme["gray-200"]};
-
-  //border: 1px solid red;
 `;
 
 export const Headline = styled.div`
@@ -47,10 +45,7 @@ export const AddressForm = styled.form`
 
   display: flex;
   flex-direction: column;
-
   gap: 1.6rem;
-
-  //border: 1px solid red;
 
   input {
     padding: 1.2rem;

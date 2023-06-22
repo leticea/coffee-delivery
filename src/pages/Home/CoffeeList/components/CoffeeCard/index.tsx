@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../../../../contexts/CartContext";
 
-import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
+import { ShoppingCartSimple } from "phosphor-react";
 import { moneyFormat } from "../../../../../utils/moneyFormat";
 import {
   Button,

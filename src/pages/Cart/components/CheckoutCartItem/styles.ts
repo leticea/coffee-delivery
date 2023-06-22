@@ -1,39 +1,14 @@
 import styled from "styled-components";
 
-export const OrderCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 4rem;
-  user-select: none;
-
-  gap: 24px;
-
-  position: absolute;
-  width: 44.8rem;
-  min-height: 30.8rem;
-  left: 83.2rem;
-  top: 18.7rem;
-
-  border-radius: 6px 44px;
-  background: ${(props) => props.theme["gray-200"]};
-
-  //border: 1px solid red;
-`;
-
 export const SelectedCoffeeCard = styled.section`
   display: flex;
   align-items: flex-start;
   padding: 0.8rem 0.4rem;
   gap: 48px;
 
-  //margin: auto;
-
   min-width: 36.8rem;
   height: 8rem;
   margin-bottom: 2.4rem;
-
-  //border: 1px solid red;
 
   div {
     display: flex;
@@ -45,12 +20,9 @@ export const SelectedCoffeeCard = styled.section`
     width: 255px;
     height: 64px;
 
-    //border: 1px solid blue;
-
     div {
       gap: 0.8rem;
       flex-direction: column;
-      //border: 1px solid blue;
     }
   }
 
@@ -59,7 +31,6 @@ export const SelectedCoffeeCard = styled.section`
     margin: 9.6rem 0;
     width: 36.8rem;
     border: 1px solid ${(props) => props.theme["gray-400"]};
-    //border: 1px solid red;
   }
 
   p {
@@ -75,7 +46,6 @@ export const SelectedCoffeeCard = styled.section`
     text-align: right;
 
     color: ${(props) => props.theme["gray-700"]};
-    //border: 1px solid red;
   }
 
   img {
@@ -93,8 +63,6 @@ export const ButtonsContainer = styled.section`
 
   width: 17.1rem;
   height: 3.2rem;
-
-  //border: 1px solid violet;
 `;
 
 export const RemoveButton = styled.button`

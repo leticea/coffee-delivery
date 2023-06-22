@@ -2,19 +2,8 @@ import { MapPinLine } from "phosphor-react";
 import { InfoContainer, Headline, AddressForm } from "./styles";
 import { useFormContext } from "react-hook-form";
 
-interface ErrorsType {
-  errors: {
-    [key: string]: {
-      message: string;
-    };
-  };
-}
-
 export function CheckoutForm() {
-  const { register, formState } = useFormContext();
-  const { errors } = formState as unknown as ErrorsType;
-
-  console.log(formState.errors);
+  const { register } = useFormContext();
 
   return (
     <>
