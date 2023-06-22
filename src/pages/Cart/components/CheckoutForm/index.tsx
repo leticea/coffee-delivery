@@ -37,7 +37,6 @@ export function CheckoutForm() {
           />
           <input
             className="street"
-            type="text"
             placeholder="Rua"
             {...register("street")}
             error={errors.street?.message}
@@ -53,7 +52,6 @@ export function CheckoutForm() {
             />
             <input
               className="complement"
-              type="text"
               placeholder="Complemento"
               {...register("complement")}
               error={errors.complement?.message}
@@ -64,21 +62,18 @@ export function CheckoutForm() {
           <section>
             <input
               className="district"
-              type="text"
               placeholder="Bairro"
               {...register("district")}
               error={errors.district?.message}
             />
             <input
               className="city"
-              type="text"
               placeholder="Cidade"
               {...register("city")}
               error={errors.city?.message}
             />
             <input
               className="state"
-              type="text"
               placeholder="UF"
               {...register("state")}
               error={errors.uf?.message}

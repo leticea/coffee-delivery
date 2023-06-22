@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { produce } from "immer";
 import { CoffeeProps } from "../pages/Home/CoffeeList/components/CoffeeCard";
 
@@ -15,6 +15,8 @@ interface CartContextType {
     cartItemId: number,
     type: "increase" | "decrease"
   ) => void;
+  removeCartItem: (cartItemId: number) => void;
+  cleanCart: () => void;
 }
 
 export const CartContext = createContext({} as CartContextType);
@@ -23,16 +25,14 @@ interface CartContextProviderProps {
   children: ReactNode;
 }
 
+const COFFEE_ITEMS_STORAGE_KEY = "coffeeDelivery:cartItems";
+
 export function CartContextProvider({ children }: CartContextProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>(() => {
-    const storedCartItems = localStorage.getItem(
-      "@coffee-delivery:cart-items-1.0.0"
-    );
-
+    const storedCartItems = localStorage.getItem(COFFEE_ITEMS_STORAGE_KEY);
     if (storedCartItems) {
       return JSON.parse(storedCartItems);
     }
-
     return [];
   });
 
@@ -76,6 +76,28 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     setCartItems(newOrder);
   }
 
+  function removeCartItem(cartItemId: number) {
+    const newOrder = produce(cartItems, (draft) => {
+      const coffeeExistsInCart = cartItems.findIndex(
+        (cartItem) => cartItem.id === cartItemId
+      );
+
+      if (coffeeExistsInCart >= 0) {
+        draft.splice(coffeeExistsInCart, 1);
+      }
+    });
+
+    setCartItems(newOrder);
+  }
+
+  function cleanCart() {
+    setCartItems([]);
+  }
+
+  useEffect(() => {
+    localStorage.setItem(COFFEE_ITEMS_STORAGE_KEY, JSON.stringify(cartItems));
+  }, [cartItems]);
+
   return (
     <CartContext.Provider
       value={{
@@ -84,6 +106,8 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartQuantity,
         totalCartItems,
         changeCartItemQuantity,
+        removeCartItem,
+        cleanCart,
       }}
     >
       {children}

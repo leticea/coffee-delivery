@@ -6,6 +6,8 @@ import { Payment } from "./components/Payment";
 import { Title } from "./styles";
 import { FormProvider, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
@@ -22,6 +24,8 @@ export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
 type ConfirmOrderFormData = OrderData;
 
 export function Cart() {
+  const { cleanCart } = useContext(CartContext);
+
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   });
@@ -30,7 +34,11 @@ export function Cart() {
   const navigate = useNavigate();
 
   function confirmOrder(data: ConfirmOrderFormData) {
-    navigate("/success");
+    navigate("/success", {
+      state: data,
+    });
+
+    cleanCart();
   }
 
   return (

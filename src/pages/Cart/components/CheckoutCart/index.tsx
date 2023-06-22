@@ -8,16 +8,16 @@ import {
 import { useContext } from "react";
 import { CartContext } from "../../../../contexts/CartContext";
 import { moneyFormat } from "../../../../utils/moneyFormat";
-import ConfirmationCard from "../ConfirmationCard";
 import { EmptyCart } from "../EmptyCart";
 import { QuantityButton } from "../../../../components/QuantityButton";
+import ConfirmationCard from "../ConfirmationCard";
 
 // interface CoffeeCartCardProps {
 //   coffee: CartItem;
 // }
 
 export function CheckoutCart() {
-  const { cartItems, changeCartItemQuantity } = useContext(CartContext);
+  const { cartItems, removeCartItem, changeCartItemQuantity } = useContext(CartContext);
   //const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
@@ -26,6 +26,10 @@ export function CheckoutCart() {
 
   function handleDecrease() {
     changeCartItemQuantity(cartItems.id, "decrease");
+  }
+
+  function handleRemove() {
+    removeCartItem(cartItems.id);
   }
 
   console.log(cartItems);
@@ -49,7 +53,7 @@ export function CheckoutCart() {
                         quantity={coffee.quantity}
                       />
 
-                      <RemoveButton type="button">
+                      <RemoveButton type="button" onClick={handleRemove}>
                         <Trash size={14} />
                         Remover
                       </RemoveButton>
