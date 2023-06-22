@@ -36,3 +36,24 @@ export const InputStyleContainer = styled.div<InputContainerProps>`
       border-color: ${theme["base-error"]};
     `}
 `;
+
+export const InputStyled = styled.input`
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 0 0.75rem;
+  height: 100%;
+  font-size: 0.75rem;
+  color: ${(props) => props.theme["gray-700"]};
+
+  &::placeholder {
+    color: ${(props) => props.theme["gray-600"]};
+  }
+`;
+
+export const RightText = styled.p`
+  font-size: 0.75rem;
+  margin-right: 0.75rem;
+  font-style: italic;
+  color: ${(props) => props.theme["gray-600"]};
+`;
