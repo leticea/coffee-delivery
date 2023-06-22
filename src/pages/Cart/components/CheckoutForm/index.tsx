@@ -1,23 +1,9 @@
 import { MapPinLine } from "phosphor-react";
 import { InfoContainer, Headline, AddressForm } from "./styles";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as zod from "zod";
 import { useFormContext } from "react-hook-form";
 
-// const confirmOrderFormValidationSchema = zod.object({
-//   cep: zod.number().min(1, "Informe o CEP"),
-//   street: zod.string().min(1, "Informe a Rua"),
-//   number: zod.number().min(1, "Informe o Número"),
-//   complement: zod.string(),
-//   district: zod.string().min(1, "Informe o Bairro"),
-//   city: zod.string().min(1, "Informe a Cidade"),
-//   state: zod.string().min(1, "Informe o Estado"),
-// });
-
-// type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
-
 export function CheckoutForm() {
-  const { register, formState } = useFormContext()
+  const { register, formState } = useFormContext();
 
   console.log(formState.errors);
 
@@ -35,7 +21,7 @@ export function CheckoutForm() {
         <AddressForm>
           <input
             className="cep"
-            type="text"
+            type="number"
             placeholder="CEP"
             {...register("cep")}
           />
@@ -49,7 +35,7 @@ export function CheckoutForm() {
           <section>
             <input
               className="number"
-              type="text"
+              type="number"
               placeholder="Número"
               {...register("number")}
             />
