@@ -56,16 +56,18 @@ export function Cart() {
   }
 
   return (
-    <form onSubmit={handleSubmit(confirmOrder)}>
-      <FormProvider {...confirmOrderForm}>
-        <Title>
-          <h1>Complete seu pedido</h1>
-          <h1>Cafés selecionados</h1>
-        </Title>
-        <CheckoutForm />
-        <Payment />
-        <CheckoutCart />
-      </FormProvider>
-    </form>
+    <>
+      <form id="parentform" onSubmit={handleSubmit(confirmOrder)}>
+        <FormProvider {...confirmOrderForm}>
+          <Title>
+            <h1>Complete seu pedido</h1>
+            <h1>Cafés selecionados</h1>
+          </Title>
+          <CheckoutForm />
+          <Payment />
+          <CheckoutCart />
+        </FormProvider>
+      </form>
+    </>
   );
 }
