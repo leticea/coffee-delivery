@@ -9,6 +9,12 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
+enum PaymentMethods {
+  credit = "credit",
+  debit = "debit",
+  money = "money",
+}
+
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.number().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
@@ -17,6 +23,11 @@ const confirmOrderFormValidationSchema = zod.object({
   district: zod.string().min(1, "Informe o Bairro"),
   city: zod.string().min(1, "Informe a Cidade"),
   state: zod.string().min(1, "Informe o Estado"),
+  paymentMethod: zod.nativeEnum(PaymentMethods, {
+    errorMap: () => {
+      return { message: "Informe o método de pagamento" };
+    },
+  }),
 });
 
 export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>;
@@ -28,6 +39,9 @@ export function Cart() {
 
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
+    defaultValues: {
+      paymentMethod: undefined,
+    },
   });
 
   const { handleSubmit } = confirmOrderForm;
@@ -48,7 +62,7 @@ export function Cart() {
         <h1>Cafés selecionados</h1>
       </Title>
       <FormProvider {...confirmOrderForm}>
-        <CheckoutForm  />
+        <CheckoutForm />
         <Payment />
         <CheckoutCart />
       </FormProvider>
