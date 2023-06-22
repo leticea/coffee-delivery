@@ -10,6 +10,7 @@ import illustration from "../../assets/illustration.png";
 import { OrderData } from "../Cart";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { paymentMethods } from "../Cart/components/Payment";
 
 interface LocationType {
   state: OrderData;
@@ -17,7 +18,6 @@ interface LocationType {
 
 export function Success() {
   const { state } = useLocation() as unknown as LocationType;
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -45,7 +45,7 @@ export function Success() {
           <MapPin size={15} weight="fill" />
           <div>
             <p>
-              Entrega em <strong>{state.street}</strong>
+              Entrega em <strong>{state.street}, {state.number}</strong>
             </p>
             <p>{state.district} - {state.city}, {state.state}</p>
           </div>
@@ -63,7 +63,7 @@ export function Success() {
           <CurrencyDollarSimple size={15} />
           <div>
             <p>Pagamento na entrega</p>
-            <strong>{paymentMethods[state.paymentMethod]}</strong>
+            <strong>{paymentMethods[state.paymentMethod].label}</strong>
           </div>
         </OrderInfoWithIcon>
       </OrderInfo>

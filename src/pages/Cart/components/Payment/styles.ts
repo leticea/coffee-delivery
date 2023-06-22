@@ -56,6 +56,7 @@ export const PaymentMethods = styled.section`
   gap: 0.75rem;
 
   > p {
+    margin: auto;
     grid-column: span 3;
     color: ${(props) => props.theme["base-error"]};
   }

@@ -79,7 +79,7 @@ export const AddressForm = styled.form`
   }
 
   .complement {
-    width: 34.6rem;
+    width: 33.6rem;
   }
 
   .district {

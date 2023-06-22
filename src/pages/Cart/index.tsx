@@ -16,9 +16,9 @@ enum PaymentMethods {
 }
 
 const confirmOrderFormValidationSchema = zod.object({
-  cep: zod.number().min(1, "Informe o CEP"),
+  cep: zod.string().min(1, "Informe o CEP"),
   street: zod.string().min(1, "Informe a Rua"),
-  number: zod.number().min(1, "Informe o Número"),
+  number: zod.string().min(1, "Informe o Número"),
   complement: zod.string().optional(),
   district: zod.string().min(1, "Informe o Bairro"),
   city: zod.string().min(1, "Informe a Cidade"),
@@ -40,7 +40,7 @@ export function Cart() {
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
     defaultValues: {
-      paymentMethod: undefined,
+      paymentMethod: undefined
     },
   });
 
@@ -57,11 +57,11 @@ export function Cart() {
 
   return (
     <form onSubmit={handleSubmit(confirmOrder)}>
-      <Title>
-        <h1>Complete seu pedido</h1>
-        <h1>Cafés selecionados</h1>
-      </Title>
       <FormProvider {...confirmOrderForm}>
+        <Title>
+          <h1>Complete seu pedido</h1>
+          <h1>Cafés selecionados</h1>
+        </Title>
         <CheckoutForm />
         <Payment />
         <CheckoutCart />

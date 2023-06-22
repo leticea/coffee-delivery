@@ -9,6 +9,8 @@ export const InputWrapper = styled.div`
   > p {
     color: ${(props) => props.theme["base-error"]};
   }
+
+  //border: 1px solid red;
 `;
 
 interface InputContainerProps {
@@ -16,7 +18,7 @@ interface InputContainerProps {
 }
 
 export const InputStyleContainer = styled.div<InputContainerProps>`
-  height: 2.625rem;
+  //height: 2.625rem;
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme["gray-400"]};
   background: ${(props) => props.theme["gray-300"]};
@@ -25,6 +27,8 @@ export const InputStyleContainer = styled.div<InputContainerProps>`
   justify-content: space-between;
   transition: 0.4s;
   overflow: hidden;
+
+  //border: 1px solid red;
 
   &:focus-within {
     border-color: ${(props) => props.theme["yellow-600"]};
