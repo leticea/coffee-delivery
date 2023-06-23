@@ -29,9 +29,21 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Projeto de Front-end de React de uma cafeteria.
+Projeto de Front-end de React de uma cafeteria onde há a listagem de produtos disponíveis para compra, a adição de uma quantidade específica de itens no carrinho, a remoção da quantidade de itens no carrinho, a exibição do valor total da compra e um formulário para o usuário preencher o seu endereço.
 
 - Módulo ReactJS do Ignite na plataforma da [Rocketseat](https://www.rocketseat.com.br/).
+
+<div align="center">
+  <img alt="" src=".github/image2.png">
+</div>
+
+<div align="center">
+  <img alt="" src=".github/image3.png">
+</div>
+
+<div align="center">
+  <img alt="" src=".github/image4.png">
+</div>
 
 ## ⚙️ Como Rodar
 
