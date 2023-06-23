@@ -23,9 +23,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://react.dev/) - ^18.2.0
 - [React Hook Form](https://react-hook-form.com/) - ^7.43.9
 - [React Router Dom](https://reactrouter.com/en/main) - ^6.9.0
-- [Zod](https://zod.dev/) - ^3.21.4
 - [Styled Components](https://styled-components.com/) - ^5.3.9
 - [Phosphor Icons](https://phosphoricons.com/)
+- [Zod](https://zod.dev/) - ^3.21.4
 
 ## 💻 Projeto
 

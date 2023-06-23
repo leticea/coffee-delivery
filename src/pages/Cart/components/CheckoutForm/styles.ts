@@ -38,7 +38,7 @@ export const Headline = styled.div`
   }
 `;
 
-export const AddressForm = styled.form`
+export const AddressForm = styled.div`
   width: 56rem;
   height: 21.6rem;
   margin: 3.2rem auto auto auto;

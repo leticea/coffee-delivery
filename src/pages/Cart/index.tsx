@@ -57,7 +57,7 @@ export function Cart() {
 
   return (
     <>
-      <form id="parentform" onSubmit={handleSubmit(confirmOrder)}>
+      <form onSubmit={handleSubmit(confirmOrder)}>
         <FormProvider {...confirmOrderForm}>
           <Title>
             <h1>Complete seu pedido</h1>
