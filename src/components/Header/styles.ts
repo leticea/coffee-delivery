@@ -6,6 +6,11 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 3.2rem 16rem;
+  background: ${(props) => props.theme["gray-100"]};
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
 
   nav {
     display: flex;
