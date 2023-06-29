@@ -9,7 +9,7 @@ export const CoffeesCard = styled.li`
 
   display: flex;
   justify-content: center;
-
++
   img {
     display: flex;
     justify-content: center;
