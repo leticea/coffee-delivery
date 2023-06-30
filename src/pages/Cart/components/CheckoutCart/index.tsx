@@ -1,8 +1,6 @@
-import {
-  OrderCard,
-} from "./styles";
+import { OrderCard } from "./styles";
 import { useContext } from "react";
-import { CartContext, CartItem } from "../../../../contexts/CartContext";
+import { CartContext } from "../../../../contexts/CartContext";
 import { EmptyCart } from "../EmptyCart";
 import ConfirmationCard from "../ConfirmationCard";
 import { CheckoutCartItem } from "../CheckoutCartItem";
