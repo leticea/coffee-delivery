@@ -19,7 +19,9 @@ export function CheckoutCartItem({ coffee }: CoffeeCartCardProps) {
   }
 
   function handleDecrease() {
-    changeCartItemQuantity(coffee.id, "decrease");
+    if (coffee.quantity > 0) {
+      changeCartItemQuantity(coffee.id, "decrease");
+    }
   }
 
   function handleRemove() {

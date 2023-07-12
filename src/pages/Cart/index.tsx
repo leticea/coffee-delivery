@@ -25,6 +25,8 @@ const confirmOrderFormValidationSchema = zod.object({
   state: zod.string().min(1),
   paymentMethod: zod.nativeEnum(PaymentMethods, {
     errorMap: () => {
+      console.log("fdfsdfs");
+
       return { message: "Informe o método de pagamento" };
     },
   }),
@@ -51,6 +53,8 @@ export function Cart() {
     navigate("/success", {
       state: data,
     });
+
+    console.log(data);
 
     cleanCart();
   }
