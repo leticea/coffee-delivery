@@ -21,7 +21,7 @@ export function CheckoutForm() {
             className="cep"
             type="number"
             placeholder="CEP"
-            {...register("cep")}
+            {...register("cep", { valueAsNumber: true })}
           />
           <input className="street" placeholder="Rua" {...register("street")} />
 
@@ -30,7 +30,7 @@ export function CheckoutForm() {
               className="number"
               type="number"
               placeholder="Número"
-              {...register("number")}
+              {...register("number", { valueAsNumber: true })}
             />
             <input
               className="complement"

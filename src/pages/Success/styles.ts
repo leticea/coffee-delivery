@@ -89,8 +89,16 @@ export const OrderInfoWithIcon = styled.li<OrderInfoWithIconProps>`
     line-height: 130%;
   }
 
+  p:last-child {
+    text-transform: capitalize;
+  }
+
   strong {
     font-size: 1.6rem;
+  }
+
+  strong:first-child {
+    text-transform: capitalize;
   }
 
   svg {
